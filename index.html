@@ -277,33 +277,42 @@ background:
       line-height:1.52;
     }
 
-    .sponsors{
-      padding:30px 0 34px;
-      background:#f6f3ed;
-      color:#151515;
-      text-align:center;
-    }
-    .sponsors h2{
-      color:#a98143;
-      text-transform:uppercase;
-      font-size:.9rem;
-      letter-spacing:.08em;
-      font-weight:500;
-      margin-bottom:25px;
-    }
-    .sponsor-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      align-items:center;
-      gap:18px;
-    }
-    .sponsor{
-      padding:11px;
-      border-left:1px solid #ded6ca;
-      font-size:1.1rem;
-      letter-spacing:.05em;
-    }
-    .sponsor:first-child{border-left:0}
+ .sponsors{
+  padding:42px 0;
+  background:#f6f3ed;
+  text-align:center;
+}
+
+.sponsors h2{
+  color:#a98143;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:30px;
+}
+
+.sponsor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:center;
+}
+
+.sponsor{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  border:1px solid #ded6ca;
+  min-height:150px;
+  padding:25px;
+}
+
+.sponsor img{
+  width:100%;
+  max-width:220px;
+  max-height:90px;
+  object-fit:contain;
+}
 
     .news{
       padding:46px 0 58px;
@@ -477,12 +486,19 @@ background:
       .quick-links{grid-template-columns:repeat(2,1fr)}
       .quick:nth-child(2){border-right:0}
       .quick:nth-child(-n+2){border-bottom:1px solid var(--line)}
-      .sponsor-grid{grid-template-columns:1fr}
-      .sponsor{
-        border-left:0;
-        border-top:1px solid #ded6ca;
-      }
-      .sponsor:first-child{border-top:0}
+     .sponsor-grid{
+  grid-template-columns:1fr;
+}
+
+.sponsor{
+  min-height:120px;
+  padding:20px;
+  border:1px solid #ded6ca;
+}
+
+.sponsor:first-child{
+  border:1px solid #ded6ca;
+}
       .news-grid{grid-template-columns:1fr}
       .footer-grid{
         grid-template-columns:1fr;
@@ -598,16 +614,27 @@ background:
       </a>
     </section>
 
-    <section class="sponsors">
-      <div class="container">
-        <h2>Patrocinadores y colaboradores oficiales</h2>
-        <div class="sponsor-grid">
-          <div class="sponsor">PERDOMO COUTURE</div>
-          <div class="sponsor">AMA ESSENTIALS</div>
-          <div class="sponsor">MISS UNIVERSE SPAIN</div>
-        </div>
+<section class="sponsors">
+  <div class="container">
+    <h2>Patrocinadores oficiales</h2>
+
+    <div class="sponsor-grid">
+
+      <div class="sponsor">
+        <img src="logo-miss-universe-spain.png" alt="Miss Universe Spain">
       </div>
-    </section>
+
+      <div class="sponsor">
+        <img src="logo-perdomo-couture.png" alt="Perdomo Couture">
+      </div>
+
+      <div class="sponsor">
+        <img src="logo-ama-essentials.png" alt="AMA Essentials">
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <section id="noticias" class="news">
       <div class="container">
