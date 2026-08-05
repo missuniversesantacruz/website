@@ -449,7 +449,8 @@
       .hero-photo img{
         position:absolute;
         right:-46%;
-        bottom:0;
+        top:0;
+        bottom:auto;
         width:175%;
         max-width:none;
         height:590px;
@@ -485,10 +486,15 @@
       .hero h1{font-size:1.3rem}
       .hero h2{font-size:.78rem}
       .hero-photo img{
-        height:540px;
-        right:-52%;
-        width:185%;
-      }
+       .hero-photo img{
+  top:0;
+  bottom:auto;
+  height:100%;
+  right:-52%;
+  width:185%;
+  object-fit:cover;
+  object-position:50% 0%;
+}
     }
   </style>
 </head>
