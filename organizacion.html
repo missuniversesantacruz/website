@@ -371,33 +371,50 @@
     }
 
     /* COLABORADORES */
-    .partners{
-      background:#f6f3ed;
-      color:#171717;
-      padding:42px 0;
-      text-align:center;
-    }
-    .partners h2{
-      color:#a98143;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-size:.9rem;
-      font-weight:500;
-      margin-bottom:28px;
-    }
-    .partner-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-      align-items:center;
-    }
-    .partner{
-      padding:15px;
-      border-left:1px solid #ded6ca;
-      font-size:1.08rem;
-      letter-spacing:.05em;
-    }
-    .partner:first-child{border-left:0}
+.partners{
+  background:#f6f3ed;
+  color:#171717;
+  padding:48px 0;
+  text-align:center;
+}
+
+.partners h2{
+  color:#a98143;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.9rem;
+  font-weight:500;
+  margin-bottom:30px;
+}
+
+.partner-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  align-items:center;
+}
+
+.partner{
+  min-height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  border:1px solid #ded6ca;
+  background:#fff;
+}
+
+.partner img{
+  width:100%;
+  max-width:220px;
+  max-height:95px;
+  object-fit:contain;
+  transition:transform .3s ease;
+}
+
+.partner:hover img{
+  transform:scale(1.04);
+}
 
     /* CTA */
     .cta{
@@ -493,12 +510,19 @@
       .mission-grid{grid-template-columns:1fr}
       .team-grid{grid-template-columns:1fr}
       .team-photo{height:380px}
-      .partner-grid{grid-template-columns:1fr}
-      .partner{
-        border-left:0;
-        border-top:1px solid #ded6ca;
-      }
-      .partner:first-child{border-top:0}
+.partner-grid{
+    grid-template-columns:1fr;
+}
+
+.partner{
+    min-height:120px;
+    padding:20px;
+    border:1px solid #ded6ca;
+}
+
+.partner:first-child{
+    border:1px solid #ded6ca;
+}
       .footer-grid{grid-template-columns:1fr;text-align:center}
     }
 
@@ -723,16 +747,25 @@
       </div>
     </section>
 
-    <section class="partners">
-      <div class="container">
-        <h2>Patrocinadores y colaboradores oficiales</h2>
-        <div class="partner-grid">
-          <div class="partner">PERDOMO COUTURE</div>
-          <div class="partner">AMA ESSENTIALS</div>
-          <div class="partner">MISS UNIVERSE SPAIN</div>
-        </div>
+<section class="partners">
+  <div class="container">
+    <h2>Patrocinadores oficiales</h2>
+
+    <div class="partner-grid">
+      <div class="partner">
+        <img src="logo-miss-universe-spain.png" alt="Miss Universe Spain">
       </div>
-    </section>
+
+      <div class="partner">
+        <img src="logo-perdomo-couture.png" alt="Perdomo Couture">
+      </div>
+
+      <div class="partner">
+        <img src="logo-ama-essentials.png" alt="AMA Essentials">
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="section cta">
       <div class="cta-copy">
