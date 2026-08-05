@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edición 2026 de Miss Universe Santa Cruz: gala, Top 3, candidatas, jurado, equipo oficial, patrocinadores y galería.">
+  <title>Edición 2026 | Miss Universe Santa Cruz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --black2:#0a0a0a;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --muted:#c8c3b9;
+      --line:rgba(199,162,90,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:.88em;
+      height:.88em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+      filter:drop-shadow(0 0 8px rgba(199,162,90,.28));
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.80);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+    nav a:hover,nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .btn{
+      min-width:220px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border:1px solid var(--gold);
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.075em;
+      font-size:.76rem;
+      transition:.24s;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#0a0a0a;
+    }
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(199,162,90,.14);
+    }
+
+    /* HERO */
+    .edition-hero{
+      min-height:760px;
+      padding-top:78px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,5,5,.99) 0%,
+          rgba(5,5,5,.95) 34%,
+          rgba(5,5,5,.68) 50%,
+          rgba(5,5,5,.14) 72%,
+          rgba(5,5,5,0) 100%
+        ),
+        url("edicion26-hero.jpg") right center / cover no-repeat;
+    }
+    .edition-hero-grid{
+      min-height:682px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+    .edition-copy{
+      width:54%;
+      max-width:680px;
+      padding:95px 0 55px;
+    }
+    .edition-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-size:.82rem;
+      margin-bottom:18px;
+    }
+    .edition-copy h1{
+      color:var(--gold2);
+      font-size:clamp(3rem,5.2vw,5rem);
+      font-weight:300;
+      line-height:1;
+      letter-spacing:.01em;
+      margin-bottom:18px;
+    }
+    .edition-copy h2{
+      color:var(--white);
+      font-size:clamp(1.15rem,2vw,1.9rem);
+      font-weight:300;
+      line-height:1.45;
+      margin-bottom:24px;
+    }
+    .edition-intro{
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.94rem;
+      max-width:610px;
+      margin-bottom:30px;
+    }
+    .edition-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .section{
+      padding:78px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .section-title{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.9rem;
+      margin-bottom:20px;
+    }
+    .section-heading{
+      font-size:clamp(2rem,4vw,3.5rem);
+      font-weight:300;
+      color:var(--white);
+      margin-bottom:24px;
+    }
+    .body-copy{
+      color:#ddd8ce;
+      line-height:1.85;
+      font-size:.96rem;
+    }
+
+    /* LA GALA */
+    .gala-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:56px;
+      align-items:center;
+    }
+    .gala-image{
+      min-height:500px;
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg,rgba(5,5,5,.05),rgba(5,5,5,.28)),
+        url("edicion26-gala.jpg") center / cover no-repeat;
+    }
+    .facts{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+    .fact{
+      border:1px solid var(--line);
+      padding:18px;
+      background:#090909;
+    }
+    .fact span{
+      display:block;
+      color:var(--gold2);
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:8px;
+    }
+    .fact strong{
+      font-weight:400;
+      font-size:.9rem;
+    }
+
+    /* GANADORA */
+    .winner{
+      min-height:500px;
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.82) 50%,rgba(5,5,5,.18) 100%),
+        url("edicion26-ganadora.jpg") right center / cover no-repeat;
+    }
+    .winner-copy{
+      width:52%;
+      max-width:640px;
+    }
+    .winner-copy h2{
+      color:var(--gold2);
+      font-size:clamp(2.2rem,4vw,3.8rem);
+      font-weight:300;
+      margin-bottom:12px;
+    }
+    .winner-copy h3{
+      color:var(--white);
+      font-weight:300;
+      font-size:1.2rem;
+      margin-bottom:18px;
+    }
+    .winner-copy p{
+      color:#d9d4ca;
+      line-height:1.8;
+      margin-bottom:26px;
+    }
+
+    /* TOP 3 */
+    .top3-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+    .top-card{
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+      text-align:center;
+    }
+    .top-photo{
+      height:360px;
+      background:center top / cover no-repeat;
+      border-bottom:1px solid var(--line);
+    }
+    .top-card:nth-child(1) .top-photo{background-image:url("top3-daniela.jpg")}
+    .top-card:nth-child(2) .top-photo{background-image:url("top3-danna.jpg")}
+    .top-card:nth-child(3) .top-photo{background-image:url("top3-valeria.jpg")}
+    .top-body{padding:22px}
+    .top-rank{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:.68rem;
+      margin-bottom:8px;
+    }
+    .top-body h3{
+      font-size:1rem;
+      font-weight:400;
+      margin-bottom:8px;
+    }
+    .top-body p{
+      color:#c9c4bb;
+      font-size:.78rem;
+      line-height:1.6;
+    }
+
+    /* REPRESENTANTES */
+    .representatives{
+      background:
+        radial-gradient(circle at center,rgba(199,162,90,.10),transparent 42%),
+        #070707;
+    }
+    .rep-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+    .rep-card{
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+    }
+    .rep-photo{
+      height:300px;
+      background:center top/cover no-repeat;
+      border-bottom:1px solid var(--line);
+    }
+    .rep-card:nth-child(1) .rep-photo{background-image:url("spain-daniela.jpg")}
+    .rep-card:nth-child(2) .rep-photo{background-image:url("spain-danna.jpg")}
+    .rep-card:nth-child(3) .rep-photo{background-image:url("spain-ivanna.jpg")}
+    .rep-body{padding:20px}
+    .rep-body h3{
+      color:var(--gold2);
+      font-weight:400;
+      font-size:1rem;
+      margin-bottom:8px;
+    }
+    .rep-body p{
+      color:#d0cbc1;
+      font-size:.79rem;
+      line-height:1.6;
+    }
+
+    /* CANDIDATAS */
+    .candidates-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+    .candidate{
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+    }
+    .candidate img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      object-position:center top;
+      border-bottom:1px solid var(--line);
+    }
+    .candidate-body{padding:16px}
+    .candidate h3{
+      color:var(--gold2);
+      font-size:.88rem;
+      font-weight:400;
+      margin-bottom:8px;
+    }
+    .candidate-meta{
+      color:#f1ede4;
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      margin-bottom:10px;
+    }
+    .candidate p{
+      color:#c9c4bb;
+      font-size:.73rem;
+      line-height:1.55;
+    }
+
+    /* DESARROLLO */
+    .timeline{
+      max-width:930px;
+      margin:40px auto 0;
+      position:relative;
+    }
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:18px;
+      top:0;
+      bottom:0;
+      width:1px;
+      background:linear-gradient(var(--gold),rgba(199,162,90,.08));
+    }
+    .step{
+      position:relative;
+      padding:0 0 30px 58px;
+    }
+    .step:last-child{padding-bottom:0}
+    .step-dot{
+      position:absolute;
+      left:10px;
+      top:3px;
+      width:17px;
+      height:17px;
+      background:url("star.PNG") center/contain no-repeat;
+    }
+    .step h3{
+      color:var(--gold2);
+      font-size:.9rem;
+      font-weight:500;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      margin-bottom:8px;
+    }
+    .step p{
+      color:#d2cdc3;
+      line-height:1.7;
+      font-size:.88rem;
+    }
+
+    /* JURADO Y EQUIPO: FOTO DE FONDO + NOMBRE SUPERPUESTO */
+    .people-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+    .person{
+      min-height:230px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#090909 center top / cover no-repeat;
+      display:flex;
+      align-items:flex-end;
+      isolation:isolate;
+    }
+    .person::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(180deg,rgba(5,5,5,.05) 0%,rgba(5,5,5,.18) 44%,rgba(5,5,5,.92) 100%);
+      transition:background .35s ease;
+    }
+    .person::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:inherit;
+      background-position:center top;
+      background-size:cover;
+      transition:transform .45s ease;
+    }
+    .person:hover::after{transform:scale(1.035)}
+    .person:hover::before{
+      background:linear-gradient(180deg,rgba(5,5,5,.02) 0%,rgba(5,5,5,.12) 40%,rgba(5,5,5,.88) 100%);
+    }
+    .person-name{
+      width:100%;
+      padding:22px 16px 18px;
+      text-align:center;
+      background:linear-gradient(180deg,transparent,rgba(5,5,5,.34));
+    }
+    .person h3{
+      color:var(--gold2);
+      font-size:.84rem;
+      font-weight:400;
+      line-height:1.45;
+      text-shadow:0 2px 12px rgba(0,0,0,.88);
+    }
+    .person small{
+      display:block;
+      color:#f3eee5;
+      margin-top:6px;
+      font-size:.62rem;
+      line-height:1.45;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      text-shadow:0 2px 10px rgba(0,0,0,.9);
+    }
+
+    .jury-rocio{background-image:url("jurado-rocio.jpg")}
+    .jury-david{background-image:url("jurado-david.jpg")}
+    .jury-andrea{background-image:url("jurado-andrea.jpg")}
+    .jury-yusef{background-image:url("jurado-yusef.jpg")}
+    .jury-natalia{background-image:url("jurado-natalia.jpg")}
+    .jury-amanda{background-image:url("jurado-amanda.jpg")}
+    .jury-jonathan{background-image:url("jurado-jonathan.jpg")}
+
+    .team-raul{background-image:url("equipo-raul.jpg")}
+    .team-patrycia{background-image:url("equipo-patrycia.jpg")}
+    .team-carlos{background-image:url("equipo-carlos.jpg")}
+    .team-ubay{background-image:url("equipo-ubay.jpg")}
+    .team-martina{background-image:url("equipo-martina.jpg")}
+    .team-fabian{background-image:url("equipo-fabian.jpg")}
+
+    /* PATROCINADORES OFICIALES CON LOGOTIPOS */
+    .partners{
+      background:#f6f3ed;
+      color:#171717;
+      padding:48px 0;
+      text-align:center;
+    }
+    .partners h2{
+      color:#a98143;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.9rem;
+      font-weight:500;
+      margin-bottom:30px;
+    }
+    .partner-logos{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      align-items:center;
+    }
+    .partner-logo{
+      min-height:150px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      border:1px solid #ded6ca;
+      background:#fff;
+    }
+    .partner-logo img{
+      width:100%;
+      max-width:220px;
+      max-height:95px;
+      object-fit:contain;
+      transition:transform .3s ease;
+    }
+    .partner-logo:hover img{
+      transform:scale(1.04);
+    }
+
+    .collaborators{
+      padding:52px 0;
+      text-align:center;
+      border-bottom:1px solid var(--line);
+      background:#f6f3ed;
+      color:#171717;
+    }
+    .collaborators .section-title{color:#a98143}
+    .collaborators .section-heading{color:#171717}
+    .collab-logos{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:22px;
+      align-items:center;
+      margin-top:32px;
+    }
+    .collab-logo{
+      min-height:120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      border:1px solid #ded6ca;
+      background:#fff;
+    }
+    .collab-logo img{
+      width:100%;
+      max-width:170px;
+      max-height:78px;
+      object-fit:contain;
+      transition:transform .3s ease;
+    }
+    .collab-logo:hover img{transform:scale(1.04)}
+
+    /* GALERÍA */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      grid-template-rows:260px 260px;
+      gap:14px;
+      margin-top:32px;
+    }
+    .gallery-item{
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#090909;
+    }
+    .gallery-item:first-child{grid-row:1 / 3}
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+    .gallery-item:hover img{transform:scale(1.035)}
+
+    .closing{
+      min-height:430px;
+      display:flex;
+      align-items:center;
+      text-align:center;
+      background:
+        linear-gradient(rgba(5,5,5,.74),rgba(5,5,5,.90)),
+        url("edicion26-cierre.jpg") center / cover no-repeat;
+    }
+    .closing-copy{width:min(780px,92%);margin:auto}
+    .closing-copy p{
+      color:#d9d4ca;
+      line-height:1.75;
+      margin:0 auto 26px;
+      max-width:680px;
+    }
+    .closing-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .edition-hero{
+        padding-top:64px;
+        min-height:620px;
+        background:
+          linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.84) 52%,rgba(5,5,5,.18) 100%),
+          url("edicion26-hero-mobile.jpg") right top / cover no-repeat;
+      }
+      .edition-hero-grid{min-height:556px}
+      .edition-copy{
+        width:60%;
+        padding:58px 0 40px;
+      }
+      .edition-kicker{font-size:.58rem}
+      .edition-copy h1{font-size:clamp(1.65rem,7vw,2.5rem)}
+      .edition-copy h2{font-size:.88rem}
+      .edition-intro{
+        font-size:.7rem;
+        line-height:1.65;
+        max-width:310px;
+      }
+      .edition-actions{gap:9px}
+      .edition-actions .btn{
+        min-width:155px;
+        padding:10px 13px;
+        font-size:.52rem;
+        white-space:nowrap;
+      }
+
+      .gala-grid{grid-template-columns:1fr;gap:34px}
+      .gala-image{min-height:360px}
+      .winner{background-position:72% center}
+      .winner-copy{width:60%}
+      .top3-grid,
+      .rep-grid,
+      .people-grid{grid-template-columns:1fr}
+      .person{min-height:320px}
+      .candidates-grid{grid-template-columns:repeat(2,1fr)}
+      .partner-logos{grid-template-columns:1fr}
+      .partner-logo{
+        min-height:125px;
+        padding:20px;
+      }
+      .collab-logos{grid-template-columns:repeat(3,1fr)}
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:280px 210px 210px;
+      }
+      .gallery-item:first-child{
+        grid-column:1 / 3;
+        grid-row:auto;
+      }
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+    }
+
+    @media(max-width:430px){
+      .edition-hero{
+        min-height:600px;
+        background-position:70% top;
+      }
+      .edition-hero-grid{min-height:536px}
+      .edition-copy{
+        width:64%;
+        transform:translateY(-8px);
+      }
+      .edition-copy h1{font-size:1.52rem}
+      .edition-intro{font-size:.67rem}
+      .facts{grid-template-columns:1fr}
+      .winner{
+        min-height:520px;
+        background-position:74% center;
+      }
+      .winner-copy{width:64%}
+      .candidates-grid{grid-template-columns:1fr}
+      .candidate img{height:320px}
+      .partner-logo{min-height:110px;padding:16px}
+      .collab-logos{grid-template-columns:repeat(2,1fr);gap:12px}
+      .collab-logo{min-height:100px;padding:14px}
+      .gallery-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:300px repeat(4,220px);
+      }
+      .gallery-item:first-child{grid-column:auto}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn" aria-label="Abrir menú"
+        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reina.html">Nuestra Reina</a>
+        <a href="organizacion.html">La Organización</a>
+        <a class="active" href="edicion26.html">Edición 2026</a>
+        <a href="galeria.html">Galería</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="edition-hero">
+      <div class="container edition-hero-grid">
+        <div class="edition-copy">
+          <p class="edition-kicker">Edición 2026</p>
+          <h1>La primera edición</h1>
+          <h2>Una noche que marcó el comienzo de nuestra historia.</h2>
+          <p class="edition-intro">
+            Trece candidatas, una gala inolvidable y el nacimiento de una nueva etapa
+            para Miss Universe Santa Cruz.
+          </p>
+          <div class="edition-actions">
+            <a href="#gala" class="btn btn-primary">Descubre la edición</a>
+            <a href="#galeria" class="btn">Ver galería</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gala" class="section">
+      <div class="container gala-grid">
+        <div class="gala-image" aria-label="Gala Miss Universe Santa Cruz 2026"></div>
+
+        <div>
+          <p class="section-title">La gala</p>
+          <h2 class="section-heading">Miss Universe Santa Cruz 2026</h2>
+          <p class="body-copy">
+            La primera edición de Miss Universe Santa Cruz se celebró el 6 de julio de 2026
+            en el Auditorio Juan Carlos I de Arafo. Trece candidatas participaron en una gala
+            diseñada para poner en valor la presencia, la confianza, la preparación y la capacidad
+            de representación de cada una.
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <span>Fecha</span>
+              <strong>6 de julio de 2026</strong>
+            </div>
+            <div class="fact">
+              <span>Lugar</span>
+              <strong>Auditorio Juan Carlos I · Arafo</strong>
+            </div>
+            <div class="fact">
+              <span>Candidatas</span>
+              <strong>13 candidatas oficiales</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section winner">
+      <div class="container">
+        <div class="winner-copy">
+          <p class="section-title">Nuestra ganadora</p>
+          <h2>Daniela Morales</h2>
+          <h3>Miss Universe Santa Cruz 2026</h3>
+          <p>
+            Daniela fue proclamada primera Miss Universe Santa Cruz y pasó a representar
+            oficialmente a la organización durante su año de reinado.
+          </p>
+          <a href="reina.html" class="btn btn-primary">Conoce a nuestra reina</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Top 3</p>
+        <h2 class="section-heading">El equipo de reinado 2026</h2>
+        <p class="body-copy">
+          Daniela, Danna y Valeria forman el Top 3 oficial de la edición 2026.
+          Las tres permanecen vinculadas a la organización durante el año de reinado,
+          participando en actos, proyectos y oportunidades de representación.
+        </p>
+
+        <div class="top3-grid">
+          <article class="top-card">
+            <div class="top-photo"></div>
+            <div class="top-body">
+              <p class="top-rank">Ganadora</p>
+              <h3>Daniela Morales</h3>
+              <p>Miss Universe Santa Cruz 2026</p>
+            </div>
+          </article>
+
+          <article class="top-card">
+            <div class="top-photo"></div>
+            <div class="top-body">
+              <p class="top-rank">Primera finalista</p>
+              <h3>Danna Hernández</h3>
+              <p>Integrante del equipo de reinado 2026</p>
+            </div>
+          </article>
+
+          <article class="top-card">
+            <div class="top-photo"></div>
+            <div class="top-body">
+              <p class="top-rank">Segunda finalista</p>
+              <h3>Valeria Gorrín</h3>
+              <p>Integrante del equipo de reinado 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section representatives">
+      <div class="container">
+        <p class="section-title">Proyección nacional</p>
+        <h2 class="section-heading">Tres representantes para Miss Universe Spain</h2>
+        <p class="body-copy">
+          La edición 2026 no solo eligió a Miss Universe Santa Cruz. También abrió el camino
+          para que otras candidatas de nuestra gala alcanzaran el escenario nacional.
+        </p>
+
+        <div class="rep-grid">
+          <article class="rep-card">
+            <div class="rep-photo"></div>
+            <div class="rep-body">
+              <h3>Daniela Morales</h3>
+              <p>Miss Universe Santa Cruz 2026</p>
+            </div>
+          </article>
+
+          <article class="rep-card">
+            <div class="rep-photo"></div>
+            <div class="rep-body">
+              <h3>Danna Hernández</h3>
+              <p>Miss Universe Galicia 2026</p>
+            </div>
+          </article>
+
+          <article class="rep-card">
+            <div class="rep-photo"></div>
+            <div class="rep-body">
+              <h3>Ivanna Parra</h3>
+              <p>Miss Universe País Vasco 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="candidatas" class="section">
+      <div class="container">
+        <p class="section-title">Candidatas oficiales</p>
+        <h2 class="section-heading">Las trece protagonistas de 2026</h2>
+        <p class="body-copy">
+          Cada candidata contará con una breve presentación personal, edad, procedencia
+          e Instagram cuando esos datos estén preparados para publicación.
+        </p>
+
+        <div class="candidates-grid">
+          <article class="candidate">
+            <img src="candidata-celeste.jpg" alt="Celeste Santana">
+            <div class="candidate-body"><h3>Celeste Santana</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-danna.jpg" alt="Danna Hernández">
+            <div class="candidate-body"><h3>Danna Hernández</h3><p class="candidate-meta">Top 3 · Miss Universe Galicia</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-daniela.jpg" alt="Daniela Morales">
+            <div class="candidate-body"><h3>Daniela Morales</h3><p class="candidate-meta">Ganadora 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-ithaisa.jpg" alt="Ithaisa De la Rosa">
+            <div class="candidate-body"><h3>Ithaisa De la Rosa</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-ivanna.jpg" alt="Ivanna Parra">
+            <div class="candidate-body"><h3>Ivanna Parra</h3><p class="candidate-meta">Miss Universe País Vasco</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-izel.jpg" alt="Izel Plasencia">
+            <div class="candidate-body"><h3>Izel Plasencia</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-lucia.jpg" alt="Lucía Hernández">
+            <div class="candidate-body"><h3>Lucía Hernández</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-miriam.jpg" alt="Miriam Luis">
+            <div class="candidate-body"><h3>Miriam Luis</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-rosa.jpg" alt="Rosa Pérez">
+            <div class="candidate-body"><h3>Rosa Pérez</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-sandra.jpg" alt="Sandra Noda">
+            <div class="candidate-body"><h3>Sandra Noda</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-sofia.jpg" alt="Sofía González">
+            <div class="candidate-body"><h3>Sofía González</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-valeria.jpg" alt="Valeria Gorrín">
+            <div class="candidate-body"><h3>Valeria Gorrín</h3><p class="candidate-meta">Top 3</p><p>Biografía próximamente.</p></div>
+          </article>
+
+          <article class="candidate">
+            <img src="candidata-veronica.jpg" alt="Verónica González">
+            <div class="candidate-body"><h3>Verónica González</h3><p class="candidate-meta">Candidata 2026</p><p>Biografía próximamente.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Desarrollo de la gala</p>
+        <h2 class="section-heading">Una noche dividida en grandes momentos</h2>
+
+        <div class="timeline">
+          <div class="step"><span class="step-dot"></span><h3>Opening</h3><p>Apertura oficial con todas las candidatas.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Presentación</h3><p>Presentación individual ante el público y el jurado.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Pase de baño</h3><p>Seguridad, presencia escénica y pasarela.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Vestido de noche</h3><p>Elegancia, estilo y proyección.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Top 5</h3><p>Selección de las cinco candidatas finalistas.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Preguntas del jurado</h3><p>Comunicación, seguridad y capacidad de respuesta.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Top 3 y discursos</h3><p>Última fase antes de la decisión final.</p></div>
+          <div class="step"><span class="step-dot"></span><h3>Coronación</h3><p>Proclamación de Daniela Morales como Miss Universe Santa Cruz 2026.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Jurado oficial</p>
+        <h2 class="section-heading">El jurado de la edición 2026</h2>
+
+        <div class="people-grid">
+          <article class="person jury-rocio">
+            <div class="person-name"><h3>Rocío Díaz Medina</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-david">
+            <div class="person-name"><h3>David Hernández</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-andrea">
+            <div class="person-name"><h3>Andrea Correa</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-yusef">
+            <div class="person-name"><h3>Yusef Perdomo</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-natalia">
+            <div class="person-name"><h3>Natalia Tsiklis</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-amanda">
+            <div class="person-name"><h3>Amanda Expósito</h3><small>Miembro del jurado</small></div>
+          </article>
+          <article class="person jury-jonathan">
+            <div class="person-name"><h3>Jonathan Teruel</h3><small>Miembro del jurado</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Equipo oficial</p>
+        <h2 class="section-heading">Estilismo y preparación</h2>
+
+        <div class="people-grid">
+          <article class="person team-raul">
+            <div class="person-name"><h3>Raúl Pérez</h3><small>Dirección de estilismo</small></div>
+          </article>
+          <article class="person team-patrycia">
+            <div class="person-name"><h3>Patrycia Suárez</h3><small>Equipo oficial</small></div>
+          </article>
+          <article class="person team-carlos">
+            <div class="person-name"><h3>Carlos Roxas</h3><small>Equipo oficial</small></div>
+          </article>
+          <article class="person team-ubay">
+            <div class="person-name"><h3>Ubay Delgado</h3><small>Equipo oficial</small></div>
+          </article>
+          <article class="person team-martina">
+            <div class="person-name"><h3>Martina Tatarelli</h3><small>Tatashadows · Equipo oficial</small></div>
+          </article>
+          <article class="person team-fabian">
+            <div class="person-name"><h3>Fabián Quintero</h3><small>Equipo oficial</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <div class="container">
+        <h2>Patrocinadores oficiales</h2>
+        <div class="partner-logos">
+          <div class="partner-logo">
+            <img src="logo-miss-universe-spain.png" alt="Miss Universe Spain">
+          </div>
+          <div class="partner-logo">
+            <img src="logo-perdomo-couture.png" alt="Perdomo Couture">
+          </div>
+          <div class="partner-logo">
+            <img src="logo-ama-essentials.png" alt="AMA Essentials">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collaborators">
+      <div class="container">
+        <p class="section-title">Colaboradores oficiales</p>
+        <h2 class="section-heading">Quienes hicieron posible la edición</h2>
+
+        <div class="collab-logos">
+          <div class="collab-logo"><img src="logo-imest.png" alt="IMEST"></div>
+          <div class="collab-logo"><img src="logo-casa-pedro.png" alt="Casa Pedro"></div>
+          <div class="collab-logo"><img src="logo-crazy-gravity.png" alt="Crazy Gravity"></div>
+          <div class="collab-logo"><img src="logo-mega-homes.png" alt="Mega Homes"></div>
+          <div class="collab-logo"><img src="logo-cariale-cakes.png" alt="Cariale Cakes"></div>
+          <div class="collab-logo"><img src="logo-divas-skin-care.png" alt="Divas Skin Care"></div>
+          <div class="collab-logo"><img src="logo-radiadores-tenerife.png" alt="Radiadores Tenerife"></div>
+          <div class="collab-logo"><img src="logo-disfruta-tenerife.png" alt="Disfruta Tenerife"></div>
+          <div class="collab-logo"><img src="logo-922-visuals.png" alt="922 Visuals"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <div class="container">
+        <p class="section-title">Galería de la edición</p>
+        <h2 class="section-heading">Momentos inolvidables</h2>
+
+        <div class="gallery-grid">
+          <a class="gallery-item" href="edicion26-galeria-1.jpg" target="_blank">
+            <img src="edicion26-galeria-1.jpg" alt="Gala Miss Universe Santa Cruz 2026">
+          </a>
+          <a class="gallery-item" href="edicion26-galeria-2.jpg" target="_blank">
+            <img src="edicion26-galeria-2.jpg" alt="Jurado y ganadoras">
+          </a>
+          <a class="gallery-item" href="edicion26-galeria-3.jpg" target="_blank">
+            <img src="edicion26-galeria-3.jpg" alt="Patrocinadores y ganadoras">
+          </a>
+          <a class="gallery-item" href="edicion26-galeria-4.jpg" target="_blank">
+            <img src="edicion26-galeria-4.jpg" alt="Top 3">
+          </a>
+          <a class="gallery-item" href="edicion26-galeria-5.jpg" target="_blank">
+            <img src="edicion26-galeria-5.jpg" alt="Coronación">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="closing-copy">
+        <p class="section-title">El comienzo de una historia</p>
+        <h2 class="section-heading">La edición 2026 fue solo el principio</h2>
+        <p>
+          Una primera gala, trece candidatas y una organización que continúa creciendo
+          con nuevas oportunidades, nuevos proyectos y el compromiso de seguir representando
+          a Santa Cruz.
+        </p>
+        <div class="closing-actions">
+          <a href="reina.html" class="btn btn-primary">Conoce a nuestra reina</a>
+          <a href="galeria.html" class="btn">Explora la galería</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        Instagram:
+        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
+          @missuniverse.santacruz
+        </a><br>
+        Contacto oficial: próximamente
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
