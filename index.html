@@ -105,29 +105,20 @@
   position:relative;
   border-bottom:1px solid var(--line);
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,5,5,.98) 0%,
-      rgba(5,5,5,.94) 34%,
-      rgba(5,5,5,.62) 50%,
-      rgba(5,5,5,.15) 70%,
-      rgba(5,5,5,0) 100%
-    ),
-    url("daniela.PNG") center center / cover no-repeat;
+background:
+  linear-gradient(
+    90deg,
+    rgba(5,5,5,.98) 0%,
+    rgba(5,5,5,.94) 34%,
+    rgba(5,5,5,.62) 50%,
+    rgba(5,5,5,.15) 70%,
+    rgba(5,5,5,0) 100%
+  ),
+  url("daniela.PNG") right top / cover no-repeat;
 }
-    .hero:after{
-      content:"";
-      position:absolute;
-      width:48%;
-      height:94%;
-      right:-8%;
-      bottom:-25%;
-      opacity:.35;
-      transform:rotate(-12deg);
-      background:repeating-radial-gradient(circle at 50% 50%,rgba(199,162,90,.17) 0 2px,transparent 3px 20px);
-      pointer-events:none;
-    }
+ .hero:after{
+  display:none;
+}
 .hero-grid{
   min-height:682px;
   display:block;
