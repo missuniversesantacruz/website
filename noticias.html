@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noticias oficiales de Miss Universe Santa Cruz: actualidad, comunicados, reinado, eventos y Miss Universe Spain.">
+  <title>Noticias | Miss Universe Santa Cruz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --black2:#0a0a0a;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --muted:#c8c3b9;
+      --line:rgba(199,162,90,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:.88em;
+      height:.88em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+      filter:drop-shadow(0 0 8px rgba(199,162,90,.28));
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.80);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+    nav a:hover,nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .btn{
+      min-width:210px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border:1px solid var(--gold);
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.075em;
+      font-size:.76rem;
+      transition:.24s;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#0a0a0a;
+    }
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(199,162,90,.14);
+    }
+
+    /* HERO */
+    .news-hero{
+      min-height:700px;
+      padding-top:78px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,5,5,.99) 0%,
+          rgba(5,5,5,.94) 34%,
+          rgba(5,5,5,.64) 52%,
+          rgba(5,5,5,.14) 72%,
+          rgba(5,5,5,0) 100%
+        ),
+        url("noticias-hero.jpg") right center / cover no-repeat;
+    }
+    .news-hero-grid{
+      min-height:622px;
+      display:flex;
+      align-items:center;
+    }
+    .news-copy{
+      width:54%;
+      max-width:680px;
+      padding:90px 0 55px;
+    }
+    .news-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-size:.82rem;
+      margin-bottom:18px;
+    }
+    .news-copy h1{
+      color:var(--gold2);
+      font-size:clamp(3.2rem,6vw,5.5rem);
+      font-weight:300;
+      line-height:1;
+      margin-bottom:18px;
+    }
+    .news-copy h2{
+      font-size:clamp(1.1rem,2vw,1.8rem);
+      font-weight:300;
+      line-height:1.5;
+      margin-bottom:24px;
+    }
+    .news-copy p{
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.94rem;
+      max-width:620px;
+    }
+
+    .section{
+      padding:78px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .section-title{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.9rem;
+      margin-bottom:20px;
+    }
+    .section-heading{
+      font-size:clamp(2rem,4vw,3.5rem);
+      font-weight:300;
+      margin-bottom:24px;
+    }
+    .body-copy{
+      color:#ddd8ce;
+      line-height:1.85;
+      font-size:.96rem;
+    }
+
+    /* NOTICIA PRINCIPAL */
+    .featured-news{
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:0;
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+    }
+    .featured-image{
+      min-height:500px;
+      background:
+        linear-gradient(180deg,rgba(5,5,5,.03),rgba(5,5,5,.28)),
+        url("noticia-daniela.jpg") center top / cover no-repeat;
+    }
+    .featured-content{
+      padding:46px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .news-meta{
+      color:var(--gold2);
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:16px;
+    }
+    .featured-content h2{
+      font-size:clamp(1.7rem,3vw,2.8rem);
+      font-weight:300;
+      line-height:1.25;
+      margin-bottom:18px;
+    }
+    .featured-content p{
+      color:#d5d0c6;
+      line-height:1.75;
+      margin-bottom:26px;
+    }
+
+    /* CATEGORÍAS */
+    .filters{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:34px 0 28px;
+    }
+    .filter{
+      border:1px solid var(--line);
+      color:#d8d3c9;
+      background:#090909;
+      padding:10px 16px;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      font-size:.68rem;
+    }
+    .filter.active{
+      color:#0a0a0a;
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      border-color:var(--gold);
+    }
+
+    /* ÚLTIMAS NOTICIAS */
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .card-img{
+      height:230px;
+      background:center top / cover no-repeat;
+      border-bottom:1px solid var(--line);
+    }
+    .card:nth-child(1) .card-img{background-image:url("noticia-danna.jpg")}
+    .card:nth-child(2) .card-img{background-image:url("noticia-ivanna.jpg")}
+    .card:nth-child(3) .card-img{background-image:url("noticia-gala-2026.jpg")}
+    .card:nth-child(4) .card-img{background-image:url("noticia-top3.jpg")}
+    .card:nth-child(5) .card-img{background-image:url("noticia-web.jpg")}
+    .card:nth-child(6) .card-img{background-image:url("noticia-spain.jpg")}
+    .card-body{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    .card-category{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.63rem;
+      margin-bottom:10px;
+    }
+    .card h3{
+      font-size:.94rem;
+      font-weight:400;
+      line-height:1.5;
+      margin-bottom:12px;
+    }
+    .card p{
+      color:#c9c4bb;
+      font-size:.76rem;
+      line-height:1.65;
+      margin-bottom:18px;
+    }
+    .card a{
+      margin-top:auto;
+      color:var(--gold2);
+      font-size:.72rem;
+    }
+
+    /* COMUNICADOS */
+    .official{
+      background:
+        radial-gradient(circle at center,rgba(199,162,90,.08),transparent 42%),
+        #070707;
+    }
+    .statement-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:32px;
+    }
+    .statement{
+      border:1px solid var(--line);
+      background:#090909;
+      padding:24px;
+    }
+    .statement-date{
+      color:var(--gold2);
+      font-size:.65rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .statement h3{
+      font-size:.9rem;
+      font-weight:400;
+      line-height:1.5;
+      margin-bottom:12px;
+    }
+    .statement p{
+      color:#c8c3b9;
+      font-size:.75rem;
+      line-height:1.65;
+      margin-bottom:16px;
+    }
+    .statement a{
+      color:var(--gold2);
+      font-size:.7rem;
+    }
+
+    /* INSTAGRAM */
+    .instagram{
+      text-align:center;
+    }
+    .instagram p{
+      color:#d5d0c6;
+      max-width:680px;
+      margin:0 auto 26px;
+      line-height:1.75;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .news-hero{
+        min-height:620px;
+        padding-top:64px;
+        background:
+          linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.84) 52%,rgba(5,5,5,.18) 100%),
+          url("noticias-hero-mobile.jpg") right top / cover no-repeat;
+      }
+      .news-hero-grid{min-height:556px}
+      .news-copy{
+        width:60%;
+        padding:58px 0 40px;
+      }
+      .news-kicker{font-size:.58rem}
+      .news-copy h1{font-size:2.4rem}
+      .news-copy h2{font-size:.88rem}
+      .news-copy p{font-size:.7rem}
+
+      .featured-news{grid-template-columns:1fr}
+      .featured-image{min-height:390px}
+      .featured-content{padding:30px}
+      .news-grid{grid-template-columns:1fr}
+      .statement-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+    }
+
+    @media(max-width:430px){
+      .news-hero{
+        min-height:600px;
+        background-position:70% top;
+      }
+      .news-hero-grid{min-height:536px}
+      .news-copy{
+        width:64%;
+        transform:translateY(-8px);
+      }
+      .news-copy h1{font-size:1.7rem}
+      .news-copy p{font-size:.67rem}
+      .featured-image{min-height:320px}
+      .filters{gap:8px}
+      .filter{padding:9px 12px;font-size:.6rem}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn" aria-label="Abrir menú"
+        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reina.html">Nuestra Reina</a>
+        <a href="organizacion.html">La Organización</a>
+        <a href="edicion26.html">Edición 2026</a>
+        <a href="galeria.html">Galería</a>
+        <a class="active" href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="news-hero">
+      <div class="container news-hero-grid">
+        <div class="news-copy">
+          <p class="news-kicker">Actualidad oficial</p>
+          <h1>Noticias</h1>
+          <h2>Actualidad, comunicados y momentos destacados de Miss Universe Santa Cruz.</h2>
+          <p>
+            Sigue las novedades de la organización, el reinado 2026,
+            nuestras representantes y los próximos proyectos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Noticia destacada</p>
+
+        <article class="featured-news">
+          <div class="featured-image" aria-label="Daniela Martínez Morales"></div>
+
+          <div class="featured-content">
+            <p class="news-meta">Reinado · 2026</p>
+            <h2>Daniela Martínez Morales, Miss Universe Santa Cruz 2026</h2>
+            <p>
+              Daniela Martínez Morales fue proclamada ganadora de la primera edición
+              de Miss Universe Santa Cruz, iniciando un año de representación,
+              crecimiento y nuevas oportunidades.
+            </p>
+            <a href="noticia-daniela.html" class="btn btn-primary">Leer noticia</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Últimas noticias</p>
+        <h2 class="section-heading">Toda la actualidad</h2>
+
+        <div class="filters" aria-label="Categorías de noticias">
+          <span class="filter active">Todas</span>
+          <span class="filter">Organización</span>
+          <span class="filter">Reinado</span>
+          <span class="filter">Miss Universe Spain</span>
+          <span class="filter">Eventos</span>
+          <span class="filter">Comunicados</span>
+        </div>
+
+        <div class="news-grid">
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Miss Universe Spain</p>
+              <h3>Danna Hernández, designada Miss Universe Galicia 2026</h3>
+              <p>Danna continúa su recorrido dentro de la organización como representante de Galicia.</p>
+              <a href="noticia-danna-galicia.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Miss Universe Spain</p>
+              <h3>Ivanna Parra, designada Miss Universe País Vasco 2026</h3>
+              <p>Ivanna da el salto al certamen nacional como representante del País Vasco.</p>
+              <a href="noticia-ivanna-pais-vasco.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Evento</p>
+              <h3>Así se vivió la primera edición de Miss Universe Santa Cruz</h3>
+              <p>Una noche de pasarela, emoción, preguntas, discursos y coronación.</p>
+              <a href="noticia-gala-2026.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Reinado</p>
+              <h3>El Top 3 oficial inicia su año de representación</h3>
+              <p>Daniela, Danna y Valeria permanecen vinculadas a la organización durante el reinado 2026.</p>
+              <a href="noticia-top3-2026.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Organización</p>
+              <h3>Miss Universe Santa Cruz presenta su nueva página web</h3>
+              <p>Un nuevo espacio para conocer la organización, sus representantes, noticias y proyectos.</p>
+              <a href="noticia-nueva-web.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <p class="card-category">Miss Universe Spain</p>
+              <h3>Santa Cruz inicia su camino en Miss Universe Spain 2026</h3>
+              <p>La representación provincial continúa su recorrido en el escenario nacional.</p>
+              <a href="noticia-miss-universe-spain.html">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section official">
+      <div class="container">
+        <p class="section-title">Comunicados oficiales</p>
+        <h2 class="section-heading">Información de la organización</h2>
+
+        <div class="statement-grid">
+          <article class="statement">
+            <p class="statement-date">Comunicado oficial</p>
+            <h3>Agradecimiento a patrocinadores y colaboradores</h3>
+            <p>Reconocimiento a las marcas y profesionales que hicieron posible la primera edición.</p>
+            <a href="comunicado-agradecimiento.html">Leer comunicado →</a>
+          </article>
+
+          <article class="statement">
+            <p class="statement-date">Organización</p>
+            <h3>Presentación del equipo directivo</h3>
+            <p>Conoce a las personas responsables de impulsar Miss Universe Santa Cruz.</p>
+            <a href="organizacion.html#direccion">Conocer al equipo →</a>
+          </article>
+
+          <article class="statement">
+            <p class="statement-date">Próximamente</p>
+            <h3>Nuevos proyectos y oportunidades</h3>
+            <p>La organización continúa trabajando en futuras acciones y experiencias.</p>
+            <a href="contacto.html">Más información →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram">
+      <div class="container">
+        <p class="section-title">Sigue la actualidad</p>
+        <h2 class="section-heading">@missuniverse.santacruz</h2>
+        <p>
+          Descubre en Instagram las últimas novedades, fotografías,
+          eventos y momentos del reinado de Miss Universe Santa Cruz.
+        </p>
+        <a href="https://instagram.com/missuniverse.santacruz"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary">Ver Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        Instagram:
+        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
+          @missuniverse.santacruz
+        </a><br>
+        Contacto oficial: próximamente
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
