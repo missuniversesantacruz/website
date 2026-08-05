@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniela Martínez Morales, Miss Universe Santa Cruz 2026. Conoce su historia, trayectoria y galería oficial.">
+  <title>Nuestra Reina | Miss Universe Santa Cruz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --black2:#0a0a0a;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --muted:#c8c3b9;
+      --line:rgba(199,162,90,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:.88em;
+      height:.88em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+      filter:drop-shadow(0 0 8px rgba(199,162,90,.28));
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.80);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+    nav a:hover,nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .btn{
+      min-width:220px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border:1px solid var(--gold);
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.075em;
+      font-size:.76rem;
+      transition:.24s;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#0a0a0a;
+    }
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(199,162,90,.14);
+    }
+
+    /* HERO NUESTRA REINA */
+    .queen-hero{
+      min-height:760px;
+      padding-top:78px;
+      border-bottom:1px solid var(--line);
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,5,5,.99) 0%,
+          rgba(5,5,5,.95) 34%,
+          rgba(5,5,5,.68) 50%,
+          rgba(5,5,5,.14) 72%,
+          rgba(5,5,5,0) 100%
+        ),
+        url("reina-hero.jpg") right center / cover no-repeat;
+    }
+    .queen-hero-grid{
+      min-height:682px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+    .queen-copy{
+      width:52%;
+      max-width:650px;
+      padding:90px 0 55px;
+    }
+    .queen-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-size:.82rem;
+      margin-bottom:18px;
+    }
+    .queen-copy h1{
+      color:var(--gold2);
+      font-size:clamp(3rem,5.2vw,5rem);
+      font-weight:300;
+      line-height:1;
+      letter-spacing:.01em;
+      margin-bottom:18px;
+    }
+    .queen-copy h2{
+      color:var(--white);
+      font-size:clamp(1.2rem,2.1vw,2rem);
+      font-weight:300;
+      letter-spacing:.09em;
+      margin-bottom:12px;
+    }
+    .queen-title{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.85rem;
+      margin-bottom:26px;
+    }
+    .queen-intro{
+      max-width:580px;
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.94rem;
+      margin-bottom:32px;
+    }
+    .queen-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    /* CONTENIDO */
+    .section{
+      padding:78px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .section-title{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.9rem;
+      margin-bottom:20px;
+    }
+    .section-heading{
+      font-size:clamp(2rem,4vw,3.5rem);
+      font-weight:300;
+      color:var(--white);
+      margin-bottom:24px;
+    }
+    .body-copy{
+      color:#ddd8ce;
+      line-height:1.85;
+      font-size:.96rem;
+    }
+
+    .story-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:56px;
+      align-items:center;
+    }
+    .story-image{
+      min-height:500px;
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg,rgba(5,5,5,.08),rgba(5,5,5,.35)),
+        url("reina-historia.jpg") center 22% / cover no-repeat;
+    }
+    .facts{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+    .fact{
+      border:1px solid var(--line);
+      padding:18px;
+      background:#090909;
+    }
+    .fact span{
+      display:block;
+      color:var(--gold2);
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:8px;
+    }
+    .fact strong{
+      font-weight:400;
+      font-size:.9rem;
+    }
+
+    .timeline{
+      max-width:900px;
+      margin:38px auto 0;
+      position:relative;
+    }
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:18px;
+      top:0;
+      bottom:0;
+      width:1px;
+      background:linear-gradient(var(--gold),rgba(199,162,90,.08));
+    }
+    .step{
+      position:relative;
+      padding:0 0 34px 58px;
+    }
+    .step:last-child{padding-bottom:0}
+    .step-dot{
+      position:absolute;
+      left:10px;
+      top:3px;
+      width:17px;
+      height:17px;
+      background:url("star.PNG") center/contain no-repeat;
+    }
+    .step h3{
+      color:var(--gold2);
+      font-size:.92rem;
+      font-weight:500;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      margin-bottom:8px;
+    }
+    .step p{
+      color:#d2cdc3;
+      line-height:1.7;
+      font-size:.9rem;
+    }
+
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+    .value-card{
+      min-height:170px;
+      border:1px solid var(--line);
+      background:#090909;
+      padding:26px 20px;
+      text-align:center;
+    }
+    .value-card img{
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      margin:0 auto 18px;
+    }
+    .value-card h3{
+      color:var(--gold2);
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:10px;
+    }
+    .value-card p{
+      color:#cbc6bc;
+      font-size:.75rem;
+      line-height:1.55;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr .75fr;
+      grid-template-rows:260px 260px;
+      gap:14px;
+      margin-top:32px;
+    }
+    .gallery-item{
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#090909;
+    }
+    .gallery-item:first-child{grid-row:1 / 3}
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+    .gallery-item:hover img{transform:scale(1.035)}
+
+    .quote-section{
+      text-align:center;
+      background:
+        radial-gradient(circle at center,rgba(199,162,90,.12),transparent 42%),
+        #070707;
+    }
+    .quote-mark{
+      color:var(--gold2);
+      font-size:4rem;
+      line-height:.8;
+      margin-bottom:18px;
+    }
+    blockquote{
+      width:min(850px,90%);
+      margin:auto;
+      font-size:clamp(1.25rem,2.7vw,2rem);
+      font-weight:300;
+      line-height:1.55;
+      color:#f1ede4;
+    }
+    .quote-name{
+      margin-top:22px;
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:.76rem;
+    }
+
+    .instagram-block{
+      text-align:center;
+    }
+    .instagram-block p{
+      color:#d5d0c6;
+      margin:14px 0 26px;
+      line-height:1.7;
+    }
+
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background:#090909;
+      overflow:hidden;
+    }
+    .card-img{
+      height:205px;
+      background:center/cover no-repeat;
+    }
+    .card:nth-child(1) .card-img{background-image:url("noticia-daniela.jpg")}
+    .card:nth-child(2) .card-img{background-image:url("noticia-spain.jpg")}
+    .card:nth-child(3) .card-img{background-image:url("noticia-gala.jpg")}
+    .card-body{padding:17px}
+    .card h3{
+      font-size:.84rem;
+      font-weight:400;
+      line-height:1.48;
+      margin-bottom:12px;
+    }
+    .card a{
+      color:var(--gold2);
+      font-size:.72rem;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .queen-hero{
+        padding-top:64px;
+        min-height:620px;
+        background:
+          linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.82) 52%,rgba(5,5,5,.16) 100%),
+          url("reina-hero-mobile.jpg") right top / cover no-repeat;
+      }
+      .queen-hero-grid{min-height:556px}
+      .queen-copy{
+        width:58%;
+        padding:55px 0 40px;
+      }
+      .queen-kicker{font-size:.58rem}
+      .queen-copy h1{font-size:clamp(1.65rem,7vw,2.5rem)}
+      .queen-copy h2{font-size:.92rem;line-height:1.4}
+      .queen-title{font-size:.58rem;line-height:1.6}
+      .queen-intro{
+        font-size:.72rem;
+        line-height:1.65;
+        max-width:300px;
+      }
+      .queen-actions{gap:9px}
+      .queen-actions .btn{
+        min-width:155px;
+        padding:10px 13px;
+        font-size:.52rem;
+        white-space:nowrap;
+      }
+
+      .story-grid{grid-template-columns:1fr;gap:34px}
+      .story-image{min-height:360px}
+      .values-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:280px 210px 210px;
+      }
+      .gallery-item:first-child{
+        grid-column:1 / 3;
+        grid-row:auto;
+      }
+      .news-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+    }
+
+    @media(max-width:430px){
+      .queen-hero{
+        min-height:600px;
+        background-position:68% top;
+      }
+      .queen-hero-grid{min-height:536px}
+      .queen-copy{
+        width:62%;
+        transform:translateY(-8px);
+      }
+      .queen-copy h1{font-size:1.55rem}
+      .queen-intro{font-size:.68rem}
+      .queen-actions .btn{min-width:148px}
+      .facts{grid-template-columns:1fr}
+      .values-grid{grid-template-columns:1fr 1fr}
+      .gallery-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:300px repeat(4,220px);
+      }
+      .gallery-item:first-child{grid-column:auto}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn" aria-label="Abrir menú"
+        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a class="active" href="reina.html">Nuestra Reina</a>
+        <a href="organizacion.html">La Organización</a>
+        <a href="edicion-2026.html">Edición 2026</a>
+        <a href="galeria.html">Galería</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="queen-hero">
+      <div class="container queen-hero-grid">
+        <div class="queen-copy">
+          <p class="queen-kicker">Nuestra Reina</p>
+          <h1>Daniela Martínez Morales</h1>
+          <h2>Miss Universe Santa Cruz 2026</h2>
+          <p class="queen-title">Belleza · Confianza · Liderazgo · Oportunidades</p>
+          <p class="queen-intro">
+            Daniela representa una nueva generación de mujeres auténticas, seguras y comprometidas.
+            Su historia une elegancia, esfuerzo y el orgullo de llevar a Santa Cruz hasta el escenario nacional.
+          </p>
+
+          <div class="queen-actions">
+            <a href="#historia" class="btn btn-primary">Conoce su historia</a>
+            <a href="#galeria" class="btn">Ver galería</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="section">
+      <div class="container story-grid">
+        <div>
+          <p class="section-title">Conócela</p>
+          <h2 class="section-heading">Daniela Martínez Morales</h2>
+          <p class="body-copy">
+            Daniela Martínez Morales fue proclamada Miss Universe Santa Cruz 2026,
+            convirtiéndose en la primera representante de la organización. Su paso por el certamen
+            estuvo marcado por la naturalidad, la constancia y una presencia escénica que conectó
+            con el público y el jurado.
+          </p>
+          <br>
+          <p class="body-copy">
+            Como reina, Daniela representa los valores de Miss Universe Santa Cruz:
+            confianza, crecimiento personal, liderazgo y compromiso con las oportunidades
+            para la mujer canaria.
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <span>Título</span>
+              <strong>Miss Universe Santa Cruz 2026</strong>
+            </div>
+            <div class="fact">
+              <span>Edad</span>
+              <strong>19 años</strong>
+            </div>
+            <div class="fact">
+              <span>Representación</span>
+              <strong>Santa Cruz de Tenerife</strong>
+            </div>
+            <div class="fact">
+              <span>Certamen nacional</span>
+              <strong>Miss Universe Spain 2026</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-image" aria-label="Daniela Martínez Morales"></div>
+      </div>
+    </section>
+
+    <section id="camino" class="section">
+      <div class="container">
+        <p class="section-title">Su trayectoria</p>
+        <h2 class="section-heading">Camino hacia la corona</h2>
+
+        <div class="timeline">
+          <div class="step">
+            <span class="step-dot"></span>
+            <h3>Candidata oficial</h3>
+            <p>Daniela inició su camino en la primera edición de Miss Universe Santa Cruz junto a las candidatas de 2026.</p>
+          </div>
+          <div class="step">
+            <span class="step-dot"></span>
+            <h3>Miss Universe Santa Cruz 2026</h3>
+            <p>Fue proclamada ganadora en la gala celebrada el 6 de julio de 2026 en el Auditorio Juan Carlos I de Arafo.</p>
+          </div>
+          <div class="step">
+            <span class="step-dot"></span>
+            <h3>Miss Universe Spain</h3>
+            <p>Representó a Santa Cruz en el certamen nacional, viviendo una semana de formación, convivencia y proyección.</p>
+          </div>
+          <div class="step">
+            <span class="step-dot"></span>
+            <h3>Embajadora de la organización</h3>
+            <p>Continúa su reinado como imagen de Miss Universe Santa Cruz y de los valores que inspiran el proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Lo que representa</p>
+        <h2 class="section-heading">Una reina con propósito</h2>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <img src="star.PNG" alt="">
+            <h3>Autenticidad</h3>
+            <p>Una presencia natural que conecta desde la cercanía y la verdad.</p>
+          </div>
+          <div class="value-card">
+            <img src="star.PNG" alt="">
+            <h3>Confianza</h3>
+            <p>Seguridad para ocupar su espacio, crecer y hacer oír su voz.</p>
+          </div>
+          <div class="value-card">
+            <img src="star.PNG" alt="">
+            <h3>Liderazgo</h3>
+            <p>La capacidad de inspirar y representar con responsabilidad.</p>
+          </div>
+          <div class="value-card">
+            <img src="star.PNG" alt="">
+            <h3>Oportunidades</h3>
+            <p>Una plataforma para abrir caminos dentro y fuera del certamen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <div class="container">
+        <p class="section-title">Galería destacada</p>
+        <h2 class="section-heading">Momentos de su reinado</h2>
+
+        <div class="gallery-grid">
+          <a class="gallery-item" href="reina-galeria-1.jpg" target="_blank">
+            <img src="reina-galeria-1.jpg" alt="Daniela Martínez Morales">
+          </a>
+          <a class="gallery-item" href="reina-galeria-2.jpg" target="_blank">
+            <img src="reina-galeria-2.jpg" alt="Daniela en Miss Universe Santa Cruz">
+          </a>
+          <a class="gallery-item" href="reina-galeria-3.jpg" target="_blank">
+            <img src="reina-galeria-3.jpg" alt="Daniela durante la gala">
+          </a>
+          <a class="gallery-item" href="reina-galeria-4.jpg" target="_blank">
+            <img src="reina-galeria-4.jpg" alt="Daniela en Miss Universe Spain">
+          </a>
+          <a class="gallery-item" href="reina-galeria-5.jpg" target="_blank">
+            <img src="reina-galeria-5.jpg" alt="Daniela, reina 2026">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-section">
+      <div class="container">
+        <div class="quote-mark">“</div>
+        <blockquote>
+          Representar a Santa Cruz es una oportunidad para crecer, inspirar y llevar con orgullo el nombre de nuestra tierra.
+        </blockquote>
+        <p class="quote-name">Daniela Martínez Morales</p>
+      </div>
+    </section>
+
+    <section class="section instagram-block">
+      <div class="container">
+        <p class="section-title">Sigue su camino</p>
+        <h2 class="section-heading">@missuniverse.santacruz</h2>
+        <p>Descubre las novedades, eventos y momentos destacados de nuestra reina y de la organización.</p>
+        <a class="btn btn-primary" href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">Ir a Instagram</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-title">Noticias relacionadas</p>
+        <h2 class="section-heading">Actualidad de nuestra reina</h2>
+
+        <div class="news-grid">
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <h3>Daniela Martínez, Miss Universe Santa Cruz 2026</h3>
+              <a href="noticia-daniela.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <h3>El camino de Santa Cruz por Miss Universe Spain 2026</h3>
+              <a href="noticia-miss-universe-spain.html">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <h3>Así se vivió la gala Miss Universe Santa Cruz 2026</h3>
+              <a href="noticia-gala-2026.html">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        Instagram: <a href="https://instagram.com/missuniverse.santacruz" target="_blank">@missuniverse.santacruz</a><br>
+        Contacto oficial: próximamente
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
