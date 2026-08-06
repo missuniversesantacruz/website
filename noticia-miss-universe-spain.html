@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Santa Cruz de Tenerife brilló en Miss Universe Spain 2026 con Daniela Martínez Morales y Danna Hernández Cruz clasificadas en el Top 10.">
+  <title>Santa Cruz de Tenerife brilló en Miss Universe Spain 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --black2:#0a0a0a;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --muted:#c8c3b9;
+      --line:rgba(199,162,90,.35);
+      --paper:#f6f3ed;
+      --ink:#1c1a17;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:.88em;
+      height:.88em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:.67rem;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .btn{
+      min-width:220px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 22px;
+      border:1px solid var(--gold);
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.075em;
+      font-size:.76rem;
+      transition:.24s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#0a0a0a;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(199,162,90,.14);
+    }
+
+    .article-hero{
+      min-height:780px;
+      padding-top:78px;
+      display:flex;
+      align-items:flex-end;
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(5,5,5,.12) 0%,
+          rgba(5,5,5,.35) 44%,
+          rgba(5,5,5,.96) 100%
+        ),
+        url("noticia-miss-universe-spain-hero.jpg") center top / cover no-repeat;
+    }
+
+    .hero-content{
+      width:min(1050px,92%);
+      margin:0 auto;
+      padding:150px 0 70px;
+    }
+
+    .category{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.74rem;
+      margin-bottom:18px;
+    }
+
+    .hero-content h1{
+      max-width:1000px;
+      font-family:"Playfair Display",serif;
+      font-size:clamp(3rem,6.5vw,6.2rem);
+      font-weight:500;
+      line-height:1.02;
+      margin-bottom:22px;
+    }
+
+    .hero-subtitle{
+      max-width:880px;
+      color:#eee9df;
+      font-size:clamp(1rem,2vw,1.4rem);
+      line-height:1.65;
+      margin-bottom:24px;
+    }
+
+    .article-meta{
+      color:#c8c3b9;
+      font-size:.74rem;
+      line-height:1.8;
+    }
+
+    .article-wrap{
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    .article{
+      width:min(820px,90%);
+      margin:auto;
+      padding:80px 0;
+    }
+
+    .lead{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.35rem,2.6vw,2rem);
+      line-height:1.6;
+      color:#2d2924;
+      margin-bottom:34px;
+    }
+
+    .article p{
+      font-size:1rem;
+      line-height:1.95;
+      margin-bottom:24px;
+      color:#3f3a34;
+    }
+
+    .article h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(2rem,4vw,3.2rem);
+      font-weight:500;
+      line-height:1.15;
+      margin:58px 0 22px;
+      color:#1e1b18;
+    }
+
+    .article-image{
+      margin:42px 0;
+    }
+
+    .article-image img{
+      width:100%;
+      max-height:760px;
+      object-fit:cover;
+    }
+
+    .caption{
+      margin-top:10px;
+      color:#7f776d;
+      font-size:.7rem;
+      line-height:1.5;
+    }
+
+    blockquote{
+      margin:54px 0;
+      padding:34px 0;
+      border-top:1px solid #cdbb98;
+      border-bottom:1px solid #cdbb98;
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.6rem,3.5vw,2.6rem);
+      line-height:1.35;
+      text-align:center;
+      color:#8f6d35;
+    }
+
+    .article-links{
+      margin-top:64px;
+      padding-top:36px;
+      border-top:1px solid #d5cfc5;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .article-links .btn{
+      border-color:#a98143;
+      color:#8f6d35;
+    }
+
+    .article-links .btn-primary{
+      color:#0a0a0a;
+    }
+
+    .related{
+      padding:72px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+
+    .section-title{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.86rem;
+      margin-bottom:18px;
+    }
+
+    .section-heading{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(2rem,4vw,3.3rem);
+      font-weight:500;
+      margin-bottom:30px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .related-card{
+      border:1px solid var(--line);
+      background:#0b0b0b;
+      overflow:hidden;
+    }
+
+    .related-image{
+      height:220px;
+      background:center top/cover no-repeat;
+      border-bottom:1px solid var(--line);
+    }
+
+    .related-card:nth-child(1) .related-image{background-image:url("noticia-daniela.jpg")}
+    .related-card:nth-child(2) .related-image{background-image:url("noticia-gala-2026.jpg")}
+    .related-card:nth-child(3) .related-image{background-image:url("noticia-top3.jpg")}
+
+    .related-body{
+      padding:20px;
+    }
+
+    .related-body p{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.62rem;
+      margin-bottom:9px;
+    }
+
+    .related-body h3{
+      font-size:.9rem;
+      line-height:1.5;
+      font-weight:400;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(max-width:1020px){
+      nav{gap:14px;font-size:.61rem}
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .article-hero{
+        min-height:700px;
+        padding-top:64px;
+        background-position:66% top;
+      }
+
+      .hero-content{
+        padding:170px 0 46px;
+      }
+
+      .hero-content h1{
+        font-size:clamp(2.3rem,9vw,4rem);
+      }
+
+      .article{
+        width:min(760px,88%);
+        padding:58px 0;
+      }
+
+      .related-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+    }
+
+    @media(max-width:430px){
+      .article-hero{
+        min-height:650px;
+        background-position:68% top;
+      }
+
+      .hero-content h1{font-size:2.15rem}
+      .hero-subtitle{font-size:.9rem}
+      .article{width:88%}
+      .article p{font-size:.94rem}
+
+      .article-links{
+        flex-direction:column;
+      }
+
+      .article-links .btn{
+        width:100%;
+        min-width:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn" aria-label="Abrir menú"
+        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reina.html">Nuestra Reina</a>
+        <a href="organizacion.html">La Organización</a>
+        <a href="missuniversespain.html">Miss Universe Spain</a>
+        <a href="edicion26.html">Edición 2026</a>
+        <a href="galeria.html">Galería</a>
+        <a class="active" href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="hero-content">
+        <p class="category">Noticias · Miss Universe Spain 2026</p>
+        <h1>Santa Cruz de Tenerife brilló en Miss Universe Spain 2026</h1>
+        <p class="hero-subtitle">
+          Daniela Martínez Morales representó a Santa Cruz de Tenerife en una edición celebrada
+          en el Gran Hotel Taoro y culminada con una espectacular gala final en el Complejo Martiánez,
+          donde logró clasificarse para el Top 10 gracias al voto del público.
+        </p>
+        <p class="article-meta">
+          Publicado por la Redacción de Miss Universe Santa Cruz<br>
+          18 de julio de 2026 · 6 minutos de lectura
+        </p>
+      </div>
+    </section>
+
+    <section class="article-wrap">
+      <article class="article">
+        <p class="lead">
+          Santa Cruz de Tenerife volvió a situarse en el foco nacional apenas unos días después
+          de la primera edición de Miss Universe Santa Cruz. Daniela Martínez Morales llegó a
+          Miss Universe Spain 2026 como representante oficial de la provincia y culminó una intensa
+          semana de concentración clasificándose entre las diez mejores candidatas del país.
+        </p>
+
+        <p>
+          La experiencia nacional se desarrolló del 12 al 18 de julio en el Gran Hotel Taoro,
+          en Puerto de la Cruz, coincidiendo con las grandes fiestas de julio de la ciudad
+          en honor a San Telmo y a la Virgen del Carmen. Durante esos días, candidatas procedentes
+          de diferentes comunidades autónomas compartieron convivencia, preparación y una agenda
+          repleta de compromisos oficiales.
+        </p>
+
+        <figure class="article-image">
+          <img src="noticia-miss-universe-spain-1.jpg" alt="Daniela Martínez Morales en el Gran Hotel Taoro">
+          <figcaption class="caption">Daniela Martínez Morales durante la concentración nacional en Puerto de la Cruz.</figcaption>
+        </figure>
+
+        <h2>Una semana de concentración en Puerto de la Cruz</h2>
+
+        <p>
+          El Gran Hotel Taoro se convirtió durante seis días en el centro de operaciones
+          de Miss Universe Spain 2026. El histórico establecimiento acogió a las candidatas,
+          al equipo nacional y a los distintos profesionales encargados de preparar cada detalle
+          de la edición.
+        </p>
+
+        <p>
+          La coincidencia con las celebraciones dedicadas a San Telmo y a la Virgen del Carmen
+          añadió una atmósfera especialmente festiva a la concentración. Puerto de la Cruz vivía
+          una de sus semanas más señaladas del calendario mientras el certamen nacional desarrollaba
+          su programación en distintos espacios de la ciudad.
+        </p>
+
+        <h2>Fotografía, ensayos y agenda oficial</h2>
+
+        <p>
+          La concentración combinó la preparación para la gala final con diferentes actividades
+          destinadas a mostrar la personalidad, la imagen y la capacidad de adaptación de las candidatas.
+          Las jornadas incluyeron sesiones fotográficas, ensayos, visitas oficiales, ruedas de prensa,
+          desfiles, deporte, grabaciones y encuentros con medios de comunicación.
+        </p>
+
+        <p>
+          El ritmo de trabajo fue intenso. Cada jornada exigía puntualidad, organización y capacidad
+          para desenvolverse en contextos muy diferentes, desde una sesión ante las cámaras hasta
+          una aparición pública o un ensayo técnico sobre el escenario.
+        </p>
+
+        <figure class="article-image">
+          <img src="noticia-miss-universe-spain-2.jpg" alt="Actividades de Miss Universe Spain 2026">
+          <figcaption class="caption">Las candidatas participaron en sesiones de fotos, ensayos, visitas y actividades oficiales.</figcaption>
+        </figure>
+
+        <blockquote>
+          “El respaldo del público convirtió a Daniela en una de las diez finalistas de Miss Universe Spain 2026.”
+        </blockquote>
+
+        <h2>Una final junto al mar</h2>
+
+        <p>
+          La gala final se celebró el sábado 18 de julio en el Complejo Martiánez,
+          uno de los enclaves más reconocibles de Puerto de la Cruz. El escenario, integrado
+          en un entorno abierto junto al Atlántico, ofreció una imagen especialmente espectacular
+          gracias a la realización televisiva y a los planos aéreos y de dron.
+        </p>
+
+        <p>
+          La final fue retransmitida por diferentes cadenas, entre ellas Ahora TV y Mírame TV,
+          además de televisiones internacionales y YouTube. La producción permitió seguir
+          el desarrollo del certamen desde distintos territorios y proyectó la imagen de Tenerife
+          a través de uno de sus espacios más emblemáticos.
+        </p>
+
+        <figure class="article-image">
+          <img src="noticia-miss-universe-spain-3.jpg" alt="Gala final en el Complejo Martiánez">
+          <figcaption class="caption">La gala final se celebró en el Complejo Martiánez de Puerto de la Cruz.</figcaption>
+        </figure>
+
+        <h2>Daniela, favorita del público y Top 10</h2>
+
+        <p>
+          Uno de los momentos más destacados para Santa Cruz llegó con el anuncio de la clasificación
+          de Daniela Martínez Morales. La representante provincial obtuvo el pase al Top 10
+          gracias al voto de favorita del público, un reconocimiento que reflejó el respaldo recibido
+          durante los días previos a la final.
+        </p>
+
+        <p>
+          Su entrada entre las diez mejores candidatas permitió que Santa Cruz de Tenerife
+          mantuviera presencia en las fases decisivas del certamen. Para la organización provincial,
+          el resultado supuso una confirmación del apoyo generado por Daniela y de la conexión
+          construida con quienes siguieron su participación.
+        </p>
+
+        <h2>Danna Hernández también alcanza el Top 10</h2>
+
+        <p>
+          La primera edición de Miss Universe Santa Cruz también estuvo representada
+          a través de Danna Hernández Cruz. Tras ser designada Miss Universe Galicia 2026,
+          Danna logró clasificarse igualmente entre las diez mejores candidatas nacionales.
+        </p>
+
+        <p>
+          La presencia conjunta de Daniela y Danna en el Top 10 puso de relieve el nivel
+          de las participantes vinculadas a la primera edición de Miss Universe Santa Cruz.
+          Dos de sus candidatas consiguieron mantenerse en competición durante una de las fases
+          más importantes de la gala nacional.
+        </p>
+
+        <figure class="article-image">
+          <img src="noticia-miss-universe-spain-4.jpg" alt="Daniela y Danna en Miss Universe Spain 2026">
+          <figcaption class="caption">Daniela Martínez Morales y Danna Hernández Cruz alcanzaron el Top 10 nacional.</figcaption>
+        </figure>
+
+        <h2>Susana Medina, nueva Miss Universe Spain</h2>
+
+        <p>
+          La edición concluyó con la proclamación de Susana Medina, representante de Las Palmas,
+          como ganadora de Miss Universe Spain 2026. Su coronación puso el broche final a una semana
+          de concentración y a una gala marcada por la dimensión televisiva, el entorno del Complejo Martiánez
+          y la participación de candidatas procedentes de todo el país.
+        </p>
+
+        <p>
+          Para Santa Cruz, la noche dejó una clasificación en el Top 10 y el reconocimiento
+          del voto popular. La representación provincial cerró así su participación nacional
+          con un resultado que mantuvo a Daniela entre las protagonistas de la edición.
+        </p>
+
+        <h2>Una experiencia que dio continuidad al proyecto</h2>
+
+        <p>
+          La participación de Daniela Martínez Morales permitió que Santa Cruz de Tenerife
+          estuviera presente entre las protagonistas de Miss Universe Spain 2026.
+          Su clasificación gracias al respaldo del público puso el broche final
+          a un intenso mes de julio para la organización.
+        </p>
+
+        <p>
+          La experiencia nacional comenzó apenas unos días después de la gala provincial
+          y dio continuidad inmediata a un proyecto que acababa de celebrar su primera edición.
+          La presencia de Daniela y Danna en el Top 10 demostró que la organización nacía
+          con capacidad para proyectar a sus candidatas también en el escenario nacional.
+        </p>
+
+        <div class="article-links">
+          <a href="missuniversespain.html" class="btn btn-primary">Ver Miss Universe Spain</a>
+          <a href="reina.html" class="btn">Conoce a Daniela</a>
+          <a href="galeria.html" class="btn">Ver galería</a>
+          <a href="noticias.html" class="btn">Volver a noticias</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="related">
+      <div class="container">
+        <p class="section-title">También puede interesarte</p>
+        <h2 class="section-heading">Más historias de 2026</h2>
+
+        <div class="related-grid">
+          <a class="related-card" href="noticia-daniela.html">
+            <div class="related-image"></div>
+            <div class="related-body">
+              <p>Reinado 2026</p>
+              <h3>Daniela Martínez Morales, proclamada Miss Universe Santa Cruz 2026</h3>
+            </div>
+          </a>
+
+          <a class="related-card" href="noticia-gala-2026.html">
+            <div class="related-image"></div>
+            <div class="related-body">
+              <p>Edición 2026</p>
+              <h3>Una gala inolvidable: así se vivió Miss Universe Santa Cruz 2026</h3>
+            </div>
+          </a>
+
+          <a class="related-card" href="noticia-top3-2026.html">
+            <div class="related-image"></div>
+            <div class="related-body">
+              <p>Top 3</p>
+              <h3>Daniela, Danna y Valeria: el Top 3 que continúa unido tras la gala</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        <strong>Instagram</strong><br>
+        <a href="https://instagram.com/missuniverse.santacruz"
+           target="_blank"
+           rel="noopener">
+          @missuniverse.santacruz
+        </a>
+
+        <br><br>
+
+        <strong>Contacto oficial</strong><br>
+        <a href="mailto:missuniverse.santacruz@hotmail.com">
+          missuniverse.santacruz@hotmail.com
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
