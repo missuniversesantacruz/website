@@ -23,6 +23,8 @@
 <meta name="twitter:description" content="Belleza, confianza, liderazgo y oportunidades. Descubre Miss Universe Santa Cruz.">
 <meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview.PNG">
 
+  <link rel="preload" as="image" href="/daniela.PNG" fetchpriority="high">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -247,6 +249,108 @@ user-select:none;
 pointer-events:none;
 -webkit-user-drag:none;
     }
+
+    /* ENTRADA SUAVE DEL HERO */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:heroCurtain .85s ease-out both;
+}
+
+.hero h1,
+.hero h2,
+.hero .gold-line,
+.hero .values,
+.hero .hero-buttons,
+.hero .social{
+  opacity:0;
+  animation:heroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.hero h1{
+  animation-delay:.14s;
+}
+
+.hero h2{
+  animation-delay:.24s;
+}
+
+.hero .gold-line{
+  animation-delay:.34s;
+}
+
+.hero .values{
+  animation-delay:.43s;
+}
+
+.hero .hero-buttons{
+  animation-delay:.52s;
+}
+
+.hero .social{
+  animation-delay:.62s;
+}
+
+.hero-photo img{
+  opacity:0;
+  animation:heroPhotoReveal .95s ease-out .10s forwards;
+}
+
+@keyframes heroCurtain{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
+}
+
+@keyframes heroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes heroPhotoReveal{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero .gold-line,
+  .hero .values,
+  .hero .hero-buttons,
+  .hero .social{
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+
+  .hero-photo img{
+    animation:none;
+    opacity:1;
+  }
+}
 
     .section{
       padding:72px 0;
