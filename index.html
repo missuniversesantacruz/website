@@ -788,16 +788,16 @@ pointer-events:none;
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="#inicio" class="brand">
+      <a href="/" class="brand">
       MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"
+  onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',abierto);this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a class="active" href="#inicio">Inicio</a>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a class="active" href="/" aria-current="page">Inicio</a>
         <a href="/reina">Nuestra Reina</a>
         <a href="organizacion.html">La Organización</a>
         <a href="missuniversespain.html">Miss Universe Spain</a>
@@ -898,21 +898,21 @@ pointer-events:none;
    href="https://missuniverse-spain.es"
    target="_blank"
    rel="noopener">
-  <img src="logo-miss-universe-spain.PNG" alt="Miss Universe Spain">
+  <img src="logo-miss-universe-spain.PNG" alt="Miss Universe Spain" loading="lazy" decoding="async">
 </a>
 
 <a class="sponsor"
    href="https://instagram.com/perdomocouture"
    target="_blank"
    rel="noopener">
-  <img src="logo-perdomo-couture.PNG" alt="Perdomo Couture">
+  <img src="logo-perdomo-couture.PNG" alt="Perdomo Couture" loading="lazy" decoding="async">
 </a>
 
 <a class="sponsor"
    href="https://amaessentials.com"
    target="_blank"
    rel="noopener">
-  <img src="logo-ama-essentials.PNG" alt="AMA Essentials">
+  <img src="logo-ama-essentials.PNG" alt="AMA Essentials" loading="lazy" decoding="async">
 </a>
 
     </div>
