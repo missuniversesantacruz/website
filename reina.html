@@ -370,6 +370,16 @@
     }
     .gallery-item:hover img{transform:scale(1.035)}
 
+    /* Protección de fotografías */
+.gallery-item img,
+.instagram-avatar{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+
     .quote-section{
       text-align:center;
       background:
@@ -836,21 +846,21 @@ background:
         <h2 class="section-heading">Momentos de su reinado</h2>
         
         <div class="gallery-grid">
-        <a class="gallery-item" href="daniela-galeria-coronacion.jpg" target="_blank">
-  <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales">
-</a>
-          <a class="gallery-item" href="reina-galeria-2.jpg" target="_blank">
-            <img src="reina-galeria-2.jpg" alt="Daniela en Miss Universe Santa Cruz">
-          </a>
-          <a class="gallery-item" href="reina-galeria-3.jpg" target="_blank">
-            <img src="reina-galeria-3.jpg" alt="Daniela durante la gala">
-          </a>
-          <a class="gallery-item" href="reina-galeria-4.JPG" target="_blank">
-            <img src="reina-galeria-4.JPG" alt="Daniela en Miss Universe Spain">
-          </a>
-          <a class="gallery-item" href="reina-galeria-5.JPG" target="_blank">
-            <img src="reina-galeria-5.JPG" alt="Daniela, reina 2026">
-          </a>
+           <div class="gallery-item">
+          <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales" draggable="false">
+        </div>
+        <div class="gallery-item">
+          <img src="reina-galeria-2.jpg" alt="Daniela en Miss Universe Santa Cruz" draggable="false">
+        </div>
+        <div class="gallery-item">
+          <img src="reina-galeria-3.jpg" alt="Daniela durante la gala" draggable="false">
+        </div>
+        <div class="gallery-item">
+          <img src="reina-galeria-4.JPG" alt="Daniela en Miss Universe Spain" draggable="false">
+        </div>
+        <div class="gallery-item">
+          <img src="reina-galeria-5.JPG" alt="Daniela, reina 2026" draggable="false">
+        </div>
         </div>
       </div>
     </section>
@@ -951,5 +961,20 @@ background:
       </div>
     </div>
   </footer>
+  
+  <script>
+  document.addEventListener("contextmenu", function(e){
+    if (
+      e.target.closest(".gallery-item") ||
+      e.target.closest(".instagram-avatar") ||
+      e.target.closest(".queen-hero") ||
+      e.target.closest(".story-image") ||
+      e.target.closest(".card-img")
+    ){
+      e.preventDefault();
+    }
+  });
+</script>
+  
 </body>
 </html>
