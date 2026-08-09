@@ -557,22 +557,22 @@
   height:auto;
   object-fit:contain;
   object-position:center;
-  .instagram-layout{
+}
+
+.instagram-layout{
   gap:14px;
-  align-items:flex-start;
+  align-items:center;
 }
 
 .instagram-avatar{
   width:82px;
   height:82px;
-  margin-top:6px;
   flex-shrink:0;
 }
 
 .instagram-content{
   flex:1;
   min-width:0;
-}
 }
     }
   </style>
@@ -760,15 +760,25 @@
       </div>
     </section>
 
-    <section class="section instagram-block">
-      <div class="container">
-        <img src="daniela-instagram.PNG" class="instagram-avatar" alt="Daniela Martínez Morales">
-        <p class="section-title">Sigue su camino</p>
-        <h2 class="section-heading">@daniimartinezm_</h2>
-        <p>Descubre las novedades, eventos y momentos destacados de nuestra reina y de la organización.</p>
-        <a class="btn btn-primary" href="https://instagram.com/daniimartinezm_" target="_blank" rel="noopener">Ir a Instagram</a>
-      </div>
-    </section>
+<section class="section instagram-block">
+  <div class="container instagram-layout">
+
+    <img src="daniela-instagram.PNG"
+         class="instagram-avatar"
+         alt="Daniela Martínez Morales">
+
+    <div class="instagram-content">
+      <p class="section-title">Sigue su camino</p>
+      <h2 class="section-heading">@daniimartinezm_</h2>
+      <p>Descubre las novedades, eventos y momentos destacados de nuestra reina y de la organización.</p>
+      <a class="btn btn-primary"
+         href="https://instagram.com/daniimartinezm_"
+         target="_blank"
+         rel="noopener">Ir a Instagram</a>
+    </div>
+
+  </div>
+</section>
 
     <section class="section">
       <div class="container">
