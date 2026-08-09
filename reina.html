@@ -28,6 +28,8 @@
   <meta name="twitter:title" content="MISS UNIVERSE SANTA CRUZ | CONOCE A NUESTRA REINA | DANIELA MARTÍNEZ">
   <meta name="twitter:description" content="Conoce a nuestra reina Daniela Martínez Morales, Miss Universe Santa Cruz 2026. Historia, trayectoria y galería oficial.">
   <meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview-reina.jpg">
+  <link rel="preload" as="image" href="/reina-hero.PNG" media="(min-width: 901px)" fetchpriority="high">
+<link rel="preload" as="image" href="/reina-hero-mobile.PNG" media="(max-width: 900px)" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -213,6 +215,88 @@
       flex-wrap:wrap;
       gap:16px;
     }
+    /* ENTRADA SUAVE DEL HERO REINA */
+.queen-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:queenHeroCurtain .85s ease-out both;
+}
+
+.queen-kicker,
+.queen-copy h1,
+.queen-copy h2,
+.queen-title,
+.queen-intro,
+.queen-actions{
+  opacity:0;
+  animation:queenHeroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.queen-kicker{
+  animation-delay:.12s;
+}
+
+.queen-copy h1{
+  animation-delay:.20s;
+}
+
+.queen-copy h2{
+  animation-delay:.29s;
+}
+
+.queen-title{
+  animation-delay:.38s;
+}
+
+.queen-intro{
+  animation-delay:.47s;
+}
+
+.queen-actions{
+  animation-delay:.57s;
+}
+
+@keyframes queenHeroCurtain{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
+}
+
+@keyframes queenHeroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .queen-hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .queen-kicker,
+  .queen-copy h1,
+  .queen-copy h2,
+  .queen-title,
+  .queen-intro,
+  .queen-actions{
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
 
     /* CONTENIDO */
     .section{
