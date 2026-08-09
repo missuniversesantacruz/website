@@ -786,12 +786,12 @@ background:
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+   <button class="menu-btn" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"
+  onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',abierto);this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
+      <nav id="main-nav" aria-label="Navegación principal">
         <a href="/">Inicio</a>
-        <a class="active" href="/reina">Nuestra Reina</a>
+        <a class="active" href="/reina" aria-current="page">Nuestra Reina</a>
         <a href="organizacion.html">La Organización</a>
         <a href="missuniversespain.html">Miss Universe Spain</a>
         <a href="edicion26.html">Edición 2026</a>
@@ -932,19 +932,19 @@ background:
         
         <div class="gallery-grid">
            <div class="gallery-item">
-          <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales" draggable="false">
+          <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales" draggable="false" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item">
-          <img src="reina-galeria-2.jpg" alt="Daniela en Miss Universe Santa Cruz" draggable="false">
+          <img src="reina-galeria-2.jpg" alt="Daniela en Miss Universe Santa Cruz" draggable="false" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item">
-          <img src="reina-galeria-3.jpg" alt="Daniela durante la gala" draggable="false">
+          <img src="reina-galeria-3.jpg" alt="Daniela durante la gala" draggable="false" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item">
-          <img src="reina-galeria-4.JPG" alt="Daniela en Miss Universe Spain" draggable="false">
+          <img src="reina-galeria-4.JPG" alt="Daniela en Miss Universe Spain" draggable="false" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item">
-          <img src="reina-galeria-5.JPG" alt="Daniela, reina 2026" draggable="false">
+         <img src="reina-galeria-5.JPG" alt="Daniela, reina 2026" draggable="false" loading="lazy" decoding="async">
         </div>
         </div>
       </div>
@@ -963,9 +963,9 @@ background:
 <section class="section instagram-block">
   <div class="container instagram-layout">
 
-    <img src="daniela-instagram.PNG"
-         class="instagram-avatar"
-         alt="Daniela Martínez Morales">
+<img src="daniela-instagram.PNG" loading="lazy" decoding="async" draggable="false"
+     class="instagram-avatar"
+     alt="Daniela Martínez Morales">
 
     <div class="instagram-content">
       <p class="section-title">Sigue su camino</p>
