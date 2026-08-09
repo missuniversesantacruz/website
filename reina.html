@@ -547,7 +547,14 @@
 @media(max-width:430px){
   .queen-hero{
     min-height:600px;
-    background-position:54% 75px;
+    background:
+      linear-gradient(90deg,
+        rgba(5,5,5,.98) 0%,
+        rgba(5,5,5,.90) 45%,
+        rgba(5,5,5,.48) 68%,
+        rgba(5,5,5,.08) 100%
+      ),
+      url("reina-hero-mobile.PNG") 54% 75px / cover no-repeat;
   }
       .queen-hero-grid{min-height:536px}
      .queen-copy{
@@ -561,7 +568,7 @@
 }
       .queen-intro{font-size:.68rem}
       .queen-actions .btn{min-width:148px}
-      .facts{grid-template-columns:1fr}
+      .facts{grid-template-columns:repeat(2,1fr)}
       .values-grid{grid-template-columns:1fr 1fr}
  .gallery-grid{
   grid-template-columns:1fr;
@@ -757,7 +764,7 @@
     <section class="section">
       <div class="container">
         <p class="section-title">Lo que representa</p>
-        <h2 class="section-heading">Una reina con propósito</h2>
+        <h2 class="section-heading">La esencia de una reina</h2>
 
         <div class="values-grid">
           <div class="value-card">
@@ -777,8 +784,8 @@
           </div>
           <div class="value-card">
             <img src="star.PNG" alt="">
-            <h3>Oportunidades</h3>
-            <p>Una plataforma para abrir caminos dentro y fuera del certamen.</p>
+            <h3>Compromiso</h3>
+            <p>La determinación de representar con orgullo, responsabilidad y dedicación.</p>
           </div>
         </div>
       </div>
