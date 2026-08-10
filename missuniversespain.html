@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="La representación de Miss Universe Santa Cruz en Miss Universe Spain 2026.">
   <title>Miss Universe Spain 2026 | Miss Universe Santa Cruz</title>
+    <meta name="apple-mobile-web-app-title" content="M✨U SC">
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" type="image/png" href="/favicon.PNG">
+  <link rel="apple-touch-icon" href="/apple-icon.PNG">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="canonical" href="https://missuniversesantacruz.es/missuniversespain">
+
+  <meta property="og:title" content="Miss Universe Spain 2026 | Miss Universe Santa Cruz">
+  <meta property="og:description" content="La representación de Miss Universe Santa Cruz en Miss Universe Spain 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missuniversesantacruz.es/missuniversespain">
+  <meta property="og:image" content="https://missuniversesantacruz.es/social-spain.jpg">
+  <meta property="og:image:secure_url" content="https://missuniversesantacruz.es/social-spain.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Miss Universe Spain 2026 — representación de Miss Universe Santa Cruz">
+  <meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Miss Universe Spain 2026 | Miss Universe Santa Cruz">
+  <meta name="twitter:description" content="La representación de Miss Universe Santa Cruz en Miss Universe Spain 2026.">
+  <meta name="twitter:image" content="https://missuniversesantacruz.es/social-spain.jpg">
+  <meta name="twitter:image:alt" content="Miss Universe Spain 2026 — representación de Miss Universe Santa Cruz">
   <link rel="preload" as="image" href="/spain-hero.jpg" type="image/jpeg" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,8 +62,8 @@
     .container{width:min(1180px,92%);margin:auto}
 
     .star{
-      width:.88em;
-      height:.88em;
+      width:1.15em;
+      height:1.15em;
       margin:0 .16em;
       vertical-align:-.04em;
       display:inline-block;
@@ -151,10 +177,12 @@
         url("spain-hero.jpg") right center / cover no-repeat;
     }
 
-    .spain-hero-grid{
-      min-height:682px;
+        .spain-hero-grid{
+      min-height:920px;
       display:flex;
       align-items:center;
+      position:relative;
+      z-index:3;
     }
 
     .spain-copy{
@@ -192,6 +220,55 @@
       font-size:.94rem;
       max-width:620px;
       margin-bottom:30px;
+          .spain-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:#050505;
+      pointer-events:none;
+      animation:spainHeroCurtain .85s ease-out forwards;
+    }
+
+    .spain-copy > *{
+      opacity:0;
+      animation:spainHeroItem .65s cubic-bezier(.22,.61,.36,1) forwards;
+    }
+
+    .spain-copy .spain-kicker{animation-delay:.14s}
+    .spain-copy h1{animation-delay:.24s}
+    .spain-copy h2{animation-delay:.34s}
+    .spain-copy > p:not(.spain-kicker){animation-delay:.44s}
+    .spain-copy .btn{animation-delay:.54s}
+
+    @keyframes spainHeroCurtain{
+      from{opacity:1}
+      to{opacity:0}
+    }
+
+    @keyframes spainHeroItem{
+      from{
+        opacity:0;
+        transform:translateY(14px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .spain-hero::before{
+        animation:none;
+        opacity:0;
+      }
+
+      .spain-copy > *{
+        animation:none;
+        opacity:1;
+        transform:none;
+      }
+    }
     }
 
     .section{
@@ -412,6 +489,7 @@
       user-select:none;
       -webkit-user-drag:none;
       -webkit-touch-callout:none;
+      pointer-events:none;
     }
 
     .gallery-item:hover img{transform:scale(1.035)}
@@ -677,19 +755,19 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"
+        onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',abierto);this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reina.html">Nuestra Reina</a>
-        <a href="organizacion.html">La Organización</a>
-        <a class="active" href="missuniversespain.html">Miss Universe Spain</a>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+        <a href="/organizacion">La Organización</a>
+        <a class="active" href="/missuniversespain">Miss Universe Spain</a>
         <a href="edicion26.html">Edición 2026</a>
         <a href="galeria.html">Galería</a>
         <a href="noticias.html">Noticias</a>
@@ -733,7 +811,7 @@
           </p>
         </div>
 
-        <div class="intro-image" aria-label="Miss Universe Spain 2026"></div>
+        <div class="intro-image" role="img" aria-label="Candidatas de Miss Universe Spain 2026 en Puerto de la Cruz"></div>
       </div>
     </section>
 
@@ -744,7 +822,7 @@
 
         <div class="rep-grid">
           <article class="rep-card">
-            <div class="rep-photo"></div>
+            <div class="rep-photo rep-one" role="img" aria-label="Daniela Martínez Morales, representante de Santa Cruz"></div>
             <div class="rep-body">
               <p class="rep-role">Santa Cruz</p>
               <h3>Daniela Martínez Morales</h3>
@@ -753,7 +831,7 @@
           </article>
 
           <article class="rep-card">
-            <div class="rep-photo"></div>
+            <div class="rep-photo rep-two" role="img" aria-label="Danna Hernández Cruz, representante de Galicia"></div>
             <div class="rep-body">
               <p class="rep-role">Galicia</p>
               <h3>Danna Hernández Cruz</h3>
@@ -762,7 +840,7 @@
           </article>
 
           <article class="rep-card">
-            <div class="rep-photo"></div>
+            <div class="rep-photo rep-three" role="img" aria-label="Ivanna Parra Villarroel, representante del País Vasco"></div>
             <div class="rep-body">
               <p class="rep-role">País Vasco</p>
               <h3>Ivanna Parra Villarroel</h3>
@@ -776,8 +854,8 @@
     <section class="section">
       <div class="container experience-grid">
         <div class="experience-collage">
-          <div class="experience-photo"></div>
-          <div class="experience-photo"></div>
+          <div class="experience-photo experience-photo-one" role="img" aria-label="Hotel Taoro, sede de la concentración de Miss Universe Spain 2026"></div>
+          <div class="experience-photo experience-photo-two" role="img" aria-label="Vista aérea de la gala final de Miss Universe Spain 2026"></div>
         </div>
 
         <div>
@@ -823,7 +901,6 @@
             Revive la gala final de la edición 2026 a través del vídeo oficial.
           </p>
 
-          <!-- Sustituye # por el enlace oficial del vídeo cuando lo tengas -->
           <a href="https://www.youtube.com/live/eWPBeSHer-Q?is=uc0ic6Gr4Set4bBO" target="_blank" rel="noopener" class="btn btn-primary">
             Ver gala oficial
           </a>
@@ -837,41 +914,41 @@
         <h2 class="section-heading">Momentos de la experiencia nacional</h2>
 
                 <div class="gallery-grid">
-          <a class="gallery-item" href="spain-galeria-1.jpg" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-1.jpg" target="_blank" rel="noopener">
             <img src="spain-galeria-1.jpg" alt="Daniela Martínez y Danna Hernández durante la concentración de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-2.jpg" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-2.jpg" target="_blank" rel="noopener">
             <img src="spain-galeria-2.jpg" alt="Daniela Martínez en una sesión fotográfica de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-3.JPG" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-3.JPG" target="_blank" rel="noopener">
             <img src="spain-galeria-3.JPG" alt="Danna Hernández durante una sesión fotográfica oficial" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-4.jpg" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-4.jpg" target="_blank" rel="noopener">
             <img src="spain-galeria-4.jpg" alt="Candidatas de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-5.JPG" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-5.JPG" target="_blank" rel="noopener">
             <img src="spain-galeria-5.JPG" alt="Daniela Martínez durante una sesión fotográfica nacional" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-6.jpg" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-6.jpg" target="_blank" rel="noopener">
             <img src="spain-galeria-6.jpg" alt="Danna Hernández durante una sesión fotográfica en Tenerife" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
 
-          <a class="gallery-item" href="spain-galeria-7.JPG" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-7.JPG" target="_blank" rel="noopener">
             <img src="spain-galeria-7.JPG" alt="Miss Universe Spain 2026 durante la gala final" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div> 
 
-          <a class="gallery-item" href="spain-galeria-8.JPG" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-8.JPG" target="_blank" rel="noopener">
             <img src="spain-galeria-8.JPG" alt="Danna Hernández sobre el escenario de Miss Universe Spain" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div> 
 
-          <a class="gallery-item" href="spain-galeria-9.jpg" target="_blank" rel="noopener">
+          <div class="gallery-item" href="spain-galeria-9.jpg" target="_blank" rel="noopener">
             <img src="spain-galeria-9.jpg" alt="Coreografía de las candidatas de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -919,8 +996,8 @@
         <br><br>
 
         <strong>Contacto oficial</strong><br>
-        <a href="mailto:missuniverse.santacruz@hotmail.com">
-          missuniverse.santacruz@hotmail.com
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
         </a>
       </div>
 
