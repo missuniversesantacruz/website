@@ -476,6 +476,17 @@
       font-size:.74rem;
       line-height:1.55;
     }
+    .official-video-card{
+  padding:18px;
+}
+
+.official-video{
+  width:100%;
+  aspect-ratio:16 / 9;
+  margin-top:16px;
+  border:0;
+  display:block;
+}
 
     footer{
       padding:32px 0;
@@ -896,12 +907,21 @@
             <p>Consulta sus publicaciones y novedades oficiales.</p>
           </a>
 
-          <!-- Sustituye # por el vídeo oficial de la gala -->
-          <a class="official-link" href="#" target="_blank" rel="noopener">
-            <div class="official-icon">▶</div>
-            <h3>Gala final 2026</h3>
-            <p>Reproduce el vídeo oficial de la gala final.</p>
-          </a>
+         <div class="official-link official-video-card">
+  <div class="official-icon">▶</div>
+  <h3>Gala final 2026</h3>
+  <p>Reproduce el vídeo oficial de la gala final.</p>
+
+  <iframe
+    class="official-video"
+    src="https://www.youtube-nocookie.com/embed/jH0TYKWivsY"
+    title="Gala final de Miss Universe Spain 2026"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
         </div>
       </div>
     </section>
