@@ -255,11 +255,11 @@
       overflow:hidden;
     }
 
-    .rep-photo{
-      height:390px;
-      background:center top / cover no-repeat;
-      border-bottom:1px solid var(--line);
-    }
+   .rep-photo{
+  aspect-ratio:4 / 5;
+  background:#fff center / contain no-repeat;
+  border-bottom:1px solid var(--line);
+}
 
     .rep-card:nth-child(1) .rep-photo{background-image:url("spain-daniela.jpg")}
     .rep-card:nth-child(2) .rep-photo{background-image:url("spain-danna.jpg")}
@@ -542,7 +542,6 @@
 
       .intro-image{min-height:380px}
       .rep-grid{grid-template-columns:1fr}
-      .rep-photo{height:460px}
 
       .experience-collage{
         min-height:440px;
