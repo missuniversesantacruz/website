@@ -645,6 +645,7 @@
           .gallery-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
         grid-auto-rows:165px;
+        grid-template-rows:215px;
         grid-auto-flow:dense;
         gap:8px;
       }
@@ -663,6 +664,9 @@
 
       .gallery-grid .gallery-item:nth-child(7),
       .gallery-grid .gallery-item:nth-child(8){
+      .gallery-grid .gallery-item:nth-child(1) img{
+        object-position:center top;
+      }
         grid-row:span 2;
       }
     }
