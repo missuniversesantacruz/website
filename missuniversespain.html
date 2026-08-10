@@ -376,27 +376,42 @@
     }
 
     /* GALERÍA */
-    .gallery-grid{
+       .gallery-grid{
       display:grid;
-      grid-template-columns:1.25fr .75fr .75fr;
-      grid-template-rows:270px 270px;
-      gap:14px;
+      grid-template-columns:repeat(12,1fr);
+      grid-auto-rows:150px;
+      gap:12px;
       margin-top:34px;
     }
 
     .gallery-item{
+      grid-column:span 4;
+      grid-row:span 2;
       overflow:hidden;
       border:1px solid var(--line);
       background:#090909;
     }
 
-    .gallery-item:first-child{grid-row:1 / 3}
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(9){
+      grid-column:span 6;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(7),
+    .gallery-item:nth-child(8){
+      grid-column:span 3;
+    }
 
     .gallery-item img{
       width:100%;
       height:100%;
       object-fit:cover;
       transition:transform .45s ease;
+      user-select:none;
+      -webkit-user-drag:none;
+      -webkit-touch-callout:none;
     }
 
     .gallery-item:hover img{transform:scale(1.035)}
@@ -549,14 +564,21 @@
 
       .final-copy{width:60%}
 
-      .gallery-grid{
-        grid-template-columns:1fr 1fr;
-        grid-template-rows:300px 220px 220px;
+         .gallery-grid{
+        grid-template-columns:repeat(6,1fr);
+        grid-auto-rows:170px;
+        gap:10px;
       }
 
-      .gallery-item:first-child{
-        grid-column:1 / 3;
-        grid-row:auto;
+      .gallery-item{
+        grid-column:span 3;
+        grid-row:span 2;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4),
+      .gallery-item:nth-child(9){
+        grid-column:span 6;
       }
 
       .official-links{grid-template-columns:1fr}
@@ -620,12 +642,27 @@
 
       .final-copy{width:64%}
 
-      .gallery-grid{
-        grid-template-columns:1fr;
-        grid-template-rows:300px repeat(4,220px);
+            .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        grid-auto-rows:165px;
+        gap:8px;
       }
 
-      .gallery-item:first-child{grid-column:auto}
+      .gallery-item{
+        grid-column:span 1;
+        grid-row:span 1;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4),
+      .gallery-item:nth-child(9){
+        grid-column:span 2;
+      }
+
+      .gallery-item:nth-child(7),
+      .gallery-item:nth-child(8){
+        grid-row:span 2;
+      }
     }
   </style>
 </head>
@@ -792,25 +829,41 @@
         <p class="section-title">Galería exclusiva</p>
         <h2 class="section-heading">Momentos de la experiencia nacional</h2>
 
-        <div class="gallery-grid">
-          <a class="gallery-item" href="spain-galeria-1.jpg" target="_blank">
-            <img src="spain-galeria-1.jpg" alt="Miss Universe Spain 2026">
+                <div class="gallery-grid">
+          <a class="gallery-item" href="spain-galeria-1.jpg" target="_blank" rel="noopener">
+            <img src="spain-galeria-1.jpg" alt="Daniela Martínez y Danna Hernández durante la concentración de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
           </a>
 
-          <a class="gallery-item" href="spain-galeria-2.jpg" target="_blank">
-            <img src="spain-galeria-2.jpg" alt="Representantes de Miss Universe Santa Cruz">
+          <a class="gallery-item" href="spain-galeria-2.jpg" target="_blank" rel="noopener">
+            <img src="spain-galeria-2.jpg" alt="Daniela Martínez en una sesión fotográfica de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
           </a>
 
-          <a class="gallery-item" href="spain-galeria-3.jpg" target="_blank">
-            <img src="spain-galeria-3.jpg" alt="Concentración nacional">
+          <a class="gallery-item" href="spain-galeria-3.JPG" target="_blank" rel="noopener">
+            <img src="spain-galeria-3.JPG" alt="Danna Hernández durante una sesión fotográfica oficial" loading="lazy" decoding="async" draggable="false">
           </a>
 
-          <a class="gallery-item" href="spain-galeria-4.jpg" target="_blank">
-            <img src="spain-galeria-4.jpg" alt="Gala final Miss Universe Spain">
+          <a class="gallery-item" href="spain-galeria-4.jpg" target="_blank" rel="noopener">
+            <img src="spain-galeria-4.jpg" alt="Candidatas de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
           </a>
 
-          <a class="gallery-item" href="spain-galeria-5.jpg" target="_blank">
-            <img src="spain-galeria-5.jpg" alt="Miss Universe Spain 2026">
+          <a class="gallery-item" href="spain-galeria-5.JPG" target="_blank" rel="noopener">
+            <img src="spain-galeria-5.JPG" alt="Daniela Martínez durante una sesión fotográfica nacional" loading="lazy" decoding="async" draggable="false">
+          </a>
+
+          <a class="gallery-item" href="spain-galeria-6.jpg" target="_blank" rel="noopener">
+            <img src="spain-galeria-6.jpg" alt="Danna Hernández durante una sesión fotográfica en Tenerife" loading="lazy" decoding="async" draggable="false">
+          </a>
+
+          <a class="gallery-item" href="spain-galeria-7.JPG" target="_blank" rel="noopener">
+            <img src="spain-galeria-7.JPG" alt="Miss Universe Spain 2026 durante la gala final" loading="lazy" decoding="async" draggable="false">
+          </a>
+
+          <a class="gallery-item" href="spain-galeria-8.JPG" target="_blank" rel="noopener">
+            <img src="spain-galeria-8.JPG" alt="Danna Hernández sobre el escenario de Miss Universe Spain" loading="lazy" decoding="async" draggable="false">
+          </a>
+
+          <a class="gallery-item" href="spain-galeria-9.jpg" target="_blank" rel="noopener">
+            <img src="spain-galeria-9.jpg" alt="Coreografía de las candidatas de Miss Universe Spain 2026" loading="lazy" decoding="async" draggable="false">
           </a>
         </div>
       </div>
