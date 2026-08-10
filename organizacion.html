@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce la organización, misión, valores, equipo directivo y recorrido de Miss Universe Santa Cruz.">
   <title>La Organización | Miss Universe Santa Cruz</title>
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+<meta name="theme-color" content="#050505">
+
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/apple-icon.PNG">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:title" content="La Organización | Miss Universe Santa Cruz">
+<meta property="og:description" content="Conoce la organización, misión, valores, equipo directivo y recorrido de Miss Universe Santa Cruz.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://missuniversesantacruz.es/organizacion">
+<meta property="og:image" content="https://missuniversesantacruz.es/social-preview-organizacion.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:secure_url" content="https://missuniversesantacruz.es/social-preview-organizacion.jpg">
+<meta property="og:image:alt" content="La Organización de Miss Universe Santa Cruz">
+<meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+<link rel="canonical" href="https://missuniversesantacruz.es/organizacion">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La Organización | Miss Universe Santa Cruz">
+<meta name="twitter:description" content="Conoce la organización, misión, valores, equipo directivo y recorrido de Miss Universe Santa Cruz.">
+<meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview-organizacion.jpg">
+
+<link rel="preload" as="image" href="/corona-organizacion.PNG" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +61,8 @@
     .container{width:min(1180px,92%);margin:auto}
 
     .star{
-      width:.88em;
-      height:.88em;
+      width:1.15em;
+      height:1.15em;
       margin:0 .16em;
       vertical-align:-.04em;
       display:inline-block;
@@ -179,6 +206,64 @@
       max-width:600px;
       margin-bottom:30px;
     }
+    /* ENTRADA SUAVE DEL HERO */
+.org-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:orgHeroCurtain .85s ease-out both;
+}
+
+.org-kicker,
+.org-copy h1,
+.org-copy h2,
+.org-intro,
+.org-copy .btn{
+  opacity:0;
+  animation:orgHeroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.org-kicker{animation-delay:.12s}
+.org-copy h1{animation-delay:.20s}
+.org-copy h2{animation-delay:.29s}
+.org-intro{animation-delay:.39s}
+.org-copy .btn{animation-delay:.49s}
+
+@keyframes orgHeroCurtain{
+  from{opacity:1}
+  to{opacity:0}
+}
+
+@keyframes orgHeroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .org-hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .org-kicker,
+  .org-copy h1,
+  .org-copy h2,
+  .org-intro,
+  .org-copy .btn{
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
 
     /* GENERALES */
     .section{
@@ -349,6 +434,15 @@
     .team-card:nth-child(1) .team-photo{background-image:url("juan-carlos.jpg")}
     .team-card:nth-child(2) .team-photo{background-image:url("raul-correa.jpg")}
     .team-card:nth-child(3) .team-photo{background-image:url("alejandro.jpg")}
+    /* Protección básica de fotografías */
+.about-image,
+.values-image,
+.team-photo{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
     .team-body{padding:22px}
     .team-body h3{
       color:var(--gold2);
@@ -428,9 +522,7 @@
       display:flex;
       align-items:center;
       text-align:center;
-      background:
-        linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88)),
-        url("organizacion-cta.jpg") center / cover no-repeat;
+background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
     }
     .cta-copy{width:min(780px,92%);margin:auto}
     .cta-copy p{
@@ -559,18 +651,18 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"
+  onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',abierto);this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reina.html">Nuestra Reina</a>
-        <a class="active" href="organizacion.html">La Organización</a>
+     <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+       <a class="active" href="/organizacion" aria-current="page">La Organización</a>
         <a href="missuniversespain.html">Miss Universe Spain</a>
         <a href="edicion26.html">Edición 2026</a>
         <a href="galeria.html">Galería</a>
@@ -598,7 +690,7 @@
 
     <section id="quienes-somos" class="section">
       <div class="container about-grid">
-        <div class="about-image" aria-label="Equipo de Miss Universe Santa Cruz"></div>
+        <div class="about-image" role="img" aria-label="Equipo directivo de Miss Universe Santa Cruz"></div>
 
         <div>
           <p class="section-title">Quiénes somos</p>
@@ -671,7 +763,7 @@
           </div>
         </div>
 
-        <div class="values-image" aria-label="Valores de Miss Universe Santa Cruz"></div>
+        <div class="values-image" role="img" aria-label="Candidatas de Miss Universe Santa Cruz celebrando juntas"></div>
       </div>
     </section>
 
@@ -731,7 +823,7 @@
 
         <div class="team-grid">
           <article class="team-card">
-            <div class="team-photo"></div>
+            <div class="team-photo" role="img" aria-label="Juan Carlos Santana Alonso"></div>
             <div class="team-body">
               <h3>Juan Carlos Santana Alonso</h3>
               <p class="team-role">Director & CEO</p>
@@ -740,7 +832,7 @@
           </article>
 
           <article class="team-card">
-            <div class="team-photo"></div>
+            <div class="team-photo" role="img" aria-label="Raúl Correa Pérez"></div>
             <div class="team-body">
               <h3>Raúl Correa Pérez</h3>
               <p class="team-role">Director & Estilista Oficial</p>
@@ -749,7 +841,7 @@
           </article>
 
           <article class="team-card">
-            <div class="team-photo"></div>
+           <div class="team-photo" role="img" aria-label="Alejandro David Piña González"></div>
             <div class="team-body">
               <h3>Alejandro David Piña González</h3>
               <p class="team-role">Director & Community Manager</p>
@@ -804,25 +896,46 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div class="brand">
-        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
-        <small>SANTA CRUZ</small>
-      </div>
-
-      <div class="contact">
-        Instagram:
-        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
-          @missuniverse.santacruz
-        </a><br>
-        Contacto oficial: próximamente
-      </div>
-
-      <div class="copyright">
-        © 2026 Miss Universe Santa Cruz
-      </div>
+<footer id="contacto">
+  <div class="container footer-grid">
+    <div class="brand">
+      MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+      <small>SANTA CRUZ</small>
     </div>
-  </footer>
+
+    <div class="contact">
+      <strong>Instagram</strong><br>
+      <a href="https://instagram.com/missuniverse.santacruz"
+         target="_blank"
+         rel="noopener">
+        @missuniverse.santacruz
+      </a>
+
+      <br><br>
+
+      <strong>Contacto oficial</strong><br>
+      <a href="mailto:info@missuniversesantacruz.es">
+        info@missuniversesantacruz.es
+      </a>
+    </div>
+
+    <div class="copyright">
+      © 2026 Miss Universe Santa Cruz
+    </div>
+  </div>
+</footer>
+  <script>
+  document.addEventListener("contextmenu", function(e){
+    if (
+      e.target.closest(".org-hero") ||
+      e.target.closest(".about-image") ||
+      e.target.closest(".values-image") ||
+      e.target.closest(".team-photo") ||
+      e.target.closest(".cta")
+    ){
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
