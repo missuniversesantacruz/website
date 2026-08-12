@@ -215,6 +215,9 @@
       flex-wrap:wrap;
       gap:16px;
     }
+    .queen-hero-photo{
+  display:none;
+}
     /* ENTRADA SUAVE DEL HERO REINA */
 .queen-hero::before{
   content:"";
@@ -677,19 +680,47 @@
     }
 
 @media(max-width:430px){
-  .queen-hero{
-    min-height:560px;
-background:
-  linear-gradient(90deg,
-    rgba(5,5,5,.98) 0%,
-    rgba(5,5,5,.86) 42%,
-    rgba(5,5,5,.28) 60%,
-    rgba(5,5,5,.04) 76%,
-    rgba(5,5,5,0) 100%
-  ),
-  url("reina-hero.jpg") 54% 75px / cover no-repeat;
-  }
-      .queen-hero-grid{min-height:496px}
+.queen-hero{
+  min-height:560px;
+  background:
+    radial-gradient(
+      circle at 83% 44%,
+      rgba(199,162,90,.20),
+      transparent 27%
+    ),
+    linear-gradient(
+      90deg,
+      #050505 0%,
+      #050505 47%,
+      rgba(5,5,5,.84) 62%,
+      rgba(5,5,5,.18) 100%
+    );
+}
+
+.queen-hero-grid{
+  min-height:496px;
+}
+
+.queen-hero-photo{
+  display:flex;
+  height:100%;
+  align-self:stretch;
+  justify-content:flex-end;
+  overflow:visible;
+}
+
+.queen-hero-photo img{
+  position:absolute;
+  top:0;
+  bottom:auto;
+  right:-25%;
+  width:185%;
+  max-width:none;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 0%;
+  mask-image:linear-gradient(to bottom,#000 89%,transparent 100%);
+}
      .queen-copy{
   width:57%;
   transform:translateY(7px);
@@ -819,6 +850,10 @@ background:
             <a href="#galeria" class="btn">Ver galería</a>
           </div>
         </div>
+        
+        <div class="queen-hero-photo">
+  <img src="reina-hero.jpg" alt="Daniela Martínez Morales, Miss Universe Santa Cruz 2026">
+</div>
       </div>
     </section>
 
