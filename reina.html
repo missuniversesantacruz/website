@@ -282,8 +282,20 @@
     transform:translateY(0);
   }
 }
-
+    
+@keyframes queenHeroPhotoReveal{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
 @media (prefers-reduced-motion: reduce){
+  .queen-hero-photo img{
+  animation:none;
+  opacity:1;
+}
   .queen-hero::before{
     animation:none;
     opacity:0;
@@ -732,7 +744,10 @@
   font-size:1.75rem;
   line-height:1.15;
 }
-      .queen-intro{font-size:.68rem}
+      .queen-intro{
+  font-size:.68rem;
+  text-shadow:0 1px 8px rgba(0,0,0,.95);
+}
       .queen-actions .btn{min-width:148px}
       .facts{grid-template-columns:repeat(2,1fr)}
       .values-grid{grid-template-columns:1fr 1fr}
@@ -843,8 +858,7 @@
           <h2>Miss Universe Santa Cruz 2026</h2>
           <p class="queen-title">Belleza · Confianza · Liderazgo</p>
           <p class="queen-intro">
-            Daniela representa una nueva 
-            generación de mujeres auténticas, seguras y comprometidas.
+            Daniela representa una nueva generación de mujeres auténticas, seguras y comprometidas.
             Su historia une elegancia, esfuerzo y el orgullo de llevar a Santa Cruz hasta el escenario nacional.
           </p>
 
