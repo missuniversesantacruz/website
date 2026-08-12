@@ -122,22 +122,23 @@
 
     /* HERO */
     .edition-hero{
-      min-height:760px;
-      padding-top:78px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5,5,5,.99) 0%,
-          rgba(5,5,5,.95) 34%,
-          rgba(5,5,5,.68) 50%,
-          rgba(5,5,5,.14) 72%,
-          rgba(5,5,5,0) 100%
-        ),
-        url("edicion26-hero.JPEG") right center / cover no-repeat;
-    }
+  min-height:760px;
+  padding-top:78px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,.98) 0%,
+      rgba(5,5,5,.94) 34%,
+      rgba(5,5,5,.62) 50%,
+      rgba(5,5,5,.15) 70%,
+      rgba(5,5,5,0) 100%
+    ),
+    url("edicion26-hero.jpg") right 0 top 58px / cover no-repeat;
+}
     .edition-hero-grid{
       min-height:682px;
       display:flex;
@@ -184,7 +185,9 @@
       flex-wrap:wrap;
       gap:16px;
     }
-
+.edition-hero-photo{
+  display:none;
+}
     .section{
       padding:78px 0;
       border-bottom:1px solid var(--line);
@@ -675,32 +678,86 @@
       nav a{padding:10px 0}
 
       .edition-hero{
-        padding-top:64px;
-        min-height:620px;
-        background:
-          linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.84) 52%,rgba(5,5,5,.18) 100%),
-          url("edicion26-hero-mobile.JPEG") right top / cover no-repeat;
-      }
-      .edition-hero-grid{min-height:556px}
-      .edition-copy{
-        width:60%;
-        padding:58px 0 40px;
-      }
-      .edition-kicker{font-size:.58rem}
-      .edition-copy h1{font-size:clamp(1.65rem,7vw,2.5rem)}
-      .edition-copy h2{font-size:.88rem}
-      .edition-intro{
-        font-size:.7rem;
-        line-height:1.65;
-        max-width:310px;
-      }
-      .edition-actions{gap:9px}
-      .edition-actions .btn{
-        min-width:155px;
-        padding:10px 13px;
-        font-size:.52rem;
-        white-space:nowrap;
-      }
+  padding-top:64px;
+  min-height:610px;
+  background:
+    radial-gradient(
+      circle at 83% 44%,
+      rgba(199,162,90,.20),
+      transparent 27%
+    ),
+    linear-gradient(
+      90deg,
+      #050505 0%,
+      #050505 47%,
+      rgba(5,5,5,.84) 62%,
+      rgba(5,5,5,.18) 100%
+    );
+}
+
+.edition-hero-grid{
+  min-height:546px;
+}
+
+.edition-copy{
+  width:58%;
+  padding:55px 0 40px;
+  position:relative;
+  z-index:5;
+}
+
+.edition-kicker{
+  font-size:.58rem;
+}
+
+.edition-copy h1{
+  font-size:clamp(1.65rem,7vw,2.5rem);
+}
+
+.edition-copy h2{
+  font-size:.92rem;
+}
+
+.edition-intro{
+  font-size:.72rem;
+  line-height:1.65;
+  max-width:300px;
+}
+
+.edition-actions{
+  gap:9px;
+}
+
+.edition-actions .btn{
+  min-width:155px;
+  padding:10px 13px;
+  font-size:.52rem;
+  white-space:nowrap;
+}
+
+.edition-hero-photo{
+  display:flex;
+  position:absolute;
+  inset:0;
+  height:100%;
+  justify-content:flex-end;
+  overflow:visible;
+  z-index:1;
+  pointer-events:none;
+}
+
+.edition-hero-photo img{
+  position:absolute;
+  right:-50%;
+  top:22px;
+  bottom:auto;
+  width:175%;
+  max-width:none;
+  height:590px;
+  object-fit:cover;
+  object-position:50% 5%;
+  mask-image:linear-gradient(to bottom,#000 89%,transparent 100%);
+}
 
       .gala-grid{grid-template-columns:1fr;gap:34px}
       .gala-image{min-height:360px}
@@ -728,18 +785,43 @@
       .footer-grid{grid-template-columns:1fr;text-align:center}
     }
 
-    @media(max-width:430px){
-      .edition-hero{
-        min-height:600px;
-        background-position:90% top;
-      }
-      .edition-hero-grid{min-height:536px}
-      .edition-copy{
-        width:64%;
-        transform:translateY(-8px);
-      }
-      .edition-copy h1{font-size:1.52rem}
-      .edition-intro{font-size:.67rem}
+   @media(max-width:430px){
+  .edition-hero{
+    min-height:560px;
+  }
+
+  .edition-hero-grid{
+    min-height:496px;
+  }
+
+  .edition-copy{
+    width:57%;
+    transform:translateY(7px);
+    position:relative;
+    z-index:5;
+  }
+
+  .edition-copy h1{
+    font-size:1.55rem;
+  }
+
+  .edition-copy h2{
+    font-size:.92rem;
+  }
+
+  .edition-intro{
+    font-size:.67rem;
+  }
+
+  .edition-hero-photo img{
+    top:0;
+    bottom:auto;
+    right:-27%;
+    width:185%;
+    height:100%;
+    object-fit:cover;
+    object-position:50% 0%;
+  }
       .facts{grid-template-columns:1fr}
       .winner{
         min-height:520px;
@@ -800,6 +882,11 @@
             <a href="#galeria" class="btn">Ver galería</a>
           </div>
         </div>
+        
+        <div class="edition-hero-photo">
+  <img src="edicion26-hero-mobile.jpg" alt="Edición 2026 de Miss Universe Santa Cruz">
+</div>
+        
       </div>
     </section>
 
