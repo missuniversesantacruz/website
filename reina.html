@@ -715,10 +715,14 @@
 
 .queen-hero-photo{
   display:flex;
+  position:absolute;
+  inset:0;
   height:100%;
   align-self:stretch;
   justify-content:flex-end;
   overflow:visible;
+  z-index:1;
+  pointer-events:none;
 }
 
 .queen-hero-photo img{
@@ -732,7 +736,7 @@
   object-fit:cover;
   object-position:50% 0%;
   mask-image:linear-gradient(to bottom,#000 89%,transparent 100%);
-  z-index:1;
+  z-index:0;
   opacity:0;
   animation:queenHeroPhotoReveal .95s ease-out .10s forwards;
 }
