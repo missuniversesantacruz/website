@@ -188,6 +188,97 @@
 .edition-hero-photo{
   display:none;
 }
+    /* ENTRADA SUAVE DEL HERO EDICIÓN 2026 */
+.edition-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:editionHeroCurtain .85s ease-out both;
+}
+
+.edition-kicker,
+.edition-copy h1,
+.edition-copy h2,
+.edition-intro,
+.edition-actions{
+  opacity:0;
+  animation:editionHeroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.edition-kicker{
+  animation-delay:.12s;
+}
+
+.edition-copy h1{
+  animation-delay:.20s;
+}
+
+.edition-copy h2{
+  animation-delay:.29s;
+}
+
+.edition-intro{
+  animation-delay:.39s;
+}
+
+.edition-actions{
+  animation-delay:.49s;
+}
+
+.edition-hero-photo img{
+  opacity:0;
+  animation:editionHeroPhotoReveal .95s ease-out .10s forwards;
+}
+
+@keyframes editionHeroCurtain{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
+}
+
+@keyframes editionHeroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes editionHeroPhotoReveal{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .edition-hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .edition-kicker,
+  .edition-copy h1,
+  .edition-copy h2,
+  .edition-intro,
+  .edition-actions,
+  .edition-hero-photo img{
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
     .section{
       padding:78px 0;
       border-bottom:1px solid var(--line);
