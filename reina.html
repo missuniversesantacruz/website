@@ -732,21 +732,23 @@
   object-fit:cover;
   object-position:50% 0%;
   mask-image:linear-gradient(to bottom,#000 89%,transparent 100%);
+  z-index:1;
+  opacity:0;
+  animation:queenHeroPhotoReveal .95s ease-out .10s forwards;
 }
      .queen-copy{
   width:57%;
   transform:translateY(7px);
   position:relative;
-  z-index:3;
+  z-index:5;
 }
       .queen-copy h1{font-size:1.55rem}
   .section-heading{
   font-size:1.75rem;
   line-height:1.15;
 }
-      .queen-intro{
+.queen-intro{
   font-size:.68rem;
-  text-shadow:0 1px 8px rgba(0,0,0,.95);
 }
       .queen-actions .btn{min-width:148px}
       .facts{grid-template-columns:repeat(2,1fr)}
