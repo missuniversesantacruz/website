@@ -309,13 +309,17 @@
       gap:56px;
       align-items:center;
     }
-    .gala-image{
-      min-height:500px;
-      border:1px solid var(--line);
-      background:
-        linear-gradient(180deg,rgba(5,5,5,.05),rgba(5,5,5,.28)),
-        url("edicion26-gala.jpg") center / cover no-repeat;
-    }
+   .gala-image{
+  border:1px solid var(--line);
+  background:#060606;
+  overflow:hidden;
+}
+
+.gala-image img{
+  display:block;
+  width:100%;
+  height:auto;
+}
     .facts{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -851,7 +855,10 @@
 }
 
       .gala-grid{grid-template-columns:1fr;gap:34px}
-      .gala-image{min-height:360px}
+      .gala-image img{
+  width:100%;
+  height:auto;
+}
       .winner{background-position:72% center}
       .winner-copy{width:60%}
       .top3-grid,
@@ -992,7 +999,9 @@
 
     <section id="gala" class="section">
       <div class="container gala-grid">
-        <div class="gala-image" aria-label="Gala Miss Universe Santa Cruz 2026"></div>
+        <div class="gala-image">
+  <img src="edicion26-gala.jpg" alt="Gala Miss Universe Santa Cruz 2026">
+</div>
 
         <div>
           <p class="section-title">La gala</p>
