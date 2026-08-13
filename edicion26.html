@@ -473,12 +473,11 @@
       overflow:hidden;
     }
     .candidate img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      object-position:center top;
-      border-bottom:1px solid var(--line);
-    }
+  width:100%;
+  height:auto;
+  display:block;
+  border-bottom:1px solid var(--line);
+}
     .candidate-body{padding:16px}
     .candidate h3{
       color:var(--gold2);
@@ -934,7 +933,7 @@
       }
       .winner-copy{width:64%}
       .candidates-grid{grid-template-columns:1fr}
-      .candidate img{height:320px}
+      .candidate img{height:auto}
       .partner-logo{min-height:110px;padding:16px}
       .collab-logos{grid-template-columns:repeat(2,1fr);gap:12px}
       .collab-logo{min-height:100px;padding:14px}
