@@ -159,26 +159,27 @@ nav{
     }
 
     /* HERO */
-    .spain-hero{
-      min-height:760px;
-      padding-top:78px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5,5,5,.99) 0%,
-          rgba(5,5,5,.94) 34%,
-          rgba(5,5,5,.64) 52%,
-          rgba(5,5,5,.14) 72%,
-          rgba(5,5,5,0) 100%
-        ),
-        url("spain-hero.jpg") right center / cover no-repeat;
-    }
+   .spain-hero{
+  min-height:760px;
+  padding-top:78px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,.98) 0%,
+      rgba(5,5,5,.94) 34%,
+      rgba(5,5,5,.62) 50%,
+      rgba(5,5,5,.15) 70%,
+      rgba(5,5,5,0) 100%
+    ),
+    url("spain-hero.jpg") right 0 top 58px / cover no-repeat;
+}
 
         .spain-hero-grid{
-      min-height:920px;
+      min-height:682px;
       display:flex;
       align-items:center;
       position:relative;
@@ -221,6 +222,10 @@ nav{
       max-width:620px;
       margin-bottom:30px;
    }
+
+    .spain-hero-photo{
+  display:none;
+}
     
    .spain-hero::before{
       content:"";
@@ -242,6 +247,10 @@ nav{
     .spain-copy h2{animation-delay:.34s}
     .spain-copy > p:not(.spain-kicker){animation-delay:.44s}
     .spain-copy .btn{animation-delay:.54s}
+    .spain-hero-photo img{
+  opacity:0;
+  animation:spainHeroPhotoReveal .95s ease-out .10s forwards;
+}
 
     @keyframes spainHeroCurtain{
       from{opacity:1}
@@ -258,7 +267,14 @@ nav{
         transform:translateY(0);
       }
     }
-
+@keyframes spainHeroPhotoReveal{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
     @media (prefers-reduced-motion:reduce){
       .spain-hero::before{
         animation:none;
@@ -269,9 +285,12 @@ nav{
         animation:none;
         opacity:1;
         transform:none;
-    }
-    }
+     }
 
+      .spain-hero-photo img{
+  animation:none;
+  opacity:1;
+}
     .section{
       padding:78px 0;
       border-bottom:1px solid var(--line);
@@ -601,25 +620,74 @@ nav{
       nav.open{display:flex}
       nav a{padding:10px 0}
 
-      .spain-hero{
-        min-height:620px;
-        padding-top:64px;
-       background:
-  linear-gradient(90deg,rgba(5,5,5,.82) 0%,rgba(5,5,5,.48) 38%,rgba(5,5,5,.10) 62%,rgba(5,5,5,0) 80%),
-  #050505 url("spain-hero.jpg") right 45px / cover no-repeat;
-      }
+   .spain-hero{
+  padding-top:64px;
+  min-height:610px;
+  background:
+    radial-gradient(
+      circle at 83% 44%,
+      rgba(199,162,90,.20),
+      transparent 27%
+    ),
+    linear-gradient(
+      90deg,
+      #050505 0%,
+      #050505 47%,
+      rgba(5,5,5,.84) 62%,
+      rgba(5,5,5,.18) 100%
+    );
+}
 
-      .spain-hero-grid{min-height:556px}
+.spain-hero-grid{
+  min-height:546px;
+}
 
-      .spain-copy{
-        width:60%;
-        padding:58px 0 40px;
-      }
+.spain-copy{
+  width:58%;
+  padding:55px 0 40px;
+  position:relative;
+  z-index:5;
+}
 
-      .spain-kicker{font-size:.58rem}
-      .spain-copy h1{font-size:2.2rem}
-      .spain-copy h2{font-size:.88rem}
-      .spain-copy p{font-size:.7rem}
+.spain-kicker{
+  font-size:.58rem;
+}
+
+.spain-copy h1{
+  font-size:2.2rem;
+}
+
+.spain-copy h2{
+  font-size:.88rem;
+}
+
+.spain-copy p{
+  font-size:.7rem;
+}
+
+.spain-hero-photo{
+  display:flex;
+  position:absolute;
+  inset:0;
+  height:100%;
+  justify-content:flex-end;
+  overflow:visible;
+  z-index:1;
+  pointer-events:none;
+}
+
+.spain-hero-photo img{
+  position:absolute;
+  right:-50%;
+  top:22px;
+  bottom:auto;
+  width:175%;
+  max-width:none;
+  height:590px;
+  object-fit:cover;
+  object-position:50% 5%;
+  mask-image:linear-gradient(to bottom,#000 89%,transparent 100%);
+}
 
       .intro-grid,
       .experience-grid{
@@ -662,16 +730,19 @@ nav{
 
     @media(max-width:430px){
       .spain-hero{
-        min-height:560px;
-        background-position:80% 45px;
-      }
+  min-height:560px;
+}
 
-      .spain-hero-grid{min-height:496px}
+.spain-hero-grid{
+  min-height:496px;
+}
 
-      .spain-copy{
-        width:64%;
-        transform:translateY(-8px);
-      }
+.spain-copy{
+  width:57%;
+  transform:translateY(7px);
+  position:relative;
+  z-index:5;
+}
 
 .spain-copy .spain-kicker{
   font-size:.56rem;
@@ -695,6 +766,15 @@ nav{
   line-height:1.45;
 }
       .spain-copy p{font-size:.67rem}
+      .spain-hero-photo img{
+  top:0;
+  bottom:auto;
+  right:-27%;
+  width:185%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 0%;
+}
 
       .experience-list{grid-template-columns:1fr}
 
@@ -786,6 +866,11 @@ nav{
           </p>
           <a href="#representantes" class="btn btn-primary">Conoce a las representantes</a>
         </div>
+        
+        <div class="spain-hero-photo">
+  <img src="spain-hero.jpg" alt="Miss Universe Spain 2026">
+</div>
+        
       </div>
     </section>
 
