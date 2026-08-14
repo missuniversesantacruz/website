@@ -74,44 +74,140 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
 .section{padding:78px 0;border-bottom:1px solid var(--line)}
 .section-heading{font-size:clamp(2rem,4vw,3.5rem);font-weight:300;margin-bottom:24px}
 
-.albums-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
-.album-card{min-height:360px;position:relative;overflow:hidden;border:1px solid var(--line);background:#090909 center/cover no-repeat;display:flex;align-items:flex-end;isolation:isolate}
-.album-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.02),rgba(5,5,5,.16) 45%,rgba(5,5,5,.95))}
-.album-card:after{content:"";position:absolute;inset:0;z-index:-2;background:inherit;background-position:center;background-size:cover;transition:transform .45s}
-.album-card:hover:after{transform:scale(1.035)}
-.album-info{padding:26px;width:100%}
-.album-info h3{color:var(--gold2);text-transform:uppercase;letter-spacing:.08em;font-size:1rem;font-weight:400;margin-bottom:8px}
-.album-info p{color:#ddd8ce;font-size:.76rem;line-height:1.55}
-.album-opening{background-image:url("album-opening.jpg")}
-.album-presentacion{background-image:url("album-presentacion.jpg")}
-.album-bano{background-image:url("album-bano.jpg")}
-.album-noche{background-image:url("album-noche.jpg")}
-.album-top5{background-image:url("album-top5.jpg")}
-.album-top3{background-image:url("album-top3.jpg")}
-.album-coronacion{background-image:url("album-coronacion.jpg")}
-.album-backstage{background-image:url("album-backstage.jpg")}
-.album-jurado{background-image:url("album-jurado.jpg")}
-.album-patrocinadores{background-image:url("album-patrocinadores.jpg")}
+.gallery-story{
+  background:
+    radial-gradient(circle at center,rgba(199,162,90,.08),transparent 44%),
+    #070707;
+}
 
-.top3-section{background:radial-gradient(circle at center,rgba(199,162,90,.1),transparent 44%),#070707}
-.top3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.top-card{border:1px solid var(--line);background:#090909;overflow:hidden}
-.top-photo{height:430px;background:center top/cover no-repeat;cursor:pointer}
-.top-card:nth-child(1) .top-photo{background-image:url("galeria-top3-daniela.jpg")}
-.top-card:nth-child(2) .top-photo{background-image:url("galeria-top3-danna.jpg")}
-.top-card:nth-child(3) .top-photo{background-image:url("galeria-top3-valeria.jpg")}
-.top-body{padding:22px;text-align:center}
-.top-rank{color:var(--gold2);text-transform:uppercase;letter-spacing:.1em;font-size:.67rem;margin-bottom:8px}
-.top-body h3{font-size:.98rem;font-weight:400;margin-bottom:7px}
-.top-body p{color:#c9c4bb;font-size:.75rem;line-height:1.55}
+.story-intro{
+  max-width:780px;
+}
 
-.featured-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;grid-template-rows:280px 280px;gap:14px;margin-top:34px}
-.photo{position:relative;overflow:hidden;border:1px solid var(--line);background:#090909;cursor:pointer}
-.photo:first-child{grid-row:1/3}
-.photo img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.photo:after{content:"＋";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,5,5,.28);color:var(--gold2);font-size:2rem;opacity:0;transition:.3s}
-.photo:hover img{transform:scale(1.035);filter:brightness(.8)}
-.photo:hover:after{opacity:1}
+.gallery-credit{
+  margin-top:20px;
+  color:#bdb7ad;
+  font-size:.76rem;
+  line-height:1.7;
+}
+
+.gallery-credit strong{
+  color:var(--gold2);
+  font-weight:500;
+}
+
+.story-chapter{
+  margin-top:60px;
+}
+
+.story-chapter + .story-chapter{
+  margin-top:82px;
+}
+
+.chapter-tag{
+  color:var(--gold);
+  font-size:.70rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.chapter-title{
+  color:var(--gold2);
+  font-size:clamp(1.55rem,3vw,2.35rem);
+  font-weight:300;
+  margin-bottom:12px;
+}
+
+.chapter-copy{
+  color:#d6d1c7;
+  font-size:.86rem;
+  line-height:1.75;
+  max-width:760px;
+  margin-bottom:26px;
+}
+
+.mosaic-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:180px;
+  grid-auto-flow:dense;
+  gap:14px;
+}
+
+.mosaic-item{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#090909;
+  cursor:pointer;
+}
+
+.mosaic-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s,filter .4s;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
+
+.mosaic-item.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.mosaic-item.wide{
+  grid-column:span 2;
+}
+
+.mosaic-item.tall{
+  grid-row:span 2;
+}
+
+.mosaic-item:after{
+  content:"＋";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(5,5,5,.28);
+  color:var(--gold2);
+  font-size:2rem;
+  opacity:0;
+  transition:.3s;
+}
+
+.mosaic-item:hover img{
+  transform:scale(1.035);
+  filter:brightness(.82);
+}
+
+.mosaic-item:hover:after{
+  opacity:1;
+}
+
+.mosaic-item figcaption{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  z-index:2;
+  pointer-events:none;
+}
+
+.mosaic-item figcaption span{
+  display:inline-block;
+  padding:7px 10px;
+  background:rgba(5,5,5,.78);
+  border:1px solid var(--line);
+  color:var(--gold2);
+  font-size:.60rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
 
 .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
 .video-card{min-height:230px;border:1px solid var(--line);background:linear-gradient(rgba(5,5,5,.55),rgba(5,5,5,.86)),url("video-portada.jpg") center/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
@@ -192,8 +288,23 @@ nav.open{display:flex}nav a{padding:10px 0}
 .gallery-copy h1{font-size:2.4rem}
 .gallery-copy h2{font-size:.88rem}
 .gallery-copy p{font-size:.7rem}
-.albums-grid,.top3-grid,.video-grid{grid-template-columns:1fr}.album-card{min-height:330px}.top-photo{height:460px}
-.featured-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px}.photo:first-child{grid-column:1/3;grid-row:auto}
+.mosaic-grid{
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows:175px;
+}
+
+.mosaic-item.big,
+.mosaic-item.wide{
+  grid-column:span 2;
+}
+
+.mosaic-item.tall{
+  grid-row:span 2;
+}
+
+.video-grid{
+  grid-template-columns:1fr;
+}
 .footer-grid{grid-template-columns:1fr;text-align:center}
 }
 @media(max-width:430px){
@@ -211,7 +322,34 @@ nav.open{display:flex}nav a{padding:10px 0}
   object-position:50% 0%;
 }
 .gallery-copy h1{font-size:1.7rem}.gallery-copy p{font-size:.67rem}
-.featured-grid{grid-template-columns:1fr;grid-template-rows:300px repeat(4,220px)}.photo:first-child{grid-column:auto}
+.mosaic-grid{
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows:150px;
+  gap:8px;
+}
+
+.story-chapter{
+  margin-top:46px;
+}
+
+.story-chapter + .story-chapter{
+  margin-top:64px;
+}
+
+.chapter-copy{
+  font-size:.75rem;
+  margin-bottom:20px;
+}
+
+.mosaic-item figcaption{
+  left:7px;
+  bottom:7px;
+}
+
+.mosaic-item figcaption span{
+  padding:5px 7px;
+  font-size:.48rem;
+}
 .prev{left:8px}.next{right:8px}.close{top:12px;right:12px}
 }
 </style>
@@ -242,7 +380,7 @@ nav.open{display:flex}nav a{padding:10px 0}
 <h1>Galería</h1>
 <h2>Revive los momentos más especiales de Miss Universe Santa Cruz 2026.</h2>
 <p>Una selección de imágenes que recorre la primera edición: desde el opening y la pasarela hasta el Top 3 y la coronación.</p>
-<a href="#albumes" class="btn btn-primary">Ver fotografías</a>
+<a href="#galeria-oficial" class="btn btn-primary">Ver fotografías</a>
 </div>
   
   <div class="gallery-hero-photo">
@@ -252,23 +390,282 @@ nav.open{display:flex}nav a{padding:10px 0}
 </div>
 </section>
 
-<section id="albumes" class="section">
+<section id="galeria-oficial" class="section gallery-story">
 <div class="container">
-<p class="section-title">Álbumes oficiales</p>
-<h2 class="section-heading">Cada momento, una historia</h2>
-<p class="body-copy">Cada portada enlaza con el futuro archivo reutilizable <strong>album.html</strong>, preparado para mostrar las fotografías de cada categoría.</p>
-<div class="albums-grid">
-<a class="album-card album-opening" href="album.html?album=opening"><div class="album-info"><h3>Opening</h3><p>Apertura oficial de la gala 2026.</p></div></a>
-<a class="album-card album-presentacion" href="album.html?album=presentacion"><div class="album-info"><h3>Presentación oficial</h3><p>Las trece candidatas sobre el escenario.</p></div></a>
-<a class="album-card album-bano" href="album.html?album=bano"><div class="album-info"><h3>Traje de baño</h3><p>Seguridad, presencia y pasarela.</p></div></a>
-<a class="album-card album-noche" href="album.html?album=noche"><div class="album-info"><h3>Gala de noche</h3><p>Elegancia y grandes diseños.</p></div></a>
-<a class="album-card album-top5" href="album.html?album=top5"><div class="album-info"><h3>Top 5</h3><p>Las cinco finalistas.</p></div></a>
-<a class="album-card album-top3" href="album.html?album=top3"><div class="album-info"><h3>Top 3</h3><p>Daniela, Danna y Valeria.</p></div></a>
-<a class="album-card album-coronacion" href="album.html?album=coronacion"><div class="album-info"><h3>Coronación</h3><p>El comienzo del reinado 2026.</p></div></a>
-<a class="album-card album-backstage" href="album.html?album=backstage"><div class="album-info"><h3>Backstage</h3><p>Ensayos y preparación.</p></div></a>
-<a class="album-card album-jurado" href="album.html?album=jurado"><div class="album-info"><h3>Jurado</h3><p>El jurado oficial de la edición.</p></div></a>
-<a class="album-card album-patrocinadores" href="album.html?album=patrocinadores"><div class="album-info"><h3>Patrocinadores y colaboradores</h3><p>Fotografías en el escenario con las ganadoras.</p></div></a>
+
+<p class="section-title">Galería oficial</p>
+
+<h2 class="section-heading">
+La edición 2026 en imágenes
+</h2>
+
+<p class="body-copy story-intro">
+Una selección cronológica de los momentos que marcaron la primera edición de Miss Universe Santa Cruz:
+backstage, opening, pasarela, final, coronación y las fotografías oficiales del cierre de gala.
+</p>
+
+<p class="gallery-credit">
+<strong>Archivo fotográfico oficial</strong><br>
+Fotografías cortesía de Disfruta Tenerife y 922 Visuals.
+</p>
+
+
+<!-- LA GALA -->
+<div class="story-chapter">
+
+<p class="chapter-tag">La gala</p>
+
+<h3 class="chapter-title">
+Backstage, opening y pasarela
+</h3>
+
+<p class="chapter-copy">
+El comienzo de una noche histórica: preparación, homenaje, primeras salidas y las diferentes etapas de la gala hasta reunir a todas las candidatas sobre el escenario.
+</p>
+
+<div class="mosaic-grid">
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-01.jpg">
+<img src="galeria-01.jpg" alt="Backstage de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Backstage</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-02.jpg">
+<img src="galeria-02.jpg" alt="Opening de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Opening</span></figcaption>
+</figure>
+
+<figure class="mosaic-item big lightbox-trigger" data-image="galeria-03.jpg">
+<img src="galeria-03.jpg" alt="Homenaje a Venezuela" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Homenaje a Venezuela</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-04.jpg">
+<img src="galeria-04.jpg" alt="Opening de la gala" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Opening</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-05.jpg">
+<img src="galeria-05.jpg" alt="Escenario de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Opening</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-06.jpg">
+<img src="galeria-06.jpg" alt="Presentación oficial" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Presentación</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-07.jpg">
+<img src="galeria-07.jpg" alt="Presentaciones oficiales" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Presentaciones</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-08.jpg">
+<img src="galeria-08.jpg" alt="Presentación de candidata" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Presentación</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-09.jpg">
+<img src="galeria-09.jpg" alt="Pase de traje de baño" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Traje de baño</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-10.jpg">
+<img src="galeria-10.jpg" alt="Gala de noche" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Gala de noche</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-11.jpg">
+<img src="galeria-11.jpg" alt="Pasarela de gala de noche" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Gala de noche</span></figcaption>
+</figure>
+
+<figure class="mosaic-item big lightbox-trigger" data-image="galeria-12.jpg">
+<img src="galeria-12.jpg" alt="Vestido de noche" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Vestido de noche</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-13.jpg">
+<img src="galeria-13.jpg" alt="Pasarela de noche" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Pasarela</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-14.jpg">
+<img src="galeria-14.jpg" alt="Pasarela individual" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Pasarela</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-15.jpg">
+<img src="galeria-15.jpg" alt="Todas las candidatas sobre el escenario" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Candidatas</span></figcaption>
+</figure>
+
 </div>
+</div>
+
+
+<!-- LA FINAL -->
+<div class="story-chapter">
+
+<p class="chapter-tag">La final</p>
+
+<h3 class="chapter-title">
+Top 5 y Top 3
+</h3>
+
+<p class="chapter-copy">
+La fase decisiva de la gala: elección del Top 5, preguntas finales, anuncio del Top 3 y los últimos momentos antes de conocer el resultado.
+</p>
+
+<div class="mosaic-grid">
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-16.jpg">
+<img src="galeria-16.jpg" alt="Elección del Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-17.jpg">
+<img src="galeria-17.jpg" alt="Respuesta Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-18.jpg">
+<img src="galeria-18.jpg" alt="Respuesta Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-19.jpg">
+<img src="galeria-19.jpg" alt="Respuesta Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-20.jpg">
+<img src="galeria-20.jpg" alt="Respuesta Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-21.jpg">
+<img src="galeria-21.jpg" alt="Respuesta Top 5" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 5</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-22.jpg">
+<img src="galeria-22.jpg" alt="Elección del Top 3" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 3</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-23.jpg">
+<img src="galeria-23.jpg" alt="Respuesta Top 3" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 3</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-24.jpg">
+<img src="galeria-24.jpg" alt="Respuesta Top 3" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 3</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-25.jpg">
+<img src="galeria-25.jpg" alt="Respuesta Top 3" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Respuesta Top 3</span></figcaption>
+</figure>
+
+<figure class="mosaic-item big lightbox-trigger" data-image="galeria-26.jpg">
+<img src="galeria-26.jpg" alt="Momento final del certamen" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>La decisión</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-27.jpg">
+<img src="galeria-27.jpg" alt="Finalistas sobre el escenario" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Final</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-28.jpg">
+<img src="galeria-28.jpg" alt="Imposición de banda" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Imposición de banda</span></figcaption>
+</figure>
+
+</div>
+</div>
+
+
+<!-- UNA NUEVA REINA -->
+<div class="story-chapter">
+
+<p class="chapter-tag">Una nueva reina</p>
+
+<h3 class="chapter-title">
+Coronación y fotografías oficiales
+</h3>
+
+<p class="chapter-copy">
+El cierre de la primera edición: coronación, celebración, retratos del Top 3 y fotografías oficiales junto a organización, jurado y colaboradores.
+</p>
+
+<div class="mosaic-grid">
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-29.jpg">
+<img src="galeria-29.jpg" alt="Fotografía con la reina anterior" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Reina anterior</span></figcaption>
+</figure>
+
+<figure class="mosaic-item big lightbox-trigger" data-image="galeria-30.jpg">
+<img src="galeria-30.jpg" alt="Coronación de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Coronación</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-31.jpg">
+<img src="galeria-31.jpg" alt="Celebración tras la coronación" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Celebración</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-32.jpg">
+<img src="galeria-32.jpg" alt="Preparación del Top 3 tras la coronación" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Post gala</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-33.jpg">
+<img src="galeria-33.jpg" alt="Top 3 con flores" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 3 con flores</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-34.jpg">
+<img src="galeria-34.jpg" alt="Top 3 con el presentador" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 3 y presentador</span></figcaption>
+</figure>
+
+<figure class="mosaic-item big lightbox-trigger" data-image="galeria-35.jpg">
+<img src="galeria-35.jpg" alt="Top 3 oficial de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 3 oficial</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-36.jpg">
+<img src="galeria-36.jpg" alt="Top 3 con dirección nacional y organización" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Dirección y organización</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-37.jpg">
+<img src="galeria-37.jpg" alt="Organización de Miss Universe Santa Cruz" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Organización</span></figcaption>
+</figure>
+
+<figure class="mosaic-item tall lightbox-trigger" data-image="galeria-38.jpg">
+<img src="galeria-38.jpg" alt="Retrato oficial del Top 3" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Top 3</span></figcaption>
+</figure>
+
+<figure class="mosaic-item lightbox-trigger" data-image="galeria-39.jpg">
+<img src="galeria-39.jpg" alt="Top 3 con miembros del jurado" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>Jurado</span></figcaption>
+</figure>
+
+<figure class="mosaic-item wide lightbox-trigger" data-image="galeria-40.jpg">
+<img src="galeria-40.jpg" alt="Top 3 con AMA Essentials" loading="lazy" decoding="async" draggable="false">
+<figcaption><span>AMA Essentials</span></figcaption>
+</figure>
+
+</div>
+</div>
+
 </div>
 </section>
 
