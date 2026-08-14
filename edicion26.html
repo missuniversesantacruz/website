@@ -963,6 +963,11 @@
       .partner-logo{min-height:110px;padding:16px}
       .collab-logos{grid-template-columns:repeat(2,1fr);gap:12px}
       .collab-logo{min-height:100px;padding:14px}
+     .collab-logo:last-child:nth-child(odd){
+  grid-column:1 / -1;
+  width:calc((100% - 12px) / 2);
+  justify-self:center;
+}
       .gallery-grid{
         grid-template-columns:1fr;
         grid-template-rows:300px repeat(4,220px);
@@ -1468,7 +1473,7 @@
           <div class="collab-logo"><img src="logo-mega-homes.png" alt="Mega Homes"></div>
           <div class="collab-logo"><img src="logo-cariale-cakes.png" alt="Cariale Cakes"></div>
           <div class="collab-logo"><img src="logo-divas-skin-care.png" alt="Divas Skin Care"></div>
-          <div class="collab-logo"><img src="logo-radiadores-tenerife.png" alt="Radiadores Tenerife"></div>
+          <div class="collab-logo"><img src="logo-damian-disenador.png" alt="Damián Diseñador"></div>
           <div class="collab-logo"><img src="logo-disfruta-tenerife.png" alt="Disfruta Tenerife"></div>
           <div class="collab-logo"><img src="logo-922-visuals.png" alt="922 Visuals"></div>
         </div>
