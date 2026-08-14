@@ -619,46 +619,57 @@
     .team-fabian{background-image:url("equipo-fabian.jpg")}
     .team-vanessa{background-image:url("equipo-vanessa.jpg")}
 
-    /* PATROCINADORES OFICIALES CON LOGOTIPOS */
-    .partners{
-      background:#f6f3ed;
-      color:#171717;
-      padding:48px 0;
-      text-align:center;
-    }
-    .partners h2{
-      color:#a98143;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-size:.9rem;
-      font-weight:500;
-      margin-bottom:30px;
-    }
-    .partner-logos{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-      align-items:center;
-    }
-    .partner-logo{
-      min-height:150px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      border:1px solid #ded6ca;
-      background:#fff;
-    }
-    .partner-logo img{
-      width:100%;
-      max-width:220px;
-      max-height:95px;
-      object-fit:contain;
-      transition:transform .3s ease;
-    }
-    .partner-logo:hover img{
-      transform:scale(1.04);
-    }
+    /* PATROCINADORES OFICIALES */
+.sponsors{
+  padding:42px 0;
+  background:#f6f3ed;
+  text-align:center;
+}
+
+.sponsors h2{
+  color:#a98143;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:30px;
+}
+
+.sponsor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:center;
+}
+
+.sponsor{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  border:1px solid #ded6ca;
+  min-height:170px;
+  padding:18px;
+  overflow:hidden;
+}
+
+.sponsor img{
+  width:100%;
+  height:150px;
+  max-width:none;
+  object-fit:contain;
+}
+
+/* Tamaño visual individual de cada patrocinador */
+.sponsor:nth-child(1) img{
+  transform:scale(1.40);
+}
+
+.sponsor:nth-child(2) img{
+  transform:scale(1.80);
+}
+
+.sponsor:nth-child(3) img{
+  transform:translate(4px, 10px) scale(1.72);
+}
 
     .collaborators{
       padding:52px 0;
@@ -873,11 +884,25 @@
       .people-grid{grid-template-columns:1fr}
       .person{min-height:320px}
       .candidates-grid{grid-template-columns:repeat(2,1fr)}
-      .partner-logos{grid-template-columns:1fr}
-      .partner-logo{
-        min-height:125px;
-        padding:20px;
-      }
+    .sponsor-grid{
+  grid-template-columns:1fr;
+}
+
+.sponsor{
+  min-height:180px;
+  padding:16px;
+}
+
+.sponsor img{
+  width:100%;
+  height:150px;
+  max-width:none;
+  max-height:none;
+}
+
+.sponsor:first-child{
+  border:1px solid #ded6ca;
+}
       .collab-logos{grid-template-columns:repeat(3,1fr)}
       .gallery-grid{
         grid-template-columns:1fr 1fr;
@@ -1400,22 +1425,36 @@
       </div>
     </section>
 
-    <section class="partners">
-      <div class="container">
-        <h2>Patrocinadores oficiales</h2>
-        <div class="partner-logos">
-          <div class="partner-logo">
-            <img src="logo-miss-universe-spain.png" alt="Miss Universe Spain">
-          </div>
-          <div class="partner-logo">
-            <img src="logo-perdomo-couture.png" alt="Perdomo Couture">
-          </div>
-          <div class="partner-logo">
-            <img src="logo-ama-essentials.png" alt="AMA Essentials">
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="sponsors">
+  <div class="container">
+    <h2>Patrocinadores oficiales</h2>
+
+    <div class="sponsor-grid">
+
+      <a class="sponsor"
+         href="https://missuniverse-spain.es"
+         target="_blank"
+         rel="noopener">
+        <img src="logo-miss-universe-spain.PNG" alt="Miss Universe Spain" loading="lazy" decoding="async">
+      </a>
+
+      <a class="sponsor"
+         href="https://instagram.com/perdomocouture"
+         target="_blank"
+         rel="noopener">
+        <img src="logo-perdomo-couture.PNG" alt="Perdomo Couture" loading="lazy" decoding="async">
+      </a>
+
+      <a class="sponsor"
+         href="https://amaessentials.com"
+         target="_blank"
+         rel="noopener">
+        <img src="logo-ama-essentials.PNG" alt="AMA Essentials" loading="lazy" decoding="async">
+      </a>
+
+    </div>
+  </div>
+</section>
 
     <section class="collaborators">
       <div class="container">
