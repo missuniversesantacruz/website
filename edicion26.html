@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Edición 2026 de Miss Universe Santa Cruz: gala, Top 3, candidatas, jurado, equipo oficial, patrocinadores y galería.">
   <title>Edición 2026 | Miss Universe Santa Cruz</title>
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+<meta name="theme-color" content="#050505">
+
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/apple-icon.PNG">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="https://missuniversesantacruz.es/edicion26">
+
+<meta property="og:title" content="Edición 2026 | Miss Universe Santa Cruz">
+<meta property="og:description" content="Edición 2026 de Miss Universe Santa Cruz: gala, Top 3, candidatas, jurado, equipo oficial, patrocinadores y galería.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://missuniversesantacruz.es/edicion26">
+<meta property="og:image" content="https://missuniversesantacruz.es/social-preview-edicion26.jpg">
+<meta property="og:image:secure_url" content="https://missuniversesantacruz.es/social-preview-edicion26.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Edición 2026 de Miss Universe Santa Cruz">
+<meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Edición 2026 | Miss Universe Santa Cruz">
+<meta name="twitter:description" content="Edición 2026 de Miss Universe Santa Cruz: gala, Top 3, candidatas, jurado, equipo oficial, patrocinadores y galería.">
+<meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview-edicion26.jpg">
+<meta name="twitter:image:alt" content="Edición 2026 de Miss Universe Santa Cruz">
+
+<link rel="preload" as="image" href="/edicion26-hero.jpg" type="image/jpeg" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="image" href="/edicion26-hero-mobile.jpg" type="image/jpeg" media="(max-width:900px)" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +60,21 @@
     }
     a{text-decoration:none;color:inherit}
     img{display:block;max-width:100%}
+    /* Protección de fotografías */
+.edition-hero-photo img,
+.gala-image img,
+.candidate img,
+.gallery-item img{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
     .container{width:min(1180px,92%);margin:auto}
 
     .star{
-      width:.88em;
-      height:.88em;
+  width:1.15em;
+  height:1.15em;
       margin:0 .16em;
       vertical-align:-.04em;
       display:inline-block;
@@ -980,20 +1019,20 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"
+  onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',abierto);this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reina.html">Nuestra Reina</a>
-        <a href="organizacion.html">La Organización</a>
-        <a href="missuniversespain.html">Miss Universe Spain</a>
-        <a class="active" href="edicion26.html">Edición 2026</a>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+        <a href="/organizacion">La Organización</a>
+        <a href="/missuniversespain">Miss Universe Spain</a>
+        <a class="active" href="/edicion26">Edición 2026</a>
         <a href="galeria.html">Galería</a>
         <a href="noticias.html">Noticias</a>
         <a href="contacto.html">Contacto</a>
@@ -1028,7 +1067,7 @@
         </div>
         
         <div class="edition-hero-photo">
-  <img src="edicion26-hero-mobile.jpg" alt="Edición 2026 de Miss Universe Santa Cruz">
+ <img src="edicion26-hero-mobile.jpg" alt="Edición 2026 de Miss Universe Santa Cruz" fetchpriority="high" decoding="async" draggable="false">
 </div>
         
       </div>
@@ -1037,7 +1076,7 @@
     <section id="gala" class="section">
       <div class="container gala-grid">
         <div class="gala-image">
-  <img src="edicion26-gala.jpg" alt="Gala Miss Universe Santa Cruz 2026">
+  <img src="edicion26-gala.jpg" alt="Gala Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
 </div>
 
         <div>
@@ -1078,7 +1117,7 @@
             Daniela fue proclamada primera Miss Universe Santa Cruz y pasó a representar
             oficialmente a la organización durante su año de reinado.
           </p>
-          <a href="reina.html" class="btn btn-primary">Conoce a nuestra reina</a>
+          <a href="/reina" class="btn btn-primary">Conoce a nuestra reina</a>
         </div>
       </div>
     </section>
@@ -1172,7 +1211,7 @@
 
         <div class="candidates-grid">
           <article class="candidate">
-            <img src="candidata-celeste.jpg" alt="Celeste Santana">
+            <img src="candidata-celeste.jpg" alt="Celeste Santana" loading="lazy" decoding="async" draggable="false"
             <div class="candidate-body">
   <h3>Celeste Santana García</h3>
 
@@ -1189,7 +1228,7 @@
           </article>
 
      <article class="candidate">
-  <img src="candidata-danna.jpg" alt="Danna Hernández Cruz">
+  <img src="candidata-danna.jpg" alt="Danna Hernández Cruz" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Danna Hernández Cruz</h3>
     <p class="candidate-meta">21 años · Ingeniería Informática</p>
@@ -1202,7 +1241,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-daniela.jpg" alt="Daniela Martínez Morales">
+  <img src="candidata-daniela.jpg" alt="Daniela Martínez Morales" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Daniela Martínez Morales</h3>
     <p class="candidate-meta">19 años · Ciencias de la Actividad Física y el Deporte</p>
@@ -1215,7 +1254,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-ithaisa.jpg" alt="Ithaisa Rodríguez de la Rosa">
+  <img src="candidata-ithaisa.jpg" alt="Ithaisa Rodríguez de la Rosa" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Ithaisa Rodríguez de la Rosa</h3>
     <p class="candidate-meta">19 años · Monitora y profesora de baile</p>
@@ -1228,7 +1267,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-ivanna.jpg" alt="Ivanna Parra Villarroel">
+  <img src="candidata-ivanna.jpg" alt="Ivanna Parra Villarroel" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Ivanna Parra Villarroel</h3>
     <p class="candidate-meta">18 años · Creadora de contenido</p>
@@ -1241,7 +1280,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-izel.jpg" alt="Izel Plasencia Rodríguez">
+  <img src="candidata-izel.jpg" alt="Izel Plasencia Rodríguez" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Izel Plasencia Rodríguez</h3>
     <p class="candidate-meta">20 años · Educadora Infantil</p>
@@ -1254,7 +1293,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-lucia.jpg" alt="Lucía Hernández Bello">
+  <img src="candidata-lucia.jpg" alt="Lucía Hernández Bello" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Lucía Hernández Bello</h3>
     <p class="candidate-meta">19 años · Estudiante de Radioterapia</p>
@@ -1267,7 +1306,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-miriam.jpg" alt="Miriam Luis Brito">
+  <img src="candidata-miriam.jpg" alt="Miriam Luis Brito" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Miriam Luis Brito</h3>
     <p class="candidate-meta">23 años · Confección y Moda</p>
@@ -1280,7 +1319,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-rosa.jpg" alt="Rosa Lilian Pérez Cabello">
+  <img src="candidata-rosa.jpg" alt="Rosa Lilian Pérez Cabello" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Rosa Lilian Pérez Cabello</h3>
     <p class="candidate-meta">52 años · Docente, tallerista y escritora</p>
@@ -1293,7 +1332,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-sandra.jpg" alt="Sandra Noda Gutiérrez">
+  <img src="candidata-sandra.jpg" alt="Sandra Noda Gutiérrez" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Sandra Noda Gutiérrez</h3>
     <p class="candidate-meta">28 años · Graduada en Educación Infantil</p>
@@ -1306,7 +1345,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-sofia.jpg" alt="Sofía Victoria González Ledezma">
+  <img src="candidata-sofia.jpg" alt="Sofía Victoria González Ledezma" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Sofía Victoria González Ledezma</h3>
     <p class="candidate-meta">18 años · Estudiante de Bachillerato</p>
@@ -1319,7 +1358,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-valeria.jpg" alt="Valeria Gorrín Samblás">
+  <img src="candidata-valeria.jpg" alt="Valeria Gorrín Samblás" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Valeria Gorrín Samblás</h3>
     <p class="candidate-meta">23 años · Asesora de ventas en parafarmacia</p>
@@ -1332,7 +1371,7 @@
 </article>
 
 <article class="candidate">
-  <img src="candidata-veronica.jpg" alt="Verónica González Díaz">
+  <img src="candidata-veronica.jpg" alt="Verónica González Díaz" loading="lazy" decoding="async" draggable="false"
   <div class="candidate-body">
     <h3>Verónica González Díaz</h3>
     <p class="candidate-meta">24 años · Estudiante de Marketing y cámara</p>
@@ -1467,15 +1506,15 @@
         <h2 class="section-heading">Quienes hicieron posible la edición</h2>
 
         <div class="collab-logos">
-          <div class="collab-logo"><img src="logo-imest.png" alt="IMEST"></div>
-          <div class="collab-logo"><img src="logo-casa-pedro.jpg" alt="Casa Pedro"></div>
-          <div class="collab-logo"><img src="logo-crazy-gravity.png" alt="Crazy Gravity"></div>
-          <div class="collab-logo"><img src="logo-mega-homes.jpg" alt="Mega Homes"></div>
-          <div class="collab-logo"><img src="logo-cariale-cakes.png" alt="Cariale Cakes"></div>
-          <div class="collab-logo"><img src="logo-divas-skin-care.jpg" alt="Divas Skin Care"></div>
-          <div class="collab-logo"><img src="logo-damian-disenador.png" alt="Damián Diseñador"></div>
-          <div class="collab-logo"><img src="logo-disfruta-tenerife.jpg" alt="Disfruta Tenerife"></div>
-          <div class="collab-logo"><img src="logo-922-visuals.png" alt="922 Visuals"></div>
+          <div class="collab-logo"><img src="logo-imest.png" alt="IMEST" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-casa-pedro.jpg" alt="Casa Pedro" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-crazy-gravity.png" alt="Crazy Gravity" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-mega-homes.jpg" alt="Mega Homes" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-cariale-cakes.png" alt="Cariale Cakes" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-divas-skin-care.jpg" alt="Divas Skin Care" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-damian-disenador.png" alt="Damián Diseñador" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-disfruta-tenerife.jpg" alt="Disfruta Tenerife" loading="lazy" decoding="async"></div>
+<div class="collab-logo"><img src="logo-922-visuals.png" alt="922 Visuals" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </section>
@@ -1486,21 +1525,45 @@
         <h2 class="section-heading">Momentos inolvidables</h2>
 
         <div class="gallery-grid">
-          <a class="gallery-item" href="edicion26-galeria-1.jpg" target="_blank">
-            <img src="edicion26-galeria-1.jpg" alt="Gala Miss Universe Santa Cruz 2026">
-          </a>
-          <a class="gallery-item" href="edicion26-galeria-2.jpg" target="_blank">
-            <img src="edicion26-galeria-2.jpg" alt="Jurado y ganadoras">
-          </a>
-          <a class="gallery-item" href="edicion26-galeria-3.jpg" target="_blank">
-            <img src="edicion26-galeria-3.jpg" alt="Patrocinadores y ganadoras">
-          </a>
-          <a class="gallery-item" href="edicion26-galeria-4.jpg" target="_blank">
-            <img src="edicion26-galeria-4.jpg" alt="Top 3">
-          </a>
-          <a class="gallery-item" href="edicion26-galeria-5.jpg" target="_blank">
-            <img src="edicion26-galeria-5.jpg" alt="Coronación">
-          </a>
+          <div class="gallery-item">
+  <img src="edicion26-galeria-1.jpg"
+       alt="Organización y equipo de reinado Miss Universe Santa Cruz 2026"
+       loading="lazy"
+       decoding="async"
+       draggable="false">
+</div>
+
+<div class="gallery-item">
+  <img src="edicion26-galeria-2.jpg"
+       alt="Jurado y ganadoras de Miss Universe Santa Cruz 2026"
+       loading="lazy"
+       decoding="async"
+       draggable="false">
+</div>
+
+<div class="gallery-item">
+  <img src="edicion26-galeria-3.jpg"
+       alt="Pasarela de gala Miss Universe Santa Cruz 2026"
+       loading="lazy"
+       decoding="async"
+       draggable="false">
+</div>
+
+<div class="gallery-item">
+  <img src="edicion26-galeria-4.jpg"
+       alt="Top 3 de Miss Universe Santa Cruz 2026"
+       loading="lazy"
+       decoding="async"
+       draggable="false">
+</div>
+
+<div class="gallery-item">
+  <img src="edicion26-galeria-5.jpg"
+       alt="Coronación de Miss Universe Santa Cruz 2026"
+       loading="lazy"
+       decoding="async"
+       draggable="false">
+</div>
         </div>
       </div>
     </section>
@@ -1515,32 +1578,55 @@
           a Santa Cruz.
         </p>
         <div class="closing-actions">
-          <a href="reina.html" class="btn btn-primary">Conoce a nuestra reina</a>
+          <a href="/reina" class="btn btn-primary">Conoce a nuestra reina</a>
           <a href="galeria.html" class="btn">Explora la galería</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div class="brand">
-        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
-        <small>SANTA CRUZ</small>
-      </div>
-
-      <div class="contact">
-        Instagram:
-        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
-          @missuniverse.santacruz
-        </a><br>
-        Contacto oficial: próximamente
-      </div>
-
-      <div class="copyright">
-        © 2026 Miss Universe Santa Cruz
-      </div>
+  <footer id="contacto">
+  <div class="container footer-grid">
+    <div class="brand">
+      MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+      <small>SANTA CRUZ</small>
     </div>
-  </footer>
+
+    <div class="contact">
+      <strong>Instagram</strong><br>
+      <a href="https://instagram.com/missuniverse.santacruz"
+         target="_blank"
+         rel="noopener">
+        @missuniverse.santacruz
+      </a>
+
+      <br><br>
+
+      <strong>Contacto oficial</strong><br>
+      <a href="mailto:info@missuniversesantacruz.es">
+        info@missuniversesantacruz.es
+      </a>
+    </div>
+
+    <div class="copyright">
+      © 2026 Miss Universe Santa Cruz
+    </div>
+  </div>
+</footer>
+  <script>
+  document.addEventListener("contextmenu", function(e){
+    if (
+      e.target.closest(".edition-hero-photo") ||
+      e.target.closest(".gala-image") ||
+      e.target.closest(".top-photo") ||
+      e.target.closest(".rep-photo") ||
+      e.target.closest(".candidate") ||
+      e.target.closest(".person") ||
+      e.target.closest(".gallery-item")
+    ){
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
