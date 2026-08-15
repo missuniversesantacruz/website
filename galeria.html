@@ -470,6 +470,16 @@ nav.open{display:flex}nav a{padding:10px 0}
 .mosaic-item[data-image="galeria-15.jpg"] img{
   object-position:50% 12%;
 }
+
+  /* Discurso final Top 3: bajar ligeramente galeria-22 */
+.mosaic-item[data-image="galeria-22.jpg"] img{
+  object-position:50% 40%;
+}
+
+/* Galeria-28: ocupar el hueco debajo de galeria-27 en móvil */
+.mosaic-item[data-image="galeria-28.jpg"]{
+  grid-column:span 1;
+}
 }
 </style>
 </head>
@@ -693,6 +703,11 @@ La fase decisiva de la gala: elección del Top 5, preguntas finales, anuncio del
 <figcaption><span>Final</span></figcaption>
 </figure>
 
+  <figure class="mosaic-item lightbox-trigger" data-image="galeria-27b.jpg">
+  <img src="galeria-27b.jpg" alt="Momento de la final de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
+  <figcaption><span>Final</span></figcaption>
+</figure>
+  
 <figure class="mosaic-item wide lightbox-trigger" data-image="galeria-28.jpg">
 <img src="galeria-28.jpg" alt="Imposición de banda" loading="lazy" decoding="async" draggable="false">
 <figcaption><span>Imposición de banda</span></figcaption>
