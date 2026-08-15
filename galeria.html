@@ -140,7 +140,7 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
   overflow:hidden;
   border:1px solid var(--line);
   background:#090909;
-  cursor:pointer;
+  cursor:default;
 }
 
 .mosaic-item img{
@@ -165,29 +165,6 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
 
 .mosaic-item.tall{
   grid-row:span 2;
-}
-
-.mosaic-item:after{
-  content:"＋";
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(5,5,5,.28);
-  color:var(--gold2);
-  font-size:2rem;
-  opacity:0;
-  transition:.3s;
-}
-
-.mosaic-item:hover img{
-  transform:scale(1.035);
-  filter:brightness(.82);
-}
-
-.mosaic-item:hover:after{
-  opacity:1;
 }
 
 .mosaic-item figcaption{
@@ -235,7 +212,7 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
   position:relative;
   aspect-ratio:4/5;
   overflow:hidden;
-  cursor:pointer;
+  cursor:default;
   background:#090909;
 }
 
@@ -248,11 +225,6 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
   user-select:none;
   -webkit-touch-callout:none;
   -webkit-user-drag:none;
-}
-
-.top-photo:hover img{
-  transform:scale(1.035);
-  filter:brightness(.88);
 }
 
 .top-body{
@@ -284,12 +256,6 @@ nav a:hover,nav a.active{color:var(--gold2);border-color:var(--gold)}
 .play{width:54px;height:54px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold2);margin-bottom:16px}
 .video-card h3{color:var(--gold2);font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
 .video-card p{color:#d4cfc5;font-size:.72rem}
-
-.lightbox{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:24px}
-.lightbox.open{display:flex}
-.lightbox img{max-width:min(1200px,90vw);max-height:86vh;object-fit:contain;border:1px solid var(--line)}
-.lightbox button{position:absolute;background:rgba(5,5,5,.65);border:1px solid var(--line);color:var(--gold2);cursor:pointer;width:48px;height:48px;font-size:1.4rem}
-.close{top:22px;right:22px}.prev{left:22px;top:50%}.next{right:22px;top:50%}
 
 footer{padding:32px 0;background:#080808}
 .footer-grid{display:grid;grid-template-columns:1fr 1fr auto;gap:30px;align-items:center}
@@ -429,8 +395,7 @@ nav.open{display:flex}nav a{padding:10px 0}
   padding:5px 7px;
   font-size:.48rem;
 }
-.prev{left:8px}.next{right:8px}.close{top:12px;right:12px}
-}
+
 </style>
 </head>
 <body>
@@ -824,28 +789,6 @@ Las tres finalistas de la primera edición de Miss Universe Santa Cruz 2026.
 </div>
 </footer>
 
-<div class="lightbox" id="lightbox">
-<button class="close" aria-label="Cerrar">×</button>
-<button class="prev" aria-label="Anterior">‹</button>
-<img id="lightbox-image" src="" alt="Fotografía ampliada">
-<button class="next" aria-label="Siguiente">›</button>
-</div>
 
-<script>
-const triggers=[...document.querySelectorAll(".lightbox-trigger")];
-const box=document.getElementById("lightbox");
-const boxImage=document.getElementById("lightbox-image");
-const images=triggers.map(x=>x.dataset.image);
-let current=0;
-function openBox(i){current=i;boxImage.src=images[current];box.classList.add("open");document.body.style.overflow="hidden"}
-function closeBox(){box.classList.remove("open");document.body.style.overflow=""}
-function move(step){current=(current+step+images.length)%images.length;boxImage.src=images[current]}
-triggers.forEach((x,i)=>x.addEventListener("click",()=>openBox(i)));
-document.querySelector(".close").onclick=closeBox;
-document.querySelector(".prev").onclick=()=>move(-1);
-document.querySelector(".next").onclick=()=>move(1);
-box.addEventListener("click",e=>{if(e.target===box)closeBox()});
-document.addEventListener("keydown",e=>{if(!box.classList.contains("open"))return;if(e.key==="Escape")closeBox();if(e.key==="ArrowLeft")move(-1);if(e.key==="ArrowRight")move(1)});
-</script>
 </body>
 </html>
