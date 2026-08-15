@@ -254,6 +254,7 @@
       text-transform:uppercase;
       letter-spacing:.07em;
       font-size:.68rem;
+      cursor:pointer;
     }
     .filter.active{
       color:#0a0a0a;
@@ -274,6 +275,9 @@
       display:flex;
       flex-direction:column;
     }
+    .card[hidden]{
+  display:none;
+}
     .card-img{
       height:230px;
       background:center top / cover no-repeat;
@@ -518,16 +522,15 @@
         <h2 class="section-heading">Toda la actualidad</h2>
 
         <div class="filters" aria-label="Categorías de noticias">
-          <span class="filter active">Todas</span>
-          <span class="filter">Organización</span>
-          <span class="filter">Reinado</span>
-          <span class="filter">Miss Universe Spain</span>
-          <span class="filter">Eventos</span>
-          <span class="filter">Comunicados</span>
-        </div>
+  <button type="button" class="filter active" data-filter="todas" aria-pressed="true">Todas</button>
+  <button type="button" class="filter" data-filter="organizacion" aria-pressed="false">Organización</button>
+  <button type="button" class="filter" data-filter="reinado" aria-pressed="false">Reinado</button>
+  <button type="button" class="filter" data-filter="miss-universe-spain" aria-pressed="false">Miss Universe Spain</button>
+  <button type="button" class="filter" data-filter="eventos" aria-pressed="false">Eventos</button>
+</div>
 
         <div class="news-grid">
-          <article class="card">
+          <article class="card" data-category="miss-universe-spain">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Miss Universe Spain</p>
@@ -537,7 +540,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-category="miss-universe-spain">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Miss Universe Spain</p>
@@ -547,7 +550,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-category="eventos">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Evento</p>
@@ -557,7 +560,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-category="reinado">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Reinado</p>
@@ -567,7 +570,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-category="organizacion">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Organización</p>
@@ -577,7 +580,7 @@
             </div>
           </article>
 
-          <article class="card">
+         <article class="card" data-category="miss-universe-spain">
             <div class="card-img"></div>
             <div class="card-body">
               <p class="card-category">Miss Universe Spain</p>
@@ -635,6 +638,32 @@
       </div>
     </section>
   </main>
+  <script>
+  const filterButtons = document.querySelectorAll('.filter[data-filter]');
+  const newsCards = document.querySelectorAll('.news-grid .card[data-category]');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selectedFilter = button.dataset.filter;
+
+      filterButtons.forEach((item) => {
+        item.classList.remove('active');
+        item.setAttribute('aria-pressed', 'false');
+      });
+
+      button.classList.add('active');
+      button.setAttribute('aria-pressed', 'true');
+
+      newsCards.forEach((card) => {
+        const category = card.dataset.category;
+
+        card.hidden =
+          selectedFilter !== 'todas' &&
+          category !== selectedFilter;
+      });
+    });
+  });
+</script>
 
   <footer>
     <div class="container footer-grid">
