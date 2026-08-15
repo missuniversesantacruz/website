@@ -396,6 +396,30 @@ nav.open{display:flex}nav a{padding:10px 0}
   font-size:.48rem;
 }
 
+  /* AJUSTES DEL PRIMER MOSAICO EN MÓVIL */
+
+/* Backstage: desplazar ligeramente la fotografía hacia la derecha */
+.mosaic-item[data-image="galeria-01.jpg"] img{
+  object-position:44% center;
+}
+
+/* Homenaje a Venezuela: cartel en la parte superior */
+.mosaic-item[data-image="galeria-04.jpg"] figcaption{
+  top:7px;
+  bottom:auto;
+}
+
+/* Opening debajo del homenaje: bajar la imagen para mostrar mejor a la chica */
+.mosaic-item[data-image="galeria-06.jpg"] img{
+  object-position:50% 20%;
+}
+
+/* Opening del traje plateado: bajar el encuadre para mostrar mejor a la chica */
+.mosaic-item[data-image="galeria-03.jpg"] img{
+  object-position:50% 25%;
+}
+
+}
 </style>
 </head>
 <body>
