@@ -35,8 +35,8 @@
     .container{width:min(1180px,92%);margin:auto}
 
     .star{
-      width:.88em;
-      height:.88em;
+      width:1.15em;
+      height:1.15em;
       margin:0 .16em;
       vertical-align:-.04em;
       display:inline-block;
@@ -122,49 +122,50 @@
     }
 
     /* HERO */
-    .news-hero{
-      min-height:700px;
-      padding-top:78px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5,5,5,.99) 0%,
-          rgba(5,5,5,.94) 34%,
-          rgba(5,5,5,.64) 52%,
-          rgba(5,5,5,.14) 72%,
-          rgba(5,5,5,0) 100%
-        ),
-        url("noticias-hero.jpg") right center / cover no-repeat;
-    }
+ .news-hero{
+  min-height:760px;
+  padding-top:78px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,.995) 0%,
+      rgba(5,5,5,.96) 30%,
+      rgba(5,5,5,.78) 48%,
+      rgba(5,5,5,.34) 66%,
+      rgba(5,5,5,.06) 84%,
+      rgba(5,5,5,0) 100%
+    ),
+    url("noticias-hero.jpg") right center / cover no-repeat;
+}
     .news-hero-grid{
-      min-height:622px;
+      min-height:682px;
       display:flex;
       align-items:center;
     }
     .news-copy{
-      width:54%;
-      max-width:680px;
-      padding:90px 0 55px;
+      width:52%;
+      max-width:650px;
+      padding:96px 0 64px;
     }
     .news-kicker{
       color:var(--gold2);
       text-transform:uppercase;
       letter-spacing:.22em;
-      font-size:.82rem;
+      font-size:.8rem;
       margin-bottom:18px;
     }
     .news-copy h1{
       color:var(--gold2);
-      font-size:clamp(3.2rem,6vw,5.5rem);
+     font-size:clamp(3rem,5.4vw,5rem);
       font-weight:300;
       line-height:1;
       margin-bottom:18px;
     }
     .news-copy h2{
-      font-size:clamp(1.1rem,2vw,1.8rem);
+      font-size:clamp(1.08rem,1.85vw,1.7rem);
       font-weight:300;
       line-height:1.5;
       margin-bottom:24px;
@@ -172,7 +173,7 @@
     .news-copy p{
       color:#ddd8ce;
       line-height:1.8;
-      font-size:.94rem;
+      font-size:.92rem;
       max-width:620px;
     }
 
@@ -407,22 +408,22 @@
       nav.open{display:flex}
       nav a{padding:10px 0}
 
-      .news-hero{
-        min-height:620px;
-        padding-top:64px;
-        background:
-          linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.84) 52%,rgba(5,5,5,.18) 100%),
-          url("noticias-hero-mobile.jpg") right top / cover no-repeat;
-      }
-      .news-hero-grid{min-height:556px}
+  .news-hero{
+  min-height:640px;
+  padding-top:64px;
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.99) 0%,rgba(5,5,5,.92) 42%,rgba(5,5,5,.56) 66%,rgba(5,5,5,.12) 100%),
+    url("noticias-hero-mobile.jpg") right top / cover no-repeat;
+}
+      .news-hero-grid{min-height:576px}
       .news-copy{
-        width:60%;
-        padding:58px 0 40px;
-      }
-      .news-kicker{font-size:.58rem}
-      .news-copy h1{font-size:2.4rem}
-      .news-copy h2{font-size:.88rem}
-      .news-copy p{font-size:.7rem}
+  width:62%;
+  padding:64px 0 44px;
+}
+      .news-kicker{font-size:.6rem}
+      .news-copy h1{font-size:2.55rem}
+      .news-copy h2{font-size:.92rem}
+      .news-copy p{font-size:.72rem}
 
       .featured-news{grid-template-columns:1fr}
       .featured-image{min-height:390px}
@@ -434,16 +435,16 @@
 
     @media(max-width:430px){
       .news-hero{
-        min-height:600px;
-        background-position:70% top;
+        min-height:620px;
+        background-position:74% top;
       }
-      .news-hero-grid{min-height:536px}
+      .news-hero-grid{min-height:556px}
       .news-copy{
-        width:64%;
-        transform:translateY(-8px);
+        width:66%;
+        transform:translateY(-4px);
       }
-      .news-copy h1{font-size:1.7rem}
-      .news-copy p{font-size:.67rem}
+      .news-copy h1{font-size:1.82rem}
+      .news-copy p{font-size:.69rem}
       .featured-image{min-height:320px}
       .filters{gap:8px}
       .filter{padding:9px 12px;font-size:.6rem}
