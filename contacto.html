@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contacto oficial de Miss Universe Santa Cruz para información general, colaboraciones, patrocinios, prensa y futuras oportunidades de participación.">
   <title>Contacto | Miss Universe Santa Cruz</title>
+  <link rel="preload" as="image" href="/contacto-hero.jpg" type="image/jpeg" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="image" href="/contacto-hero-mobile.jpg" type="image/jpeg" media="(max-width:900px)" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,60 +126,126 @@
       box-shadow:0 12px 30px rgba(199,162,90,.14);
     }
 
-    /* HERO */
     .contact-hero{
-      min-height:700px;
-      padding-top:78px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5,5,5,.99) 0%,
-          rgba(5,5,5,.94) 34%,
-          rgba(5,5,5,.64) 52%,
-          rgba(5,5,5,.14) 72%,
-          rgba(5,5,5,0) 100%
-        ),
-        url("contacto-hero.jpg") right center / cover no-repeat;
-    }
-    .contact-hero-grid{
-      min-height:622px;
-      display:flex;
-      align-items:center;
-    }
-    .contact-copy{
-      width:54%;
-      max-width:680px;
-      padding:90px 0 55px;
-    }
-    .contact-kicker{
-      color:var(--gold2);
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      font-size:.82rem;
-      margin-bottom:18px;
-    }
-    .contact-copy h1{
-      color:var(--gold2);
-      font-size:clamp(3.2rem,6vw,5.5rem);
-      font-weight:300;
-      line-height:1;
-      margin-bottom:18px;
-    }
-    .contact-copy h2{
-      font-size:clamp(1.1rem,2vw,1.8rem);
-      font-weight:300;
-      line-height:1.5;
-      margin-bottom:24px;
-    }
-    .contact-copy p{
-      color:#ddd8ce;
-      line-height:1.8;
-      font-size:.94rem;
-      max-width:620px;
-    }
+  min-height:760px;
+  padding-top:78px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,.995) 0%,
+      rgba(5,5,5,.96) 30%,
+      rgba(5,5,5,.78) 48%,
+      rgba(5,5,5,.34) 66%,
+      rgba(5,5,5,.06) 84%,
+      rgba(5,5,5,0) 100%
+    ),
+    url("contacto-hero.jpg") right center / cover no-repeat;
+}
+
+.contact-hero-grid{
+  min-height:682px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+.contact-copy{
+  width:52%;
+  max-width:650px;
+  padding:96px 0 64px;
+  position:relative;
+  z-index:3;
+}
+
+.contact-kicker{
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.8rem;
+  margin-bottom:18px;
+}
+
+.contact-copy h1{
+  color:var(--gold2);
+  font-size:clamp(3rem,5.4vw,5rem);
+  font-weight:300;
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.contact-copy h2{
+  font-size:clamp(1.08rem,1.85vw,1.7rem);
+  font-weight:300;
+  line-height:1.5;
+  margin-bottom:24px;
+}
+
+.contact-copy p{
+  color:#ddd8ce;
+  line-height:1.8;
+  font-size:.92rem;
+  max-width:620px;
+}
+    /* HERO */
+    /* ENTRADA SUAVE DEL HERO */
+.contact-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:contactHeroCurtain .85s ease-out both;
+}
+
+.contact-kicker,
+.contact-copy h1,
+.contact-copy h2,
+.contact-copy > p:not(.contact-kicker){
+  opacity:0;
+  animation:contactHeroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.contact-kicker{animation-delay:.12s}
+.contact-copy h1{animation-delay:.20s}
+.contact-copy h2{animation-delay:.29s}
+.contact-copy > p:not(.contact-kicker){animation-delay:.39s}
+
+@keyframes contactHeroCurtain{
+  from{opacity:1}
+  to{opacity:0}
+}
+
+@keyframes contactHeroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .contact-hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .contact-kicker,
+  .contact-copy h1,
+  .contact-copy h2,
+  .contact-copy > p:not(.contact-kicker){
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
 
     .section{
       padding:78px 0;
@@ -443,40 +511,52 @@
       nav.open{display:flex}
       nav a{padding:10px 0}
 
-      .contact-hero{
-        min-height:620px;
-        padding-top:64px;
-        background:
-          linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.84) 52%,rgba(5,5,5,.18) 100%),
-          url("contacto-hero-mobile.jpg") right top / cover no-repeat;
-      }
-      .contact-hero-grid{min-height:556px}
-      .contact-copy{
-        width:60%;
-        padding:58px 0 40px;
-      }
-      .contact-kicker{font-size:.58rem}
-      .contact-copy h1{font-size:2.4rem}
-      .contact-copy h2{font-size:.88rem}
-      .contact-copy p{font-size:.7rem}
+     .contact-hero{
+  min-height:610px;
+  padding-top:64px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,.99) 0%,
+      rgba(5,5,5,.92) 42%,
+      rgba(5,5,5,.56) 66%,
+      rgba(5,5,5,.12) 100%
+    ),
+    url("contacto-hero-mobile.jpg") 60% top / cover no-repeat;
+}
+
+.contact-hero-grid{min-height:546px}
+
+.contact-copy{
+  width:62%;
+  padding:64px 0 44px;
+}
+
+.contact-kicker{font-size:.6rem}
+.contact-copy h1{font-size:2.55rem}
+.contact-copy h2{font-size:.92rem}
+.contact-copy p{font-size:.72rem}
 
       .contact-grid{grid-template-columns:1fr}
       .path-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr;text-align:center}
     }
 
-    @media(max-width:430px){
-      .contact-hero{
-        min-height:600px;
-        background-position:70% top;
-      }
-      .contact-hero-grid{min-height:536px}
-      .contact-copy{
-        width:64%;
-        transform:translateY(-8px);
-      }
-      .contact-copy h1{font-size:1.7rem}
-      .contact-copy p{font-size:.67rem}
+   @media(max-width:430px){
+  .contact-hero{
+    min-height:560px;
+    background-position:58% top;
+  }
+
+  .contact-hero-grid{min-height:496px}
+
+  .contact-copy{
+    width:66%;
+    transform:translateY(-4px);
+  }
+
+  .contact-copy h1{font-size:1.82rem}
+  .contact-copy p{font-size:.69rem}
       .form-card{padding:22px}
       .form-grid{grid-template-columns:1fr}
       .field.full,
