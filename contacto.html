@@ -242,6 +242,9 @@ background:
       padding:78px 0;
       border-bottom:1px solid var(--line);
     }
+    #formulario{
+  scroll-margin-top:90px;
+}
     .section-title{
       color:var(--gold2);
       text-transform:uppercase;
@@ -723,7 +726,9 @@ background:
               Marcas, diseñadores, fotógrafos, maquilladores, estilistas,
               medios, hoteles y profesionales pueden presentar sus propuestas.
             </p>
-            <a href="colaboraciones.html" class="btn btn-primary">Proponer colaboración</a>
+            <a href="#formulario"
+   class="btn btn-primary"
+   data-contact-motivo="Colaboraciones">Proponer colaboración</a>
           </article>
 
           <article class="path-card">
@@ -732,7 +737,9 @@ background:
               Las inscripciones no están abiertas actualmente, pero puedes solicitar
               información sobre próximas oportunidades de participación.
             </p>
-            <a href="participa.html" class="btn">Solicitar información</a>
+            <a href="#formulario"
+   class="btn"
+   data-contact-motivo="Participación en futuras ediciones">Solicitar información</a>
           </article>
         </div>
       </div>
@@ -746,10 +753,10 @@ background:
         <div class="faq-list">
           <details>
             <summary>¿Cómo puedo colaborar con Miss Universe Santa Cruz?</summary>
-            <p>
-              Puedes utilizar el formulario de contacto o acceder a la página de colaboraciones
-              para presentar una propuesta profesional, comercial o creativa.
-            </p>
+          <p>
+  Puedes utilizar el formulario de contacto para presentar una propuesta
+  profesional, comercial o creativa.
+</p>
           </details>
 
           <details>
@@ -830,6 +837,13 @@ background:
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("form-status");
   const submitButton = contactForm.querySelector('button[type="submit"]');
+    const motivoSelect = document.getElementById("motivo");
+
+document.querySelectorAll("[data-contact-motivo]").forEach((button) => {
+  button.addEventListener("click", () => {
+    motivoSelect.value = button.dataset.contactMotivo;
+  });
+});
 
   contactForm.addEventListener("submit", async function(event){
     event.preventDefault();
