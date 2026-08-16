@@ -604,7 +604,10 @@ background:
           <p class="section-title">Escríbenos</p>
           <h2 class="section-heading">Cuéntanos cómo podemos ayudarte</h2>
 
-          <form id="contactForm" class="form-card">
+         <form id="contactForm"
+      class="form-card"
+      action="https://formspree.io/f/mqpzdrae"
+      method="POST">
             <div class="form-grid">
               <div class="field">
                 <label for="nombre">Nombre y apellidos</label>
@@ -640,7 +643,7 @@ background:
               </div>
 
               <label class="consent">
-                <input id="consentimiento" type="checkbox" required>
+                <input id="consentimiento" name="consentimiento" value="Aceptado" type="checkbox" required>
                 <span>
                   Acepto que mis datos sean utilizados únicamente para responder a esta consulta.
                   No se emplearán para otros fines sin autorización.
@@ -649,9 +652,9 @@ background:
 
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                <p class="form-note">
-                  Al enviar, se abrirá tu aplicación de correo con el mensaje preparado.
-                </p>
+               <p class="form-note" id="form-status" aria-live="polite">
+  Responderemos a tu consulta lo antes posible.
+</p>
               </div>
             </div>
           </form>
@@ -804,27 +807,41 @@ background:
   </footer>
 
   <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event){
-      event.preventDefault();
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("form-status");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
 
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const telefono = document.getElementById("telefono").value.trim();
-      const motivo = document.getElementById("motivo").value;
-      const mensaje = document.getElementById("mensaje").value.trim();
+  contactForm.addEventListener("submit", async function(event){
+    event.preventDefault();
 
-      const subject = encodeURIComponent("Contacto web · " + motivo);
-      const body = encodeURIComponent(
-        "Nombre: " + nombre + "\n" +
-        "Correo: " + email + "\n" +
-        "Teléfono: " + (telefono || "No indicado") + "\n" +
-        "Motivo: " + motivo + "\n\n" +
-        "Mensaje:\n" + mensaje
-      );
+    const originalButtonText = submitButton.textContent;
 
-      window.location.href =
-        "mailto:missuniverse.santacruz@hotmail.com?subject=" + subject + "&body=" + body;
-    });
-  </script>
+    submitButton.disabled = true;
+    submitButton.textContent = "ENVIANDO…";
+    formStatus.textContent = "Enviando mensaje…";
+
+    try{
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if(response.ok){
+        formStatus.textContent = "✓ Mensaje enviado correctamente. Gracias por contactar con nosotros.";
+        contactForm.reset();
+      }else{
+        formStatus.textContent = "No se ha podido enviar el mensaje. Inténtalo de nuevo.";
+      }
+    }catch(error){
+      formStatus.textContent = "No se ha podido enviar el mensaje. Comprueba tu conexión e inténtalo de nuevo.";
+    }finally{
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+</script>
 </body>
 </html>
