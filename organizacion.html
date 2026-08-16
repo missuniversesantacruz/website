@@ -427,18 +427,9 @@
       background:#090909;
       overflow:hidden;
     }
-    .team-photo{
-      height:320px;
-      background:center top/cover no-repeat;
-      border-bottom:1px solid var(--line);
-    }
-    .team-card:nth-child(1) .team-photo{background-image:url("juan-carlos.jpg")}
-    .team-card:nth-child(2) .team-photo{background-image:url("raul-correa.jpg")}
-    .team-card:nth-child(3) .team-photo{background-image:url("alejandro.jpg")}
     /* Protección básica de fotografías */
 .about-image,
-.values-image,
-.team-photo{
+.values-image{
   -webkit-user-select:none;
   user-select:none;
   -webkit-touch-callout:none;
@@ -619,7 +610,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
       .values-image{min-height:350px}
       .mission-grid{grid-template-columns:1fr}
       .team-grid{grid-template-columns:1fr}
-      .team-photo{height:380px}
 .partner-grid{
   grid-template-columns:1fr;
 }
@@ -669,7 +659,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
       .org-copy h2{font-size:.92rem}
       .org-intro{font-size:.67rem}
       .values-grid{grid-template-columns:1fr}
-      .team-photo{height:330px}
     }
   </style>
 </head>
@@ -849,7 +838,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
 
         <div class="team-grid">
           <article class="team-card">
-            <div class="team-photo" role="img" aria-label="Juan Carlos Santana Alonso"></div>
             <div class="team-body">
               <h3>Juan Carlos Santana Alonso</h3>
               <p class="team-role">Director & CEO</p>
@@ -858,7 +846,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
           </article>
 
           <article class="team-card">
-            <div class="team-photo" role="img" aria-label="Raúl Correa Pérez"></div>
             <div class="team-body">
               <h3>Raúl Correa Pérez</h3>
               <p class="team-role">Director & Estilista Oficial</p>
@@ -867,7 +854,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
           </article>
 
           <article class="team-card">
-           <div class="team-photo" role="img" aria-label="Alejandro David Piña González"></div>
             <div class="team-body">
               <h3>Alejandro David Piña González</h3>
               <p class="team-role">Director & Community Manager</p>
@@ -956,7 +942,6 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
       e.target.closest(".org-hero") ||
       e.target.closest(".about-image") ||
       e.target.closest(".values-image") ||
-      e.target.closest(".team-photo") ||
       e.target.closest(".cta")
     ){
       e.preventDefault();
