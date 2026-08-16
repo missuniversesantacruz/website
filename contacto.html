@@ -335,6 +335,26 @@ background:
       font-size:.68rem;
       line-height:1.5;
     }
+    .form-status{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid transparent;
+  transition:.25s;
+}
+
+.form-status.success{
+  color:var(--gold2);
+  border-color:var(--gold);
+  background:rgba(199,162,90,.08);
+  font-size:.72rem;
+  letter-spacing:.04em;
+}
+
+.form-status.error{
+  color:#f1b5b5;
+  border-color:rgba(220,100,100,.45);
+  background:rgba(220,100,100,.08);
+}
 
     .contact-cards{
       display:grid;
@@ -652,7 +672,7 @@ background:
 
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-               <p class="form-note" id="form-status" aria-live="polite">
+               <p class="form-note form-status" id="form-status" aria-live="polite" role="status">
   Responderemos a tu consulta lo antes posible.
 </p>
               </div>
@@ -818,7 +838,8 @@ background:
 
     submitButton.disabled = true;
     submitButton.textContent = "ENVIANDO…";
-    formStatus.textContent = "Enviando mensaje…";
+    formStatus.className = "form-note form-status";
+formStatus.textContent = "Enviando mensaje…";
 
     try{
       const response = await fetch(contactForm.action, {
@@ -829,14 +850,17 @@ background:
         }
       });
 
-      if(response.ok){
-        formStatus.textContent = "✓ Mensaje enviado correctamente. Gracias por contactar con nosotros.";
-        contactForm.reset();
-      }else{
-        formStatus.textContent = "No se ha podido enviar el mensaje. Inténtalo de nuevo.";
-      }
-    }catch(error){
-      formStatus.textContent = "No se ha podido enviar el mensaje. Comprueba tu conexión e inténtalo de nuevo.";
+     if(response.ok){
+  formStatus.className = "form-note form-status success";
+  formStatus.textContent = "✓ MENSAJE ENVIADO CORRECTAMENTE. Gracias por contactar con nosotros.";
+  contactForm.reset();
+}else{
+  formStatus.className = "form-note form-status error";
+  formStatus.textContent = "No se ha podido enviar el mensaje. Inténtalo de nuevo.";
+}
+}catch(error){
+  formStatus.className = "form-note form-status error";
+  formStatus.textContent = "No se ha podido enviar el mensaje. Comprueba tu conexión e inténtalo de nuevo.";
     }finally{
       submitButton.disabled = false;
       submitButton.textContent = originalButtonText;
