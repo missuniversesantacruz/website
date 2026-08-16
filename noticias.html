@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Noticias oficiales de Miss Universe Santa Cruz: actualidad, comunicados, reinado, eventos y Miss Universe Spain.">
   <title>Noticias | Miss Universe Santa Cruz</title>
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+<meta name="theme-color" content="#050505">
+
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/apple-icon.PNG">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" as="image" href="/noticias-hero.jpg" type="image/jpeg" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="image" href="/noticias-hero-mobile.jpg" type="image/jpeg" media="(max-width:900px)" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,15 +150,19 @@
     url("noticias-hero.jpg") right center / cover no-repeat;
 }
     .news-hero-grid{
-      min-height:682px;
-      display:flex;
-      align-items:center;
-    }
-    .news-copy{
-      width:52%;
-      max-width:650px;
-      padding:96px 0 64px;
-    }
+  min-height:682px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+   .news-copy{
+  width:52%;
+  max-width:650px;
+  padding:96px 0 64px;
+  position:relative;
+  z-index:3;
+}
     .news-kicker{
       color:var(--gold2);
       text-transform:uppercase;
@@ -177,6 +190,61 @@
       max-width:620px;
     }
 
+    /* ENTRADA SUAVE DEL HERO */
+.news-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#050505;
+  z-index:1;
+  pointer-events:none;
+  animation:newsHeroCurtain .85s ease-out both;
+}
+
+.news-kicker,
+.news-copy h1,
+.news-copy h2,
+.news-copy > p:not(.news-kicker){
+  opacity:0;
+  animation:newsHeroItem .65s cubic-bezier(.22,.65,.28,1) forwards;
+}
+
+.news-kicker{animation-delay:.12s}
+.news-copy h1{animation-delay:.20s}
+.news-copy h2{animation-delay:.29s}
+.news-copy > p:not(.news-kicker){animation-delay:.39s}
+
+@keyframes newsHeroCurtain{
+  from{opacity:1}
+  to{opacity:0}
+}
+
+@keyframes newsHeroItem{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .news-hero::before{
+    animation:none;
+    opacity:0;
+  }
+
+  .news-kicker,
+  .news-copy h1,
+  .news-copy h2,
+  .news-copy > p:not(.news-kicker){
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
     .section{
       padding:78px 0;
       border-bottom:1px solid var(--line);
@@ -208,12 +276,16 @@
       background:#090909;
       overflow:hidden;
     }
-    .featured-image{
-      min-height:500px;
-      background:
-        linear-gradient(180deg,rgba(5,5,5,.03),rgba(5,5,5,.28)),
-        url("noticia-daniela.jpg") 75% top / cover no-repeat;
-    }
+   .featured-image{
+  min-height:500px;
+  background:
+    linear-gradient(180deg,rgba(5,5,5,.03),rgba(5,5,5,.28)),
+    url("noticia-daniela.jpg") 75% top / cover no-repeat;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
     .featured-content{
       padding:46px;
       display:flex;
@@ -279,10 +351,14 @@
   display:none;
 }
     .card-img{
-      height:230px;
-      background:center top / cover no-repeat;
-      border-bottom:1px solid var(--line);
-    }
+  height:230px;
+  background:center top / cover no-repeat;
+  border-bottom:1px solid var(--line);
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
     .card:nth-child(1) .card-img{background-image:url("noticia-danna.jpg")}
     .card:nth-child(2) .card-img{background-image:url("noticia-ivanna.jpg")}
     .card:nth-child(3) .card-img{background-image:url("noticia-gala-2026.PNG")}
@@ -459,24 +535,27 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+     <button class="menu-btn"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=this.parentElement.querySelector('#main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reina.html">Nuestra Reina</a>
-        <a href="organizacion.html">La Organización</a>
-        <a href="missuniversespain.html">Miss Universe Spain</a>
-        <a href="edicion26.html">Edición 2026</a>
-        <a href="galeria.html">Galería</a>
-        <a class="active" href="noticias.html">Noticias</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+<nav id="main-nav" aria-label="Navegación principal">
+  <a href="/">Inicio</a>
+  <a href="/reina">Nuestra Reina</a>
+  <a href="/organizacion">La Organización</a>
+  <a href="/missuniversespain">Miss Universe Spain</a>
+  <a href="/edicion26">Edición 2026</a>
+  <a href="/galeria">Galería</a>
+  <a class="active" href="/noticias" aria-current="page">Noticias</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
     </div>
   </header>
 
@@ -610,7 +689,7 @@
             <p class="statement-date">Organización</p>
             <h3>Presentación del equipo directivo</h3>
             <p>Conoce a las personas responsables de impulsar Miss Universe Santa Cruz.</p>
-            <a href="organizacion.html#direccion">Conocer al equipo →</a>
+            <a href="/organizacion#direccion">Conocer al equipo →</a>
           </article>
 
           <article class="statement">
@@ -663,22 +742,33 @@
       });
     });
   });
+    document.querySelectorAll('.featured-image, .card-img').forEach((zone) => {
+  zone.addEventListener('contextmenu', (event) => event.preventDefault());
+});
 </script>
 
-  <footer>
+  <footer id="contacto">
     <div class="container footer-grid">
       <div class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </div>
 
-      <div class="contact">
-        Instagram:
-        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
-          @missuniverse.santacruz
-        </a><br>
-        Contacto oficial: próximamente
-      </div>
+    <div class="contact">
+  <strong>Instagram</strong><br>
+  <a href="https://instagram.com/missuniverse.santacruz"
+     target="_blank"
+     rel="noopener">
+    @missuniverse.santacruz
+  </a>
+
+  <br><br>
+
+  <strong>Contacto oficial</strong><br>
+  <a href="mailto:info@missuniversesantacruz.es">
+    info@missuniversesantacruz.es
+  </a>
+</div>
 
       <div class="copyright">
         © 2026 Miss Universe Santa Cruz
