@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Daniela Martínez Morales, proclamada Miss Universe Santa Cruz 2026 tras una emocionante final celebrada en Arafo.">
   <title>Daniela Martínez Morales, Miss Universe Santa Cruz 2026</title>
+  <link rel="canonical" href="https://missuniversesantacruz.es/noticia-daniela">
+
+<meta property="og:title" content="Daniela Martínez Morales, Miss Universe Santa Cruz 2026">
+<meta property="og:description" content="Daniela Martínez Morales, proclamada Miss Universe Santa Cruz 2026 tras una emocionante final celebrada en Arafo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://missuniversesantacruz.es/noticia-daniela">
+<meta property="og:image" content="https://missuniversesantacruz.es/social-preview-noticia-daniela.jpg">
+<meta property="og:image:secure_url" content="https://missuniversesantacruz.es/social-preview-noticia-daniela.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Daniela Martínez Morales, Miss Universe Santa Cruz 2026">
+<meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daniela Martínez Morales, Miss Universe Santa Cruz 2026">
+<meta name="twitter:description" content="Daniela Martínez Morales, proclamada Miss Universe Santa Cruz 2026 tras una emocionante final celebrada en Arafo.">
+<meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview-noticia-daniela.jpg">
+
+<meta name="apple-mobile-web-app-title" content="M✨U SC">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/apple-icon.PNG">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" as="image" href="/noticia-daniela.jpg" type="image/jpeg" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,6 +212,53 @@
       line-height:1.8;
     }
 
+    /* Entrada elegante del hero */
+.article-hero{
+  animation:articleHeroReveal .85s ease-out both;
+}
+
+.category,
+.hero-content h1,
+.hero-subtitle,
+.article-meta{
+  opacity:0;
+  transform:translateY(10px);
+  animation:articleHeroContent .65s ease-out forwards;
+}
+
+.category{animation-delay:.15s}
+.hero-content h1{animation-delay:.28s}
+.hero-subtitle{animation-delay:.42s}
+.article-meta{animation-delay:.55s}
+
+@keyframes articleHeroReveal{
+  from{opacity:.72}
+  to{opacity:1}
+}
+
+@keyframes articleHeroContent{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .article-hero,
+  .category,
+  .hero-content h1,
+  .hero-subtitle,
+  .article-meta{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
     /* ARTÍCULO */
     .article-wrap{
       background:var(--paper);
@@ -227,10 +300,22 @@
     }
 
     .article-image img{
-      width:100%;
-      max-height:760px;
-      object-fit:cover;
-    }
+  width:100%;
+  max-height:760px;
+  object-fit:cover;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
+
+.article-hero,
+.related-image{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
 
     .caption{
       margin-top:10px;
@@ -441,24 +526,28 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/index" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=document.getElementById('main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="/index">Inicio</a>
-        <a href="/reina">Nuestra Reina</a>
-        <a href="/organizacion">La Organización</a>
-        <a href="/missuniversespain">Miss Universe Spain</a>
-        <a href="/edicion26">Edición 2026</a>
-        <a href="/galeria">Galería</a>
-        <a class="active" href="/noticias">Noticias</a>
-        <a href="/contacto">Contacto</a>
-      </nav>
+<nav id="main-nav" aria-label="Navegación principal">
+  <a href="/">Inicio</a>
+  <a href="/reina">Nuestra Reina</a>
+  <a href="/organizacion">La Organización</a>
+  <a href="/missuniversespain">Miss Universe Spain</a>
+  <a href="/edicion26">Edición 2026</a>
+  <a href="/galeria">Galería</a>
+  <a class="active" href="/noticias" aria-current="page">Noticias</a>
+  <a href="/contacto">Contacto</a>
+</nav>
     </div>
   </header>
 
@@ -496,7 +585,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales durante la gala">
+          <img src="daniela-galeria-coronacion.jpg" alt="Daniela Martínez Morales durante la gala" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Daniela Martínez Morales durante la gala de Miss Universe Santa Cruz 2026.</figcaption>
         </figure>
 
@@ -532,7 +621,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="edicion26-galeria-4.jpg" alt="Top 3 de Miss Universe Santa Cruz 2026">
+          <img src="edicion26-galeria-4.jpg" alt="Top 3 de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Daniela Martínez Morales, Danna Hernández Cruz y Valeria Gorrín Samblas, Top 3 oficial de 2026.</figcaption>
         </figure>
 
@@ -557,7 +646,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="galeria-28.jpg" alt="Coronación de Daniela Martínez Morales">
+          <img src="galeria-28.jpg" alt="Coronación de Daniela Martínez Morales" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">El momento de la coronación de Daniela Martínez Morales.</figcaption>
         </figure>
 
@@ -592,7 +681,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="edicion26-galeria-5.jpg" alt="Daniela Martínez Morales como ganadora">
+          <img src="edicion26-galeria-5.jpg" alt="Daniela Martínez Morales como ganadora" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Daniela Martínez Morales, Miss Universe Santa Cruz 2026.</figcaption>
         </figure>
 
@@ -639,7 +728,7 @@
         <h2 class="section-heading">Más historias de 2026</h2>
 
         <div class="related-grid">
-          <a class="related-card" href="noticia-gala-2026.html">
+          <a class="related-card" href="/noticia-gala-2026">
             <div class="related-image"></div>
             <div class="related-body">
               <p>Edición 2026</p>
@@ -647,7 +736,7 @@
             </div>
           </a>
 
-          <a class="related-card" href="noticia-miss-universe-spain.html">
+          <a class="related-card" href="/noticia-miss-universe-spain">
             <div class="related-image"></div>
             <div class="related-body">
               <p>Miss Universe Spain</p>
@@ -655,8 +744,8 @@
             </div>
           </a>
 
-          <a class="related-card" href="edicion26.html">
-            <div class="related-image"></div>
+          <a class="related-card" href="/edicion26">
+            div class="related-image"></div>
             <div class="related-body">
               <p>Top 3</p>
               <h3>Daniela, Danna y Valeria: el equipo de reinado de la primera edición</h3>
@@ -670,7 +759,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="brand">
-        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        MISS <img src="star.PNG" class="star" alt="" loading="lazy" decoding="async"> UNIVERSE
         <small>SANTA CRUZ</small>
       </div>
 
@@ -685,8 +774,8 @@
         <br><br>
 
         <strong>Contacto oficial</strong><br>
-        <a href="mailto:missuniverse.santacruz@hotmail.com">
-          missuniverse.santacruz@hotmail.com
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
         </a>
       </div>
 
@@ -695,5 +784,10 @@
       </div>
     </div>
   </footer>
+  <script>
+  document.querySelectorAll('.article-hero, .article-image img, .related-image').forEach((image) => {
+    image.addEventListener('contextmenu', (event) => event.preventDefault());
+  });
+</script>
 </body>
 </html>
