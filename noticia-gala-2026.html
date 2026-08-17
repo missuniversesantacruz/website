@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Crónica de la histórica primera edición de Miss Universe Santa Cruz 2026, celebrada en el Auditorio Juan Carlos I de Arafo.">
   <title>Una gala inolvidable: así se vivió Miss Universe Santa Cruz 2026</title>
+  <link rel="canonical" href="https://missuniversesantacruz.es/noticia-gala-2026">
+
+<meta property="og:title" content="Una gala inolvidable: así se vivió Miss Universe Santa Cruz 2026">
+<meta property="og:description" content="Crónica de la histórica primera edición de Miss Universe Santa Cruz 2026, celebrada en el Auditorio Juan Carlos I de Arafo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://missuniversesantacruz.es/noticia-gala-2026">
+<meta property="og:image" content="https://missuniversesantacruz.es/social-preview-noticia-gala-2026.jpg">
+<meta property="og:image:secure_url" content="https://missuniversesantacruz.es/social-preview-noticia-gala-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Primera edición de Miss Universe Santa Cruz 2026">
+<meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Una gala inolvidable: así se vivió Miss Universe Santa Cruz 2026">
+<meta name="twitter:description" content="Crónica de la histórica primera edición de Miss Universe Santa Cruz 2026, celebrada en el Auditorio Juan Carlos I de Arafo.">
+<meta name="twitter:image" content="https://missuniversesantacruz.es/social-preview-noticia-gala-2026.jpg">
+
+<meta name="apple-mobile-web-app-title" content="M✨U SC">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/apple-icon.PNG">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" as="image" href="/noticia-gala-2026-hero.jpg" type="image/jpeg" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +63,8 @@
     .container{width:min(1180px,92%);margin:auto}
 
     .star{
-      width:.88em;
-      height:.88em;
+      width:1.15em;
+      height:1.15em;
       margin:0 .16em;
       vertical-align:-.04em;
       display:inline-block;
@@ -79,14 +105,14 @@
       letter-spacing:.54em;
     }
 
-    nav{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      font-size:.67rem;
-      text-transform:uppercase;
-      letter-spacing:.05em;
-    }
+   nav{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  font-size:.71rem;
+  text-transform:uppercase;
+  letter-spacing:.055em;
+}
 
     nav a{
       padding:31px 0 25px;
@@ -132,6 +158,7 @@
       box-shadow:0 12px 30px rgba(199,162,90,.14);
     }
 
+    /* HERO EDITORIAL */
     .article-hero{
       min-height:780px;
       padding-top:78px;
@@ -142,7 +169,7 @@
         linear-gradient(
           180deg,
           rgba(5,5,5,.12) 0%,
-          rgba(5,5,5,.34) 44%,
+          rgba(5,5,5,.35) 44%,
           rgba(5,5,5,.96) 100%
         ),
         url("noticia-gala-2026-hero.jpg") center top / cover no-repeat;
@@ -172,7 +199,7 @@
     }
 
     .hero-subtitle{
-      max-width:880px;
+      max-width:860px;
       color:#eee9df;
       font-size:clamp(1rem,2vw,1.4rem);
       line-height:1.65;
@@ -185,6 +212,54 @@
       line-height:1.8;
     }
 
+    /* Entrada elegante del hero */
+.article-hero{
+  animation:articleHeroReveal .85s ease-out both;
+}
+
+.category,
+.hero-content h1,
+.hero-subtitle,
+.article-meta{
+  opacity:0;
+  transform:translateY(10px);
+  animation:articleHeroContent .65s ease-out forwards;
+}
+
+.category{animation-delay:.15s}
+.hero-content h1{animation-delay:.28s}
+.hero-subtitle{animation-delay:.42s}
+.article-meta{animation-delay:.55s}
+
+@keyframes articleHeroReveal{
+  from{opacity:.72}
+  to{opacity:1}
+}
+
+@keyframes articleHeroContent{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .article-hero,
+  .category,
+  .hero-content h1,
+  .hero-subtitle,
+  .article-meta{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
+    /* ARTÍCULO */
     .article-wrap{
       background:var(--paper);
       color:var(--ink);
@@ -225,10 +300,22 @@
     }
 
     .article-image img{
-      width:100%;
-      max-height:760px;
-      object-fit:cover;
-    }
+  width:100%;
+  max-height:760px;
+  object-fit:cover;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
+
+.article-hero,
+.related-image{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-drag:none;
+}
 
     .caption{
       margin-top:10px;
@@ -248,6 +335,7 @@
       text-align:center;
       color:#8f6d35;
     }
+
 
     .name-list{
       margin:28px 0 36px;
@@ -281,6 +369,7 @@
       color:#0a0a0a;
     }
 
+    /* RELACIONADAS */
     .related{
       padding:72px 0;
       background:#080808;
@@ -321,7 +410,7 @@
     }
 
     .related-card:nth-child(1) .related-image{background-image:url("noticia-daniela.jpg")}
-    .related-card:nth-child(2) .related-image{background-image:url("noticia-spain.jpg")}
+    .related-card:nth-child(2) .related-image{background-image:url("noticia-miss-universe-spain.jpg")}
     .related-card:nth-child(3) .related-image{background-image:url("noticia-top3.jpg")}
 
     .related-body{
@@ -366,9 +455,9 @@
       font-size:.72rem;
     }
 
-    @media(max-width:1020px){
-      nav{gap:14px;font-size:.61rem}
-    }
+    @media(min-width:901px) and (max-width:1020px){
+  nav{gap:14px;font-size:.61rem}
+}
 
     @media(max-width:900px){
       .container{width:94%}
@@ -418,13 +507,24 @@
     @media(max-width:430px){
       .article-hero{
         min-height:650px;
-        background-position:68% top;
+        background-position:63% top;
       }
 
-      .hero-content h1{font-size:2.15rem}
-      .hero-subtitle{font-size:.9rem}
-      .article{width:88%}
-      .article p{font-size:.94rem}
+      .hero-content h1{
+        font-size:2.25rem;
+      }
+
+      .hero-subtitle{
+        font-size:.9rem;
+      }
+
+      .article{
+        width:88%;
+      }
+
+      .article p{
+        font-size:.94rem;
+      }
 
       .article-links{
         flex-direction:column;
@@ -441,24 +541,28 @@
 <body>
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
         <small>SANTA CRUZ</small>
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menú"
-        onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+      <button class="menu-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=document.getElementById('main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
 
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reina.html">Nuestra Reina</a>
-        <a href="organizacion.html">La Organización</a>
-        <a href="missuniversespain.html">Miss Universe Spain</a>
-        <a href="edicion26.html">Edición 2026</a>
-        <a href="galeria.html">Galería</a>
-        <a class="active" href="noticias.html">Noticias</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+<nav id="main-nav" aria-label="Navegación principal">
+  <a href="/">Inicio</a>
+  <a href="/reina">Nuestra Reina</a>
+  <a href="/organizacion">La Organización</a>
+  <a href="/missuniversespain">Miss Universe Spain</a>
+  <a href="/edicion26">Edición 2026</a>
+  <a href="/galeria">Galería</a>
+  <a class="active" href="/noticias" aria-current="page">Noticias</a>
+  <a href="/contacto">Contacto</a>
+</nav>
     </div>
   </header>
 
@@ -495,7 +599,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="noticia-gala-2026-1.jpg" alt="Preparativos de Miss Universe Santa Cruz 2026">
+          <img src="noticia-gala-2026-1.jpg" alt="Preparativos de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Los preparativos comenzaron desde primera hora en el Auditorio Juan Carlos I de Arafo.</figcaption>
         </figure>
 
@@ -529,7 +633,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="noticia-gala-2026-2.jpg" alt="Jurado de Miss Universe Santa Cruz 2026">
+          <img src="noticia-gala-2026-2.jpg" alt="Jurado de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">El jurado inició su valoración antes de la apertura de puertas.</figcaption>
         </figure>
 
@@ -563,7 +667,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="noticia-gala-2026-3.jpg" alt="Candidatas durante la gala de Miss Universe Santa Cruz 2026">
+          <img src="noticia-gala-2026-3.jpg" alt="Candidatas durante la gala de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Las trece candidatas participaron en las distintas fases de la gala.</figcaption>
         </figure>
 
@@ -607,7 +711,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="noticia-gala-2026-4.jpg" alt="Top 3 de Miss Universe Santa Cruz 2026">
+          <img src="noticia-gala-2026-4.jpg" alt="Top 3 de Miss Universe Santa Cruz 2026" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Daniela, Danna y Valeria formaron el Top 3 oficial de la primera edición.</figcaption>
         </figure>
 
@@ -641,7 +745,7 @@
         </p>
 
         <figure class="article-image">
-          <img src="noticia-gala-2026-5.jpg" alt="Coronación de Daniela Martínez Morales">
+          <img src="noticia-gala-2026-5.jpg" alt="Coronación de Daniela Martínez Morales" loading="lazy" decoding="async" draggable="false">
           <figcaption class="caption">Daniela Martínez Morales fue proclamada Miss Universe Santa Cruz 2026.</figcaption>
         </figure>
 
@@ -675,10 +779,10 @@
         </p>
 
         <div class="article-links">
-          <a href="edicion26.html" class="btn btn-primary">Revive la edición 2026</a>
-          <a href="reina.html" class="btn">Conoce a Daniela</a>
-          <a href="galeria.html" class="btn">Ver galería</a>
-          <a href="noticias.html" class="btn">Volver a noticias</a>
+          <a href="/edicion26" class="btn btn-primary">Revive la edición 2026</a>
+          <a href="/reina" class="btn">Conoce a Daniela</a>
+          <a href="/galeria" class="btn">Ver galería</a>
+          <a href="/noticias" class="btn">Volver a noticias</a>
         </div>
       </article>
     </section>
@@ -689,7 +793,7 @@
         <h2 class="section-heading">Más historias de 2026</h2>
 
         <div class="related-grid">
-          <a class="related-card" href="noticia-daniela.html">
+          <a class="related-card" href="/noticia-daniela">
             <div class="related-image"></div>
             <div class="related-body">
               <p>Reinado 2026</p>
@@ -697,7 +801,7 @@
             </div>
           </a>
 
-          <a class="related-card" href="noticia-miss-universe-spain.html">
+          <a class="related-card" href="/noticia-miss-universe-spain">
             <div class="related-image"></div>
             <div class="related-body">
               <p>Miss Universe Spain</p>
@@ -705,11 +809,11 @@
             </div>
           </a>
 
-          <a class="related-card" href="noticia-top3-2026.html">
+          <a class="related-card" href="/edicion26">
             <div class="related-image"></div>
             <div class="related-body">
               <p>Top 3</p>
-              <h3>Daniela, Danna y Valeria: el Top 3 que continúa unido tras la gala</h3>
+              <h3>Daniela, Danna y Valeria: el equipo de reinado de la primera edición</h3>
             </div>
           </a>
         </div>
@@ -720,7 +824,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="brand">
-        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        MISS <img src="star.PNG" class="star" alt="" loading="lazy" decoding="async"> UNIVERSE
         <small>SANTA CRUZ</small>
       </div>
 
@@ -735,8 +839,8 @@
         <br><br>
 
         <strong>Contacto oficial</strong><br>
-        <a href="mailto:missuniverse.santacruz@hotmail.com">
-          missuniverse.santacruz@hotmail.com
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
         </a>
       </div>
 
@@ -745,5 +849,10 @@
       </div>
     </div>
   </footer>
+  <script>
+  document.querySelectorAll('.article-hero, .article-image img, .related-image').forEach((image) => {
+    image.addEventListener('contextmenu', (event) => event.preventDefault());
+  });
+</script>
 </body>
 </html>
