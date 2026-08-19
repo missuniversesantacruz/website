@@ -632,41 +632,45 @@ background:linear-gradient(rgba(5,5,5,.72),rgba(5,5,5,.88));
       .footer-grid{grid-template-columns:1fr;text-align:center}
     }
 
- .org-hero{
-  min-height:560px;
-background:
-  radial-gradient(
-    circle at 83% 44%,
-    rgba(199,162,90,.10),
-    transparent 30%
-  ),
-  linear-gradient(
-    90deg,
-    rgba(5,5,5,.38) 0%,
-    rgba(5,5,5,.26) 32%,
-    rgba(5,5,5,.12) 50%,
-    rgba(5,5,5,.04) 72%,
-    rgba(5,5,5,0) 100%
-  ),
-  url("corona-organizacion.jpg") 74% top / cover no-repeat;
-}
-      .org-hero-grid{min-height:496px}
-      .org-copy{
-        width:64%;
-        transform:translateY(-8px);
-      }
-      .org-copy h1{font-size:1.55rem}
-      .org-copy h2{font-size:.92rem}
-      .org-intro{font-size:.67rem}
-      .values-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:430px){
+ @media(max-width:430px){
+
+  .org-hero{
+    min-height:560px;
+    background:
+      radial-gradient(
+        circle at 83% 44%,
+        rgba(199,162,90,.10),
+        transparent 30%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(5,5,5,.38) 0%,
+        rgba(5,5,5,.26) 32%,
+        rgba(5,5,5,.12) 50%,
+        rgba(5,5,5,.04) 72%,
+        rgba(5,5,5,0) 100%
+      ),
+      url("corona-organizacion.jpg") 74% top / cover no-repeat;
+  }
+
+  .org-hero-grid{min-height:496px}
+
+  .org-copy{
+    width:64%;
+    transform:translateY(-8px);
+  }
+
+  .org-copy h1{font-size:1.55rem}
+  .org-copy h2{font-size:.92rem}
+  .org-intro{font-size:.67rem}
+  .values-grid{grid-template-columns:1fr}
+
   .step-dot{
-  left:-2px;
-  top:-7px;
-  width:40px;
-  height:40px;
-}
+    left:2px;
+    top:-3px;
+    width:32px;
+    height:32px;
+  }
 }
   </style>
 </head>
