@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Política de privacidad de Miss Universe Santa Cruz. Información sobre el tratamiento de datos personales, formulario de contacto, derechos y proveedores externos.">
+  <title>Política de privacidad | Miss Universe Santa Cruz</title>
+  <link rel="canonical" href="https://missuniversesantacruz.es/privacidad">
+
+  <meta property="og:title" content="Política de privacidad | Miss Universe Santa Cruz">
+  <meta property="og:description" content="Información sobre el tratamiento de datos personales en el sitio web oficial de Miss Universe Santa Cruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missuniversesantacruz.es/privacidad">
+  <meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Política de privacidad | Miss Universe Santa Cruz">
+  <meta name="twitter:description" content="Información sobre el tratamiento de datos personales en el sitio web oficial de Miss Universe Santa Cruz.">
+
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" type="image/png" href="/favicon.PNG">
+  <link rel="apple-touch-icon" href="/apple-icon.PNG">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --line:rgba(199,162,90,.35);
+      --paper:#f6f3ed;
+      --ink:#1c1a17;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:1.15em;
+      height:1.15em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .legal-hero{
+      min-height:460px;
+      padding-top:78px;
+      display:flex;
+      align-items:flex-end;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 72% 42%, rgba(199,162,90,.13), transparent 34%),
+        linear-gradient(180deg,#090909 0%,#050505 100%);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .legal-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:#050505;
+      pointer-events:none;
+      animation:heroCurtain .8s ease-out both;
+    }
+
+    .legal-hero-content{
+      width:min(1050px,92%);
+      margin:0 auto;
+      padding:130px 0 60px;
+      position:relative;
+      z-index:2;
+    }
+
+    .legal-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.74rem;
+      margin-bottom:18px;
+      opacity:0;
+      animation:heroItem .6s ease-out .12s forwards;
+    }
+
+    .legal-hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(3rem,6vw,5.4rem);
+      font-weight:500;
+      line-height:1.05;
+      margin-bottom:20px;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .22s forwards;
+    }
+
+    .legal-hero p{
+      max-width:800px;
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.95rem;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .34s forwards;
+    }
+
+    @keyframes heroCurtain{
+      from{opacity:1}
+      to{opacity:0}
+    }
+
+    @keyframes heroItem{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .legal-wrap{
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    .legal{
+      width:min(860px,90%);
+      margin:auto;
+      padding:78px 0;
+    }
+
+    .updated{
+      color:#8f6d35;
+      font-size:.76rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      margin-bottom:34px;
+    }
+
+    .legal h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      font-weight:500;
+      line-height:1.2;
+      margin:48px 0 18px;
+      color:#1e1b18;
+    }
+
+    .legal p,
+    .legal li{
+      font-size:.98rem;
+      line-height:1.9;
+      color:#3f3a34;
+    }
+
+    .legal p{margin-bottom:20px}
+    .legal ul{
+      padding-left:22px;
+      margin:0 0 22px;
+    }
+
+    .legal li{margin-bottom:8px}
+    .legal strong{color:#26211c}
+
+    .legal-card{
+      margin:26px 0 34px;
+      padding:24px;
+      background:#ece5d8;
+      border-left:3px solid #b48b4a;
+    }
+
+    .legal-card p{margin-bottom:8px}
+    .legal-card p:last-child{margin-bottom:0}
+
+    .legal a.inline{
+      color:#8f6d35;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(min-width:901px) and (max-width:1020px){
+      nav{gap:14px;font-size:.61rem}
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .legal-hero{
+        min-height:390px;
+        padding-top:64px;
+      }
+
+      .legal-hero-content{padding:110px 0 48px}
+      .legal{width:88%;padding:56px 0}
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+
+    @media(max-width:430px){
+      .legal-hero{min-height:360px}
+      .legal-hero h1{font-size:2.35rem}
+      .legal-hero p{font-size:.82rem}
+      .legal p,.legal li{font-size:.94rem}
+      .legal-card{padding:20px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .legal-hero::before,
+      .legal-kicker,
+      .legal-hero h1,
+      .legal-hero p{
+        animation:none !important;
+        opacity:1 !important;
+        transform:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="/" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=document.getElementById('main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
+
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+        <a href="/organizacion">La Organización</a>
+        <a href="/missuniversespain">Miss Universe Spain</a>
+        <a href="/edicion26">Edición 2026</a>
+        <a href="/galeria">Galería</a>
+        <a href="/noticias">Noticias</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="legal-hero-content">
+        <p class="legal-kicker">Protección de datos</p>
+        <h1>Política de privacidad</h1>
+        <p>Información sobre cómo tratamos los datos personales facilitados a través de este sitio web y, en particular, mediante el formulario de contacto.</p>
+      </div>
+    </section>
+
+    <section class="legal-wrap">
+      <article class="legal">
+        <p class="updated">Última actualización: 19 de agosto de 2026</p>
+
+        <h2>1. Responsable del tratamiento</h2>
+        <p>El responsable del tratamiento de los datos personales recogidos a través de este sitio web es:</p>
+
+        <div class="legal-card">
+          <p><strong>Responsable:</strong> Juan Carlos Santana Alonso</p>
+          <p><strong>NIF:</strong> 51153251D</p>
+          <p><strong>Domicilio:</strong> Casa, C. Campo y Tamayo, 127, 38320 La Laguna, Santa Cruz de Tenerife, España</p>
+          <p><strong>Teléfono:</strong> <a class="inline" href="tel:+34603977087">+34 603 977 087</a></p>
+          <p><strong>Correo electrónico:</strong> <a class="inline" href="mailto:info@missuniversesantacruz.es">info@missuniversesantacruz.es</a></p>
+        </div>
+
+        <p>No se ha designado un Delegado de Protección de Datos, al no haberse identificado en la actividad actual del sitio web una obligación específica de designación.</p>
+
+        <h2>2. Qué datos personales tratamos</h2>
+        <p>Cuando una persona utiliza el formulario de contacto del sitio web, pueden tratarse los siguientes datos:</p>
+        <ul>
+          <li>Nombre y apellidos.</li>
+          <li>Dirección de correo electrónico.</li>
+          <li>Número de teléfono, cuando se facilite voluntariamente.</li>
+          <li>Motivo de contacto seleccionado.</li>
+          <li>Contenido del mensaje enviado.</li>
+          <li>Información técnica asociada al envío que pueda resultar necesaria para la seguridad y funcionamiento del servicio de formularios.</li>
+        </ul>
+        <p>También pueden tratarse los datos que una persona facilite voluntariamente al ponerse en contacto con la organización mediante correo electrónico u otros canales oficiales.</p>
+
+        <h2>3. Finalidades del tratamiento</h2>
+        <p>Los datos personales se tratarán para gestionar, atender y responder a las consultas recibidas, así como para tramitar solicitudes relacionadas con información general, colaboraciones, patrocinios, prensa, participación en futuras ediciones u otros asuntos seleccionados por la persona interesada.</p>
+        <p>Los datos enviados mediante el formulario no se utilizarán para el envío de comunicaciones comerciales ajenas a la solicitud formulada sin disponer previamente de una base jurídica adecuada para ello.</p>
+
+        <h2>4. Base jurídica</h2>
+        <p>La base jurídica para el tratamiento de los datos enviados mediante el formulario es el consentimiento de la persona interesada, prestado al realizar voluntariamente la consulta y marcar la casilla correspondiente antes del envío.</p>
+        <p>Cuando una comunicación pueda dar lugar posteriormente a actuaciones precontractuales solicitadas por la propia persona interesada, el tratamiento podrá resultar asimismo necesario para atender dichas actuaciones.</p>
+        <p>La persona interesada puede retirar su consentimiento en cualquier momento, sin que ello afecte a la licitud del tratamiento realizado con anterioridad a su retirada.</p>
+
+        <h2>5. Carácter obligatorio de los datos</h2>
+        <p>Los campos marcados como obligatorios en el formulario son necesarios para poder gestionar la consulta. Si no se facilitan, no será posible enviar correctamente la solicitud mediante dicho formulario.</p>
+        <p>El número de teléfono es opcional mientras el formulario así lo indique.</p>
+
+        <h2>6. Conservación de los datos</h2>
+        <p>Los datos se conservarán durante el tiempo necesario para gestionar y responder a la consulta y, posteriormente, durante los plazos que puedan resultar necesarios para atender posibles responsabilidades, reclamaciones u obligaciones legales.</p>
+        <p>Cuando el tratamiento se base exclusivamente en el consentimiento y no exista otra causa que justifique su conservación, los datos dejarán de utilizarse para esa finalidad cuando el consentimiento sea retirado.</p>
+
+        <h2>7. Destinatarios y proveedores</h2>
+        <p>Los datos no se cederán a terceros salvo obligación legal o cuando resulte necesario para gestionar adecuadamente la solicitud de la persona interesada.</p>
+        <p>Para el funcionamiento del formulario de contacto, este sitio web utiliza <strong>Formspree</strong> como proveedor tecnológico. Los datos introducidos en el formulario se transmiten a dicho servicio para procesar el envío y poner la consulta a disposición de la organización.</p>
+        <p>Formspree actúa como proveedor de servicios de tratamiento de formularios y declara aplicar medidas de seguridad y mecanismos de cumplimiento en materia de protección de datos.</p>
+
+        <h2>8. Transferencias internacionales</h2>
+        <p>El uso de Formspree puede implicar tratamiento de información en Estados Unidos. Según la información publicada por Formspree, su infraestructura utiliza servicios alojados en Estados Unidos y, para su actuación como encargado del tratamiento en el marco del RGPD, declara apoyarse en las Cláusulas Contractuales Tipo de la Comisión Europea como mecanismo de transferencia.</p>
+        <p>La utilización de proveedores externos se realizará procurando que existan garantías adecuadas conforme a la normativa de protección de datos aplicable.</p>
+
+        <h2>9. Derechos de las personas interesadas</h2>
+        <p>Las personas interesadas pueden ejercer los derechos reconocidos por la normativa de protección de datos, cuando resulten aplicables:</p>
+        <ul>
+          <li><strong>Acceso:</strong> conocer qué datos personales se están tratando.</li>
+          <li><strong>Rectificación:</strong> solicitar la corrección de datos inexactos o incompletos.</li>
+          <li><strong>Supresión:</strong> solicitar la eliminación de sus datos cuando proceda.</li>
+          <li><strong>Oposición:</strong> oponerse a determinados tratamientos en los casos legalmente previstos.</li>
+          <li><strong>Limitación:</strong> solicitar que se limite el tratamiento en determinadas circunstancias.</li>
+          <li><strong>Portabilidad:</strong> recibir los datos en un formato estructurado y transmitirlos a otro responsable cuando resulte aplicable.</li>
+          <li><strong>Retirada del consentimiento:</strong> retirar en cualquier momento el consentimiento previamente prestado.</li>
+        </ul>
+
+        <h2>10. Cómo ejercer los derechos</h2>
+        <p>Para ejercer cualquiera de estos derechos puede enviarse una solicitud a <a class="inline" href="mailto:info@missuniversesantacruz.es">info@missuniversesantacruz.es</a>, indicando el derecho que desea ejercer y facilitando la información necesaria para poder identificar y atender correctamente la solicitud.</p>
+        <p>Cuando existan dudas razonables sobre la identidad de quien solicita el ejercicio de un derecho, podrá solicitarse información adicional estrictamente necesaria para verificarla.</p>
+
+        <h2>11. Reclamación ante la autoridad de control</h2>
+        <p>Si una persona considera que el tratamiento de sus datos personales no se ajusta a la normativa, puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, sin perjuicio de otros recursos que pudieran corresponderle.</p>
+        <p>Antes de reclamar por el ejercicio de un derecho, debe haberse dirigido previamente al responsable del tratamiento en los términos establecidos por la normativa.</p>
+
+        <h2>12. Seguridad de los datos</h2>
+        <p>El responsable aplicará medidas técnicas y organizativas razonables destinadas a proteger los datos personales frente a pérdida, alteración, acceso no autorizado, divulgación o tratamiento indebido, teniendo en cuenta la naturaleza de la información tratada y los riesgos asociados.</p>
+        <p>No obstante, ningún sistema conectado a Internet puede garantizar una seguridad absoluta.</p>
+
+        <h2>13. Datos de terceras personas</h2>
+        <p>Si una persona facilita datos personales de terceros a través de los canales de contacto, deberá asegurarse de estar legitimada para hacerlo y de que la información facilitada sea adecuada y pertinente para la finalidad de la comunicación.</p>
+
+        <h2>14. Menores de edad</h2>
+        <p>El formulario general de contacto no está diseñado específicamente para recabar datos de menores. Las futuras convocatorias, procesos de participación u otras actividades que puedan implicar requisitos de edad se regirán por sus propias bases y condiciones cuando correspondan.</p>
+
+        <h2>15. Enlaces y servicios externos</h2>
+        <p>El sitio web puede contener enlaces a páginas externas, como redes sociales, patrocinadores, colaboradores u otras organizaciones. Al acceder a ellas, el tratamiento de datos quedará sujeto a las políticas del correspondiente tercero.</p>
+        <p>La mera inclusión de un enlace externo no supone que dicho tercero trate datos personales mientras la persona permanezca navegando en este sitio web, salvo que se indique expresamente otra cosa.</p>
+
+        <h2>16. Cookies y tecnologías similares</h2>
+        <p>La información específica sobre cookies y tecnologías similares puede consultarse en la <a class="inline" href="/cookies">Política de Cookies</a>.</p>
+
+        <h2>17. Modificaciones de esta política</h2>
+        <p>Esta Política de Privacidad podrá actualizarse cuando se produzcan cambios en los tratamientos realizados, en los proveedores utilizados, en las funcionalidades del sitio web o en la normativa aplicable.</p>
+        <p>La versión vigente será la publicada en esta página, junto con su fecha de última actualización.</p>
+
+        <h2>18. Información legal adicional</h2>
+        <p>La identificación del titular y las condiciones generales de utilización del sitio web pueden consultarse en el <a class="inline" href="/aviso-legal">Aviso Legal</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt="" loading="lazy" decoding="async"> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        <strong>Instagram</strong><br>
+        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
+          @missuniverse.santacruz
+        </a>
+
+        <br><br>
+
+        <strong>Contacto oficial</strong><br>
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+        <br><br>
+        <a href="/aviso-legal">Aviso legal</a>
+        &nbsp;·&nbsp;
+        <a href="/privacidad" aria-current="page">Privacidad</a>
+        &nbsp;·&nbsp;
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

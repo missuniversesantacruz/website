@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Aviso legal de Miss Universe Santa Cruz. Información sobre el titular del sitio web, condiciones de uso, propiedad intelectual, enlaces externos y normativa aplicable.">
+  <title>Aviso legal | Miss Universe Santa Cruz</title>
+  <link rel="canonical" href="https://missuniversesantacruz.es/aviso-legal">
+
+  <meta property="og:title" content="Aviso legal | Miss Universe Santa Cruz">
+  <meta property="og:description" content="Información legal del sitio web oficial de Miss Universe Santa Cruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missuniversesantacruz.es/aviso-legal">
+  <meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Aviso legal | Miss Universe Santa Cruz">
+  <meta name="twitter:description" content="Información legal del sitio web oficial de Miss Universe Santa Cruz.">
+
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" type="image/png" href="/favicon.PNG">
+  <link rel="apple-touch-icon" href="/apple-icon.PNG">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --line:rgba(199,162,90,.35);
+      --paper:#f6f3ed;
+      --ink:#1c1a17;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:1.15em;
+      height:1.15em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .legal-hero{
+      min-height:460px;
+      padding-top:78px;
+      display:flex;
+      align-items:flex-end;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 72% 42%, rgba(199,162,90,.13), transparent 34%),
+        linear-gradient(180deg,#090909 0%,#050505 100%);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .legal-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:#050505;
+      pointer-events:none;
+      animation:heroCurtain .8s ease-out both;
+    }
+
+    .legal-hero-content{
+      width:min(1050px,92%);
+      margin:0 auto;
+      padding:130px 0 60px;
+      position:relative;
+      z-index:2;
+    }
+
+    .legal-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.74rem;
+      margin-bottom:18px;
+      opacity:0;
+      animation:heroItem .6s ease-out .12s forwards;
+    }
+
+    .legal-hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(3rem,6vw,5.4rem);
+      font-weight:500;
+      line-height:1.05;
+      margin-bottom:20px;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .22s forwards;
+    }
+
+    .legal-hero p{
+      max-width:760px;
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.95rem;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .34s forwards;
+    }
+
+    @keyframes heroCurtain{
+      from{opacity:1}
+      to{opacity:0}
+    }
+
+    @keyframes heroItem{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .legal-wrap{
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    .legal{
+      width:min(860px,90%);
+      margin:auto;
+      padding:78px 0;
+    }
+
+    .updated{
+      color:#8f6d35;
+      font-size:.76rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      margin-bottom:34px;
+    }
+
+    .legal h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      font-weight:500;
+      line-height:1.2;
+      margin:48px 0 18px;
+      color:#1e1b18;
+    }
+
+    .legal p{
+      font-size:.98rem;
+      line-height:1.9;
+      margin-bottom:20px;
+      color:#3f3a34;
+    }
+
+    .legal strong{color:#26211c}
+
+    .legal-card{
+      margin:26px 0 34px;
+      padding:24px;
+      background:#ece5d8;
+      border-left:3px solid #b48b4a;
+    }
+
+    .legal-card p{margin-bottom:8px}
+    .legal-card p:last-child{margin-bottom:0}
+
+    .legal a.inline{
+      color:#8f6d35;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(min-width:901px) and (max-width:1020px){
+      nav{gap:14px;font-size:.61rem}
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .legal-hero{
+        min-height:390px;
+        padding-top:64px;
+      }
+
+      .legal-hero-content{
+        padding:110px 0 48px;
+      }
+
+      .legal{
+        width:88%;
+        padding:56px 0;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+
+    @media(max-width:430px){
+      .legal-hero{min-height:360px}
+      .legal-hero h1{font-size:2.35rem}
+      .legal-hero p{font-size:.82rem}
+      .legal p{font-size:.94rem}
+      .legal-card{padding:20px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .legal-hero::before,
+      .legal-kicker,
+      .legal-hero h1,
+      .legal-hero p{
+        animation:none !important;
+        opacity:1 !important;
+        transform:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="/" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=document.getElementById('main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
+
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+        <a href="/organizacion">La Organización</a>
+        <a href="/missuniversespain">Miss Universe Spain</a>
+        <a href="/edicion26">Edición 2026</a>
+        <a href="/galeria">Galería</a>
+        <a href="/noticias">Noticias</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="legal-hero-content">
+        <p class="legal-kicker">Información legal</p>
+        <h1>Aviso legal</h1>
+        <p>Información sobre el titular de este sitio web, sus condiciones de utilización, propiedad intelectual, enlaces externos y normativa aplicable.</p>
+      </div>
+    </section>
+
+    <section class="legal-wrap">
+      <article class="legal">
+        <p class="updated">Última actualización: 19 de agosto de 2026</p>
+
+        <h2>1. Información del titular</h2>
+        <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a las personas usuarias de los datos identificativos del titular del presente sitio web.</p>
+
+        <div class="legal-card">
+          <p><strong>Titular:</strong> Juan Carlos Santana Alonso</p>
+          <p><strong>NIF:</strong> 51153251D</p>
+          <p><strong>Domicilio:</strong> Casa, C. Campo y Tamayo, 127, 38320 La Laguna, Santa Cruz de Tenerife, España</p>
+          <p><strong>Teléfono:</strong> <a class="inline" href="tel:+34603977087">+34 603 977 087</a></p>
+          <p><strong>Correo electrónico:</strong> <a class="inline" href="mailto:info@missuniversesantacruz.es">info@missuniversesantacruz.es</a></p>
+          <p><strong>Sitio web:</strong> missuniversesantacruz.es</p>
+        </div>
+
+        <p>El titular desarrolla la actividad vinculada a la organización y gestión de Miss Universe Santa Cruz.</p>
+
+        <h2>2. Objeto del sitio web</h2>
+        <p>El sitio web de Miss Universe Santa Cruz tiene como finalidad proporcionar información oficial relacionada con la organización, sus representantes, ediciones, actividades, noticias, galería, participación en Miss Universe Spain, colaboraciones, patrocinios y demás iniciativas relacionadas con el proyecto.</p>
+        <p>Asimismo, el sitio permite a las personas usuarias ponerse en contacto con la organización a través de los medios habilitados para ello.</p>
+
+        <h2>3. Condiciones de acceso y utilización</h2>
+        <p>El acceso y navegación por este sitio web atribuyen la condición de persona usuaria e implican la aceptación de las condiciones establecidas en el presente Aviso Legal.</p>
+        <p>La persona usuaria se compromete a utilizar el sitio web, sus contenidos y servicios de manera lícita, responsable y conforme a la legislación vigente, la buena fe y el orden público.</p>
+        <p>Queda prohibido utilizar el sitio web con fines ilícitos, fraudulentos o que puedan perjudicar los derechos o intereses de Miss Universe Santa Cruz o de terceros, así como realizar actuaciones destinadas a dañar, alterar, sobrecargar o impedir el normal funcionamiento del sitio web.</p>
+
+        <h2>4. Propiedad intelectual e industrial</h2>
+        <p>Los contenidos que integran este sitio web, incluyendo, entre otros, textos, fotografías, imágenes, vídeos, diseños, elementos gráficos, logotipos, composiciones, estructura, código y demás elementos, están protegidos por la normativa aplicable en materia de propiedad intelectual e industrial.</p>
+        <p>Los derechos sobre determinados logotipos, marcas, fotografías, diseños y otros contenidos pertenecientes a terceros corresponden a sus respectivos titulares y se utilizan, cuando procede, con la correspondiente autorización o en el marco de las relaciones existentes con dichos titulares.</p>
+        <p>Salvo autorización expresa o cuando la legislación lo permita, queda prohibida la reproducción, distribución, transformación, comunicación pública, puesta a disposición o explotación de los contenidos de este sitio web.</p>
+        <p>La presencia de contenidos relacionados con <strong>Miss Universe</strong> y <strong>Miss Universe Spain</strong> no supone la adquisición por parte del titular de derechos de propiedad sobre marcas, logotipos u otros elementos pertenecientes a sus respectivos titulares.</p>
+
+        <h2>5. Fotografías, imágenes y contenido audiovisual</h2>
+        <p>Las fotografías, vídeos y demás material audiovisual publicado en este sitio web pueden corresponder a eventos, actividades, candidatas, representantes, colaboradores, profesionales y otras personas vinculadas a Miss Universe Santa Cruz.</p>
+        <p>Su utilización fuera de este sitio web deberá respetar los derechos de propiedad intelectual, derecho a la propia imagen y demás derechos que correspondan a sus respectivos titulares.</p>
+        <p>Las medidas técnicas incorporadas en el sitio para dificultar determinadas acciones sobre las imágenes no implican una renuncia a ninguno de los derechos aplicables sobre dichos contenidos.</p>
+
+        <h2>6. Responsabilidad</h2>
+        <p>Miss Universe Santa Cruz procura que la información publicada en este sitio web sea correcta y se encuentre actualizada. No obstante, no puede garantizar la inexistencia absoluta de errores u omisiones ni la disponibilidad permanente e ininterrumpida del sitio web.</p>
+        <p>El titular podrá modificar, actualizar, suspender o retirar contenidos o funcionalidades cuando resulte necesario.</p>
+        <p>Asimismo, no será responsable de los daños derivados de interferencias, interrupciones, virus, averías, desconexiones u otras circunstancias ajenas a su control razonable, sin perjuicio de las responsabilidades que legalmente pudieran corresponderle.</p>
+
+        <h2>7. Enlaces externos</h2>
+        <p>Este sitio web puede contener enlaces a páginas o servicios de terceros, incluyendo redes sociales, organizaciones, patrocinadores, colaboradores u otras entidades relacionadas.</p>
+        <p>Estos enlaces se facilitan con carácter informativo o para permitir el acceso a servicios externos. Miss Universe Santa Cruz no controla necesariamente sus contenidos, disponibilidad, condiciones de uso o políticas de privacidad y cookies.</p>
+        <p>El acceso a dichos sitios queda sujeto a las condiciones establecidas por sus respectivos titulares.</p>
+
+        <h2>8. Protección de datos personales</h2>
+        <p>El tratamiento de los datos personales realizado a través de este sitio web se rige por lo establecido en la <a class="inline" href="/privacidad">Política de Privacidad</a>.</p>
+        <p>En ella se informa, entre otras cuestiones, sobre el responsable del tratamiento, las finalidades, bases jurídicas, destinatarios, conservación de los datos y derechos de las personas interesadas.</p>
+
+        <h2>9. Cookies y tecnologías similares</h2>
+        <p>La información relativa al uso de cookies y tecnologías similares se encuentra disponible en la <a class="inline" href="/cookies">Política de Cookies</a>.</p>
+
+        <h2>10. Modificaciones</h2>
+        <p>El titular podrá modificar este Aviso Legal cuando resulte necesario para adaptarlo a cambios en el sitio web, en los servicios ofrecidos o en la normativa aplicable.</p>
+        <p>La versión vigente será la publicada en esta página, indicando su fecha de última actualización.</p>
+
+        <h2>11. Legislación aplicable</h2>
+        <p>Este sitio web y el presente Aviso Legal se rigen por la legislación española.</p>
+        <p>Cualquier controversia se someterá a los juzgados y tribunales que resulten competentes conforme a la normativa aplicable, respetándose en todo caso los derechos que correspondan legalmente a consumidores y usuarios cuando sean aplicables.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt="" loading="lazy" decoding="async"> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        <strong>Instagram</strong><br>
+        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
+          @missuniverse.santacruz
+        </a>
+
+        <br><br>
+
+        <strong>Contacto oficial</strong><br>
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+        <br><br>
+        <a href="/aviso-legal" aria-current="page">Aviso legal</a>
+        &nbsp;·&nbsp;
+        <a href="/privacidad">Privacidad</a>
+        &nbsp;·&nbsp;
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
