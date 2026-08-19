@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Política de cookies de Miss Universe Santa Cruz. Información sobre cookies técnicas, servicios externos y configuración del navegador.">
+  <title>Política de cookies | Miss Universe Santa Cruz</title>
+  <link rel="canonical" href="https://missuniversesantacruz.es/cookies">
+
+  <meta property="og:title" content="Política de cookies | Miss Universe Santa Cruz">
+  <meta property="og:description" content="Información sobre el uso de cookies y tecnologías similares en el sitio web oficial de Miss Universe Santa Cruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missuniversesantacruz.es/cookies">
+  <meta property="og:site_name" content="Miss Universe Santa Cruz">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Política de cookies | Miss Universe Santa Cruz">
+  <meta name="twitter:description" content="Información sobre el uso de cookies y tecnologías similares en el sitio web oficial de Miss Universe Santa Cruz.">
+
+  <meta name="apple-mobile-web-app-title" content="M✨U SC">
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" type="image/png" href="/favicon.PNG">
+  <link rel="apple-touch-icon" href="/apple-icon.PNG">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050505;
+      --gold:#c7a25a;
+      --gold2:#e1c37f;
+      --white:#f8f6f1;
+      --line:rgba(199,162,90,.35);
+      --paper:#f6f3ed;
+      --ink:#1c1a17;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--black);
+      color:var(--white);
+      font-family:"Montserrat",Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .star{
+      width:1.15em;
+      height:1.15em;
+      margin:0 .16em;
+      vertical-align:-.04em;
+      display:inline-block;
+      object-fit:contain;
+    }
+
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:100;
+      background:rgba(5,5,5,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      color:var(--gold2);
+      font-size:1.24rem;
+      line-height:1;
+      letter-spacing:.18em;
+      font-weight:300;
+      white-space:nowrap;
+    }
+
+    .brand small{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      font-size:.48em;
+      letter-spacing:.54em;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.71rem;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+    }
+
+    nav a{
+      padding:31px 0 25px;
+      border-bottom:2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--gold2);
+      border-color:var(--gold);
+    }
+
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--gold2);
+      padding:9px 12px;
+      font-size:1.15rem;
+    }
+
+    .legal-hero{
+      min-height:460px;
+      padding-top:78px;
+      display:flex;
+      align-items:flex-end;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 72% 42%, rgba(199,162,90,.13), transparent 34%),
+        linear-gradient(180deg,#090909 0%,#050505 100%);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .legal-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:#050505;
+      pointer-events:none;
+      animation:heroCurtain .8s ease-out both;
+    }
+
+    .legal-hero-content{
+      width:min(1050px,92%);
+      margin:0 auto;
+      padding:130px 0 60px;
+      position:relative;
+      z-index:2;
+    }
+
+    .legal-kicker{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.74rem;
+      margin-bottom:18px;
+      opacity:0;
+      animation:heroItem .6s ease-out .12s forwards;
+    }
+
+    .legal-hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(3rem,6vw,5.4rem);
+      font-weight:500;
+      line-height:1.05;
+      margin-bottom:20px;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .22s forwards;
+    }
+
+    .legal-hero p{
+      max-width:800px;
+      color:#ddd8ce;
+      line-height:1.8;
+      font-size:.95rem;
+      opacity:0;
+      transform:translateY(10px);
+      animation:heroItem .65s ease-out .34s forwards;
+    }
+
+    @keyframes heroCurtain{
+      from{opacity:1}
+      to{opacity:0}
+    }
+
+    @keyframes heroItem{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .legal-wrap{
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    .legal{
+      width:min(860px,90%);
+      margin:auto;
+      padding:78px 0;
+    }
+
+    .updated{
+      color:#8f6d35;
+      font-size:.76rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      margin-bottom:34px;
+    }
+
+    .legal h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      font-weight:500;
+      line-height:1.2;
+      margin:48px 0 18px;
+      color:#1e1b18;
+    }
+
+    .legal p,
+    .legal li{
+      font-size:.98rem;
+      line-height:1.9;
+      color:#3f3a34;
+    }
+
+    .legal p{margin-bottom:20px}
+    .legal ul{
+      padding-left:22px;
+      margin:0 0 22px;
+    }
+
+    .legal li{margin-bottom:8px}
+    .legal strong{color:#26211c}
+
+    .legal-card{
+      margin:26px 0 34px;
+      padding:24px;
+      background:#ece5d8;
+      border-left:3px solid #b48b4a;
+    }
+
+    .legal-card p{margin-bottom:8px}
+    .legal-card p:last-child{margin-bottom:0}
+
+    .legal a.inline{
+      color:#8f6d35;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    footer{
+      padding:32px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:30px;
+      align-items:center;
+    }
+
+    .contact{
+      color:#d6d1c7;
+      font-size:.82rem;
+      line-height:1.9;
+    }
+
+    .copyright{
+      color:#959189;
+      font-size:.72rem;
+    }
+
+    @media(min-width:901px) and (max-width:1020px){
+      nav{gap:14px;font-size:.61rem}
+    }
+
+    @media(max-width:900px){
+      .container{width:94%}
+      .nav-wrap{min-height:64px}
+      .brand{font-size:.86rem}
+      .menu-btn{display:block}
+
+      nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        padding:18px 5%;
+        background:#080808;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid var(--line);
+      }
+
+      nav.open{display:flex}
+      nav a{padding:10px 0}
+
+      .legal-hero{
+        min-height:390px;
+        padding-top:64px;
+      }
+
+      .legal-hero-content{padding:110px 0 48px}
+      .legal{width:88%;padding:56px 0}
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+
+    @media(max-width:430px){
+      .legal-hero{min-height:360px}
+      .legal-hero h1{font-size:2.35rem}
+      .legal-hero p{font-size:.82rem}
+      .legal p,.legal li{font-size:.94rem}
+      .legal-card{padding:20px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .legal-hero::before,
+      .legal-kicker,
+      .legal-hero h1,
+      .legal-hero p{
+        animation:none !important;
+        opacity:1 !important;
+        transform:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="/" class="brand">
+        MISS <img src="star.PNG" class="star" alt=""> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </a>
+
+      <button class="menu-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        onclick="const nav=document.getElementById('main-nav');const abierto=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(abierto));this.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');">☰</button>
+
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reina">Nuestra Reina</a>
+        <a href="/organizacion">La Organización</a>
+        <a href="/missuniversespain">Miss Universe Spain</a>
+        <a href="/edicion26">Edición 2026</a>
+        <a href="/galeria">Galería</a>
+        <a href="/noticias">Noticias</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="legal-hero-content">
+        <p class="legal-kicker">Información sobre navegación</p>
+        <h1>Política de cookies</h1>
+        <p>Información sobre el uso actual de cookies y tecnologías similares en el sitio web oficial de Miss Universe Santa Cruz.</p>
+      </div>
+    </section>
+
+    <section class="legal-wrap">
+      <article class="legal">
+        <p class="updated">Última actualización: 19 de agosto de 2026</p>
+
+        <h2>1. ¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos o dispositivos de almacenamiento que pueden descargarse en el equipo, teléfono móvil u otro dispositivo de una persona usuaria cuando visita determinadas páginas web.</p>
+        <p>Pueden utilizarse, entre otras finalidades, para permitir el funcionamiento técnico del sitio, recordar determinadas preferencias o, cuando se implementan servicios de medición o publicidad, analizar el uso de una página web o desarrollar perfiles de navegación.</p>
+
+        <h2>2. Uso actual de cookies en este sitio web</h2>
+        <p>Tras la revisión técnica de la configuración actual del sitio web de Miss Universe Santa Cruz, no se han identificado herramientas propias de analítica publicitaria, publicidad comportamental o seguimiento como Google Analytics o Meta Pixel, ni contenidos de YouTube o Instagram integrados mediante iframes que se carguen automáticamente al acceder a las páginas.</p>
+
+        <div class="legal-card">
+          <p><strong>Configuración actual:</strong> el sitio web no utiliza actualmente cookies de analítica o publicidad que requieran solicitar consentimiento previo mediante un banner de aceptación o rechazo.</p>
+        </div>
+
+        <p>La web puede utilizar, cuando resulte necesario para su funcionamiento, tecnologías o cookies de carácter estrictamente técnico. Este tipo de tecnologías permiten prestar los servicios solicitados por la persona usuaria y, cuando cumplen los requisitos legales para considerarse exentas, no requieren consentimiento previo.</p>
+
+        <h2>3. Cookies técnicas</h2>
+        <p>Las cookies o tecnologías técnicas son aquellas necesarias para permitir la navegación a través del sitio web y la utilización de sus diferentes opciones o servicios.</p>
+        <p>Entre otras funciones, pueden resultar necesarias para aspectos como la seguridad, la gestión técnica de comunicaciones, la correcta visualización de contenidos o la prestación de una funcionalidad solicitada expresamente por la persona usuaria.</p>
+        <p>La configuración actual de Miss Universe Santa Cruz no utiliza estas tecnologías con fines publicitarios ni para elaborar perfiles de navegación.</p>
+
+        <h2>4. Servicios externos utilizados por la web</h2>
+        <p>El sitio web utiliza o enlaza determinados servicios externos que deben distinguirse del uso de cookies de analítica o publicidad dentro de missuniversesantacruz.es.</p>
+
+        <h2>5. Google Fonts</h2>
+        <p>La web carga tipografías mediante el servicio Google Fonts. Al solicitar estos recursos, el navegador establece una conexión con servidores de Google para descargar las fuentes necesarias para mostrar correctamente el diseño del sitio.</p>
+        <p>Este servicio supone una comunicación técnica con un tercero, aunque en la configuración revisada no se utiliza como herramienta propia de analítica o publicidad de Miss Universe Santa Cruz.</p>
+
+        <h2>6. Formulario de contacto y Formspree</h2>
+        <p>La página de Contacto utiliza <strong>Formspree</strong> como proveedor tecnológico para procesar los mensajes enviados voluntariamente mediante el formulario.</p>
+        <p>Formspree no se carga como un sistema de analítica publicitaria del sitio. La interacción con este servicio se produce en relación con el envío del formulario. El tratamiento de los datos personales facilitados mediante dicho formulario se explica específicamente en la <a class="inline" href="/privacidad">Política de Privacidad</a>.</p>
+
+        <h2>7. Vídeo alojado en infraestructura propia</h2>
+        <p>La Galería incluye un vídeo servido desde el subdominio <strong>media.missuniversesantacruz.es</strong> mediante un reproductor HTML5 propio del navegador. El vídeo no está integrado mediante un reproductor de YouTube u otra plataforma publicitaria de terceros.</p>
+        <p>La solicitud técnica necesaria para acceder al archivo multimedia no se utiliza, en la configuración revisada, como herramienta de creación de perfiles publicitarios o de seguimiento comportamental.</p>
+
+        <h2>8. Enlaces a terceros</h2>
+        <p>El sitio contiene enlaces a servicios externos como Instagram, YouTube, Miss Universe Spain, patrocinadores, colaboradores y otras páginas relacionadas.</p>
+        <p>La mera presencia de estos enlaces no implica que las cookies de dichas plataformas se instalen en el dispositivo mientras la persona permanece en este sitio web. Cuando la persona pulsa un enlace y abandona missuniversesantacruz.es, pasa a navegar por un sitio de terceros sujeto a su propia política de cookies y privacidad.</p>
+
+        <h2>9. ¿Por qué no aparece actualmente un banner de cookies?</h2>
+        <p>La configuración revisada no incorpora cookies de analítica, publicidad o seguimiento que requieran consentimiento previo. Por este motivo, no se muestra actualmente un banner destinado a aceptar o rechazar ese tipo de cookies.</p>
+        <p>La ausencia de un banner no impide que esta Política de Cookies esté disponible por transparencia y para informar sobre la configuración actual del sitio.</p>
+
+        <h2>10. Cambios futuros en la configuración</h2>
+        <p>Si en el futuro se incorporan herramientas de analítica, publicidad, personalización no exenta, píxeles de seguimiento, reproductores externos, redes sociales integradas u otras tecnologías que requieran consentimiento, la configuración de esta web deberá adaptarse antes de activar dichas tecnologías.</p>
+        <p>En ese caso, cuando sea legalmente necesario, se implementará un mecanismo de consentimiento que permita aceptar o rechazar las cookies no necesarias antes de que sean utilizadas.</p>
+
+        <h2>11. Configuración del navegador</h2>
+        <p>Los navegadores permiten generalmente consultar, bloquear o eliminar cookies desde sus opciones de privacidad o configuración.</p>
+        <p>La forma de hacerlo depende del navegador y del dispositivo utilizado. La persona usuaria puede consultar la ayuda oficial de su navegador para conocer las opciones disponibles.</p>
+        <p>El bloqueo de cookies estrictamente técnicas puede afectar al funcionamiento de algunos sitios o servicios web.</p>
+
+        <h2>12. Responsable del sitio web</h2>
+        <div class="legal-card">
+          <p><strong>Titular:</strong> Juan Carlos Santana Alonso</p>
+          <p><strong>NIF:</strong> 51153251D</p>
+          <p><strong>Domicilio:</strong> Casa, C. Campo y Tamayo, 127, 38320 La Laguna, Santa Cruz de Tenerife, España</p>
+          <p><strong>Teléfono:</strong> <a class="inline" href="tel:+34603977087">+34 603 977 087</a></p>
+          <p><strong>Correo electrónico:</strong> <a class="inline" href="mailto:info@missuniversesantacruz.es">info@missuniversesantacruz.es</a></p>
+        </div>
+
+        <h2>13. Modificaciones de esta política</h2>
+        <p>Esta Política de Cookies podrá modificarse cuando cambien las funcionalidades del sitio web, los proveedores utilizados, las tecnologías implementadas o la normativa aplicable.</p>
+        <p>La versión vigente será la publicada en esta página, junto con la fecha de su última actualización.</p>
+
+        <h2>14. Información adicional</h2>
+        <p>Para obtener información sobre el tratamiento de datos personales puede consultarse la <a class="inline" href="/privacidad">Política de Privacidad</a>.</p>
+        <p>La identificación del titular y las condiciones generales de utilización del sitio se encuentran en el <a class="inline" href="/aviso-legal">Aviso Legal</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        MISS <img src="star.PNG" class="star" alt="" loading="lazy" decoding="async"> UNIVERSE
+        <small>SANTA CRUZ</small>
+      </div>
+
+      <div class="contact">
+        <strong>Instagram</strong><br>
+        <a href="https://instagram.com/missuniverse.santacruz" target="_blank" rel="noopener">
+          @missuniverse.santacruz
+        </a>
+
+        <br><br>
+
+        <strong>Contacto oficial</strong><br>
+        <a href="mailto:info@missuniversesantacruz.es">
+          info@missuniversesantacruz.es
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Miss Universe Santa Cruz
+        <br><br>
+        <a href="/aviso-legal">Aviso legal</a>
+        &nbsp;·&nbsp;
+        <a href="/privacidad">Privacidad</a>
+        &nbsp;·&nbsp;
+        <a href="/cookies" aria-current="page">Cookies</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
