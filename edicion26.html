@@ -176,7 +176,7 @@
       rgba(5,5,5,.15) 70%,
       rgba(5,5,5,0) 100%
     ),
-    url("edicion26-hero.jpg") right 0 top 58px / cover no-repeat;
+    url("edicion26-hero.jpg") right 0 top 98px / cover no-repeat;
 }
     .edition-hero-grid{
       min-height:682px;
@@ -510,6 +510,11 @@
       border:1px solid var(--line);
       background:#090909;
       overflow:hidden;
+    }
+        @media (min-width:901px){
+      .candidate.candidate-featured{
+        grid-column:2 / span 2;
+      }
     }
     .candidate img{
   width:100%;
@@ -1330,7 +1335,7 @@
   </div>
 </article>
 
-<article class="candidate">
+<article class="candidate candidate-featured">
   <img src="candidata-lucia.jpg" alt="Lucía Hernández Bello" loading="lazy" decoding="async" draggable="false">
   <div class="candidate-body">
     <h3>Lucía Hernández Bello</h3>
