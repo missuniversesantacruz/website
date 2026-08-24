@@ -158,7 +158,8 @@
   overflow:hidden;
   border-bottom:1px solid var(--line);
 background:
-  url("contacto-hero.jpg") right center / cover no-repeat;
+  linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.78) 38%,rgba(5,5,5,.34) 62%,rgba(5,5,5,.06) 82%),
+  url("contacto-hero.jpg") 82% center / cover no-repeat;
 }
 
 .contact-hero-grid{
@@ -384,9 +385,10 @@ background:
   background:rgba(220,100,100,.08);
 }
 
-    .contact-cards{
+        .contact-cards{
       display:grid;
       gap:16px;
+      margin-top:118px;
     }
     .contact-card{
       border:1px solid var(--line);
@@ -527,6 +529,10 @@ background:
       gap:30px;
       align-items:center;
     }
+        footer .brand{
+      display:inline-block;
+      width:max-content;
+    }
     .contact{
       color:#d6d1c7;
       font-size:.82rem;
@@ -561,7 +567,9 @@ background:
   min-height:610px;
   padding-top:64px;
 background:
-  url("contacto-hero-mobile.jpg") 60% top / cover no-repeat;
+  linear-gradient(90deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.64) 44%,rgba(5,5,5,.18) 78%),
+  linear-gradient(180deg,rgba(5,5,5,.12),rgba(5,5,5,.48)),
+  url("contacto-hero-mobile.jpg") 68% top / cover no-repeat;
 }
 
 .contact-hero-grid{min-height:546px}
@@ -577,8 +585,10 @@ background:
 .contact-copy p{font-size:.72rem}
 
       .contact-grid{grid-template-columns:1fr}
+      .contact-cards{margin-top:0}
       .path-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr;text-align:center}
+      footer .brand{margin:0 auto}
     }
 
    @media(max-width:430px){
