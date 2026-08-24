@@ -858,6 +858,52 @@
   .footer-grid .brand{
     width:max-content;
   }
+
+        /* Centrar última fila de Jurado y Equipo oficial */
+  .people-grid{
+    grid-template-columns:repeat(8,1fr);
+  }
+
+  .people-grid .person{
+    grid-column:span 2;
+  }
+
+  .people-grid .person:nth-last-child(3){
+    grid-column:2 / span 2;
+  }
+
+  .people-grid .person:nth-last-child(2){
+    grid-column:4 / span 2;
+  }
+
+  .people-grid .person:last-child{
+    grid-column:6 / span 2;
+  }
+
+  /* Centrar última fila de Colaboradores */
+  .collab-logos{
+    grid-template-columns:repeat(10,1fr);
+  }
+
+  .collab-logo{
+    grid-column:span 2;
+  }
+
+  .collab-logo:nth-last-child(4){
+    grid-column:2 / span 2;
+  }
+
+  .collab-logo:nth-last-child(3){
+    grid-column:4 / span 2;
+  }
+
+  .collab-logo:nth-last-child(2){
+    grid-column:6 / span 2;
+  }
+
+  .collab-logo:last-child{
+    grid-column:8 / span 2;
+  }
 }
     @media(max-width:900px){
       .container{width:94%}
