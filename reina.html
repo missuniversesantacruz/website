@@ -90,6 +90,7 @@
       letter-spacing:.18em;
       font-weight:300;
       white-space:nowrap;
+      display:inline-block;
     }
     .brand small{
       display:block;
@@ -612,6 +613,9 @@
       gap:30px;
       align-items:center;
     }
+    .footer-grid .brand{
+  width:max-content;
+}
     .contact{
       color:#d6d1c7;
       font-size:.82rem;
@@ -635,7 +639,7 @@
         rgba(5,5,5,.14) 72%,
         rgba(5,5,5,0) 100%
       ),
-      url("reina-hero.jpg") calc(100% + 100px) 30% / cover no-repeat;
+      url("reina-hero.jpg") calc(100% + 100px) 20% / cover no-repeat;
   }
 
   .queen-hero-grid{
@@ -768,7 +772,9 @@
       }
       .news-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr;text-align:center}
-    }
+      .footer-grid .brand{
+  margin:0 auto;
+}
 
 @media(max-width:430px){
 .queen-hero{
