@@ -478,6 +478,61 @@ background:
       color:#959189;
       font-size:.72rem;
     }
+    @media(min-width:901px){
+
+  .news-hero{
+    min-height:700px;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5,5,5,.98) 0%,
+        rgba(5,5,5,.94) 34%,
+        rgba(5,5,5,.62) 50%,
+        rgba(5,5,5,.15) 70%,
+        rgba(5,5,5,0) 100%
+      ),
+      url("noticias-hero.jpg") right -90px top 45px / cover no-repeat;
+  }
+
+  .news-hero-grid{
+    min-height:622px;
+    display:block;
+  }
+
+  .news-copy{
+    width:52%;
+    max-width:650px;
+    padding:132px 0 56px;
+  }
+
+  .news-kicker{
+    font-size:.82rem;
+    margin-bottom:18px;
+  }
+
+  .news-copy h1{
+    font-size:clamp(2.7rem,3.7vw,3.25rem);
+    line-height:1.02;
+    margin-bottom:20px;
+  }
+
+  .news-copy h2{
+    max-width:510px;
+    font-size:clamp(1.1rem,1.6vw,1.45rem);
+    line-height:1.45;
+    margin-bottom:18px;
+  }
+
+  .news-copy p{
+    max-width:510px;
+    font-size:.92rem;
+    line-height:1.7;
+  }
+
+  .footer-grid .brand{
+    width:max-content;
+  }
+}
 
     @media(max-width:900px){
       .container{width:94%}
