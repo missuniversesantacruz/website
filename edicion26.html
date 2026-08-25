@@ -512,10 +512,12 @@
       overflow:hidden;
     }
         @media (min-width:901px){
-      .candidate.candidate-featured{
-        grid-column:2 / span 2;
-      }
-    }
+  .candidate.candidate-featured{
+    grid-column:1 / -1;
+    width:calc((100% - 48px) / 4);
+    justify-self:center;
+  }
+}
     .candidate img{
   width:100%;
   height:auto;
